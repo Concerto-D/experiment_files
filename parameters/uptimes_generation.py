@@ -155,7 +155,7 @@ def main():
     plot_uptimes(uptimes_by_params, datetime_now_formatted)
 
     # Save uptimes
-    # with open(f"evaluation/experiment/generated_covering_taux/{datetime_now_formatted}/uptimes.json", "w") as f:
+    # with open(f"experiment/generated_covering_taux/{datetime_now_formatted}/uptimes.json", "w") as f:
     #     json.dump({str(k): {str(perc): uptimes for perc, uptimes in v.items()} for k,v in uptimes_by_params.items()}, f)  # TODO: to refacto (que ce soit plus clair)
 
 
