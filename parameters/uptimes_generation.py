@@ -132,7 +132,7 @@ def main():
     overlap_percentages_list = [(1, 1)]
     max_bound = 30
     step_range = 1
-    offset_between_draw = 40
+    offset_between_draw = 90
     uptimes_by_params = generate_uptimes_by_params(
         freqs_awake_list,
         time_awakening,
