@@ -20,7 +20,8 @@ def generate_uptimes_by_params(
         nb_deps_list: List[int],
         overlap_percentages_list: List[Tuple],
         max_bound: int,
-        step_range: int
+        step_range: int,
+        offset_between_draw: int
 ) -> Dict:
     """
     TODO: reprendre le nom des variables (time, nb_deps, etc)
@@ -39,7 +40,7 @@ def generate_uptimes_by_params(
         while not all(uptimes is not None for uptimes in covering_perc_values.values()):
             # On écarte de plus en plus la plage sur laquelle choisir les uptimes
             for step in range(duration, duration + max_bound, step_range):
-                uptimes_list = compute_uptimes_for_params(freq, nb_deps, step, duration)
+                uptimes_list = compute_uptimes_for_params(freq, nb_deps, step, duration, offset_between_draw)
 
                 # Check if uptimes overlap fits into category
                 covering_uptimes = []
@@ -58,12 +59,11 @@ def generate_uptimes_by_params(
     return uptimes_by_params
 
 
-def compute_uptimes_for_params(freq, nb_deps, step_uptime, time):
+def compute_uptimes_for_params(freq, nb_deps, step_uptime, time, offset_between_draw):
     uptimes_list = [[] for _ in range(nb_deps + 1)]
-    offset = 60
     for up_num in range(freq):
         for dep_num in range(nb_deps + 1):  # Add 1 to the nb_deps to add the server
-            time_to_awake = random.uniform(step_uptime * up_num + offset * up_num, step_uptime * (up_num + 1) - time + offset * up_num)
+            time_to_awake = random.uniform(step_uptime * up_num + offset_between_draw * up_num, step_uptime * (up_num + 1) - time + offset_between_draw * up_num)
             uptimes_list[dep_num].append((time_to_awake, time))
     return tuple(tuple(uptimes) for uptimes in uptimes_list)
 
@@ -122,19 +122,25 @@ def plot_uptimes(uptimes_by_params, datetime_now_formatted: str):
 
 def main():
     # Compute uptimes
+    # freqs_awake_list = [30]
+    # time_awakening = [30, 60]
+    # nb_deps_list = [12]
+    # overlap_percentages_list = [(0.02, 0.05), (0.20, 0.30), (0.50, 0.60)]
     freqs_awake_list = [30]
-    time_awakening = [30, 60]
-    nb_deps_list = [12]
-    overlap_percentages_list = [(0.02, 0.05), (0.20, 0.30), (0.50, 0.60)]
-    max_bound = 2000
-    step_range = 20
+    time_awakening = [30]
+    nb_deps_list = [2]
+    overlap_percentages_list = [(0.98, 1)]
+    max_bound = 30
+    step_range = 1
+    offset_between_draw = 40
     uptimes_by_params = generate_uptimes_by_params(
         freqs_awake_list,
         time_awakening,
         nb_deps_list,
         overlap_percentages_list,
         max_bound,
-        step_range
+        step_range,
+        offset_between_draw
     )
     print("finished")
 
