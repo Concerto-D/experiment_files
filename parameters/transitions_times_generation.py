@@ -1,4 +1,5 @@
 import json
+import os
 import random
 from typing import Tuple
 
@@ -46,6 +47,7 @@ def generate_transitions_time_file(transitions_times, nb_nodes):
     for dep_num in range(1, nb_nodes):
         transitions_to_dump[f"dep{dep_num - 1}"] = dict(transitions_times[dep_num])
     hash_file = str(abs(hash(transitions_times)))[:6]
+    os.makedirs("generations", exist_ok=True)
     reconf_config_file = f"generations/transitions_times_{hash_file}.json"
     with open(reconf_config_file, "w") as f:
         json.dump({"nb_deps_tot": nb_nodes - 1, "transitions_time": transitions_to_dump}, f, indent=4)
@@ -54,7 +56,7 @@ def generate_transitions_time_file(transitions_times, nb_nodes):
 
 
 if __name__ == "__main__":
-    nb_deps = 20
+    nb_deps = 12
     nb_generations = 2
     min_value = 1
     max_value = 30
