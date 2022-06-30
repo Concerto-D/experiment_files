@@ -125,13 +125,13 @@ def main():
     # freqs_awake_list = [30]
     # time_awakening = [30, 60]
     # nb_deps_list = [12]
-    # overlap_percentages_list = [(0.02, 0.05), (0.20, 0.30), (0.50, 0.60)]
-    freqs_awake_list = [30]
+    overlap_percentages_list = [(0.02, 0.05), (0.20, 0.30), (0.50, 0.60)]
+    freqs_awake_list = [60]
     time_awakening = [30]
     nb_deps_list = [12]
-    overlap_percentages_list = [(1, 1)]
-    max_bound = 30
-    step_range = 1
+    overlap_percentages_list = [(0.02, 0.05), (0.20, 0.30), (0.50, 0.60)]
+    max_bound = 2000
+    step_range = 20
     offset_between_draw = 90
     uptimes_by_params = generate_uptimes_by_params(
         freqs_awake_list,
