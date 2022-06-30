@@ -56,7 +56,7 @@ def generate_transitions_time_file(transitions_times, nb_nodes):
 
 
 if __name__ == "__main__":
-    nb_deps = 2
+    nb_deps = 12
     nb_generations = 1
     min_value = 1
     max_value = 30

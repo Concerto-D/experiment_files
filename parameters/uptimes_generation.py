@@ -128,8 +128,8 @@ def main():
     # overlap_percentages_list = [(0.02, 0.05), (0.20, 0.30), (0.50, 0.60)]
     freqs_awake_list = [30]
     time_awakening = [30]
-    nb_deps_list = [2]
-    overlap_percentages_list = [(0.98, 1)]
+    nb_deps_list = [12]
+    overlap_percentages_list = [(1, 1)]
     max_bound = 30
     step_range = 1
     offset_between_draw = 40
