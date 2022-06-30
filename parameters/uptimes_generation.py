@@ -49,7 +49,7 @@ def generate_uptimes_by_params(
                 global_means_coverage = round(sum(covering_uptimes) / len(covering_uptimes), 2)
                 for cover_val in covering_perc_values.keys():
                     # TODO Mettre des intervals plus larges, entre 0.1 et 0.2, au lieu d'une valeur fixe
-                    if covering_perc_values[cover_val] is None and cover_val[0] <= global_means_coverage < cover_val[1]:
+                    if covering_perc_values[cover_val] is None and cover_val[0] <= global_means_coverage <= cover_val[1]:
                         print(f"Found for {(freq, duration, nb_deps)} {cover_val}")
                         covering_perc_values[cover_val] = uptimes_list
 
@@ -114,7 +114,7 @@ def plot_uptimes(uptimes_by_params, datetime_now_formatted: str):
             min_p, max_p = perc
             min_p = str(min_p).replace(".", "_")
             max_p = str(max_p).replace(".", "_")
-            plt.savefig(f"{datetime_now_formatted}/figure-{freq}-{duration}-{nb_deps}-{min_p}-{max_p}.png")
+            plt.savefig(f"{dir_name}/{datetime_now_formatted}/figure-{freq}-{duration}-{nb_deps}-{min_p}-{max_p}.png")
             plt.close(figure_number)
             figure_number += 1
             line_number = 5
