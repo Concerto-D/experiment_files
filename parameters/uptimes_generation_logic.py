@@ -130,35 +130,12 @@ def create_uptimes_nodes(uptimes_by_freq, freq, duration, nb_deps, overlap_taux,
     return uptimes_nodes
 
 
-def compute_covering_time_dep(dep_num: int, freq: int, time_awoken: float, all_dep_uptimes):
-    uptimes_dep = all_dep_uptimes[dep_num]
-    all_other_uptimes = [all_dep_uptimes[i] for i in range(len(all_dep_uptimes)) if dep_num != i]
-    overlaps_list = []
-    for other_uptimes_dep in all_other_uptimes:
-        covering_time = 0
-        for uptime_dep in uptimes_dep:
-            for other_uptime_dep in other_uptimes_dep:
-                overlap = min(uptime_dep[0] + time_awoken, other_uptime_dep[0] + time_awoken) - max(uptime_dep[0], other_uptime_dep[0])
-                covering_time += overlap if overlap > 0 else 0
-
-        percentage_overlap = covering_time/(time_awoken*freq)
-        overlaps_list.append(percentage_overlap)
-
-    return overlaps_list
-
-
 def generate_uptimes_nodes_file(
     file_name, freq, duration, nb_deps, overlap_taux, nb_generations, perc_str
 ):
     with open(file_name) as f:
         uptimes_by_freq = json.load(f)
     uptimes_nodes = create_uptimes_nodes(uptimes_by_freq, freq, duration, nb_deps, overlap_taux, nb_generations)
-    #
-    # dep_num = 0  # Check only server
-    # cov_perc_list = compute_covering_time_dep(dep_num, freq, duration, uptimes_nodes)
-    # server_means_coverage = round(sum(cov_perc_list) / len(cov_perc_list), 2)
-    #
-    # print(server_means_coverage)
 
     with open(f"uptimes/uptimes-60-30-12-{perc_str}-1.json", "w") as f:
         json.dump(uptimes_nodes, f)
