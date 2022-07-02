@@ -1,14 +1,16 @@
 import json
+import sys
 
 if __name__ == "__main__":
-    output = json.load(open("generations/2022-07-01_17-17-43/uptimes-60-30-12-0_5-0_6.json"))
+    file_name = sys.argv[1]
+    output = json.load(open(file_name))
 
     # for i in range(len(output[0])):
     #     print(f"FREQ: {i} ------------------")
     #     for j in range(len(output)):
     #         print(output[j][i], end="")
     #     print("-----------------")
-    print("experiment_files/parameters/uptimes/uptimes-60-30-12-0_2-0_3.json")
+    print(file_name)
     for i in range(len(output[0])):
         print(f"--- FREQ: {i} -----")
         for k in range(1, len(output)):

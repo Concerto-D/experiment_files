@@ -69,21 +69,20 @@ def compute_uptimes(freq, duration, nb_deps, overlap_taux, overlap_time_max, lim
     return up_list
 
 
-def generate_uptimes_files(freq, duration, nb_deps, overlap_taux, nb_generations):
+def generate_uptimes_files(freq, duration, nb_deps, overlap_taux, nb_generations, overlap_time_max, limit_nb_up_allowed, perc_str):
     for i in range(nb_generations):
-        up_list = compute_uptimes(freq, duration, nb_deps, overlap_taux, 30, limit_nb_up_allowed=False)
+        up_list = compute_uptimes(freq, duration, nb_deps, overlap_taux, overlap_time_max, limit_nb_up_allowed=limit_nb_up_allowed)
         timestamp_log_dir = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-        with open(f"generated_uptimes_for_0_2_0_3_specific-{timestamp_log_dir}", "w") as f:
-            print(f"dumping generated_uptimes_for_0_2_0_3_specific-{timestamp_log_dir}")
+        with open(f"generated_uptimes_for_{perc_str}_specific-{timestamp_log_dir}", "w") as f:
+            print(f"dumping generated_uptimes_for_{perc_str}_specific-{timestamp_log_dir}")
             json.dump(up_list, f)
             time.sleep(1)
 
 
-def see_uptimes_files():
+def see_uptimes_files(f):
     n = 0
     # for f in os.listdir():
     # if "generated_uptimes_for" in f:
-    f = "uptimes/generated_uptimes_for_0_5_0_6_specific-0"
     print(f"----- file {f} -------")
     with open(f) as lf:
         output = json.load(lf)
@@ -148,23 +147,31 @@ def compute_covering_time_dep(dep_num: int, freq: int, time_awoken: float, all_d
     return overlaps_list
 
 
+def generate_uptimes_nodes_file(
+    file_name, freq, duration, nb_deps, overlap_taux, nb_generations, perc_str
+):
+    with open(file_name) as f:
+        uptimes_by_freq = json.load(f)
+    uptimes_nodes = create_uptimes_nodes(uptimes_by_freq, freq, duration, nb_deps, overlap_taux, nb_generations)
+    #
+    # dep_num = 0  # Check only server
+    # cov_perc_list = compute_covering_time_dep(dep_num, freq, duration, uptimes_nodes)
+    # server_means_coverage = round(sum(cov_perc_list) / len(cov_perc_list), 2)
+    #
+    # print(server_means_coverage)
+
+    with open(f"uptimes/uptimes-60-30-12-{perc_str}-1.json", "w") as f:
+        json.dump(uptimes_nodes, f)
+
+
 if __name__ == "__main__":
     freq = 60
     duration = 30
     nb_deps = 12
     overlap_taux = (0.2, 0.3)
-    nb_generations = 5
-    # generate_uptimes_files(freq, duration, nb_deps, overlap_taux, nb_generations)
-    # see_uptimes_files()
-    with open("uptimes/generated_uptimes_for_0_5_0_6_specific-0") as f:
-        uptimes_by_freq = json.load(f)
-    uptimes_nodes = create_uptimes_nodes(uptimes_by_freq, freq, duration, nb_deps, overlap_taux, nb_generations)
+    nb_generations = 1
+    # generate_uptimes_files(freq, duration, nb_deps, overlap_taux, nb_generations, 30, False, "0_2-0_3")
+    # see_uptimes_files(file_name)
+    file_name = "generated_uptimes_for_0_2-0_3_specific-2022-07-02_12-22-01"
+    generate_uptimes_nodes_file(file_name, freq, duration, nb_deps, overlap_taux, nb_generations, "0_2-0_3")
 
-    dep_num = 0  # Check only server
-    cov_perc_list = compute_covering_time_dep(dep_num, freq, duration, uptimes_nodes)
-    server_means_coverage = round(sum(cov_perc_list) / len(cov_perc_list), 2)
-
-    print(server_means_coverage)
-
-    with open("uptimes/uptimes-60-30-12-0_5-0_6.json", "w") as f:
-        json.dump(uptimes_nodes, f)
