@@ -9,6 +9,7 @@ from typing import List, Dict, Tuple
 import matplotlib
 import yaml
 from matplotlib import pyplot as plt
+import numpy as np
 
 
 dir_name = "generations"
@@ -39,30 +40,36 @@ def generate_uptimes_by_params(
         # TODO: voir si ça prend trop de temps on met une condition d'arrêt
         while not all(uptimes is not None for uptimes in covering_perc_values.values()):
             # On écarte de plus en plus la plage sur laquelle choisir les uptimes
-            for gap in range(duration, duration + max_bound, step_range):
-                uptimes_list = compute_uptimes_for_params(freq, nb_deps, gap, duration, offset_between_draw)
+            gap = 100
+            uptimes_list = compute_uptimes_for_params(freq, nb_deps, 100, duration, 10, offset_between_draw)
 
-                # Check if uptimes overlap fits into category
-                dep_num = 0    # Check only server
-                cov_perc_list = compute_covering_time_dep(dep_num, freq, duration, uptimes_list)
-                server_means_coverage = round(sum(cov_perc_list)/len(cov_perc_list), 2)
-                for cover_val in covering_perc_values.keys():
-                    # TODO Mettre des intervals plus larges, entre 0.1 et 0.2, au lieu d'une valeur fixe
-                    if covering_perc_values[cover_val] is None and cover_val[0] <= server_means_coverage <= cover_val[1]:
-                        print(f"Found for {(freq, duration, nb_deps)} {cover_val}")
-                        covering_perc_values[cover_val] = uptimes_list
+            # Check if uptimes overlap fits into category
+            dep_num = 0    # Check only server
+            cov_perc_list = compute_covering_time_dep(dep_num, freq, duration, uptimes_list)
+            server_means_coverage = round(sum(cov_perc_list)/len(cov_perc_list), 2)
+            print(f"Server coverage: {server_means_coverage}% for gap {gap}")
+            for cover_val in covering_perc_values.keys():
+                # TODO Mettre des intervals plus larges, entre 0.1 et 0.2, au lieu d'une valeur fixe
+                if covering_perc_values[cover_val] is None and cover_val[0] <= server_means_coverage <= cover_val[1]:
+                    print(f"Found for {(freq, duration, nb_deps)} {cover_val}")
+                    covering_perc_values[cover_val] = uptimes_list
 
         uptimes_by_params[(freq, duration, nb_deps)] = covering_perc_values
 
     return uptimes_by_params
 
 
-def compute_uptimes_for_params(freq, nb_deps, gap, time, offset_between_draw):
+def compute_uptimes_for_params(freq, nb_deps, gap, duration, spread, offset_between_draw):
     uptimes_list = [[] for _ in range(nb_deps + 1)]
     for up_num in range(freq):
+        b_min = gap * up_num + offset_between_draw * up_num
+        b_max = gap * (up_num+1) + (duration*up_num - duration)
+        # print(b_min, b_max)
+        mu, sigma = (b_min + b_max)/2, spread  # mean and standard deviation
+        number_generator = list(filter(lambda x: b_min <= x <= b_max, np.random.normal(mu, sigma, 500)))
+        number_generator = iter(number_generator)
         for dep_num in range(nb_deps + 1):  # Add 1 to the nb_deps to add the server
-            time_to_awake = random.uniform(gap * up_num + offset_between_draw * up_num, gap * (up_num + 1) - time + offset_between_draw * up_num)
-            uptimes_list[dep_num].append((time_to_awake, time))
+            uptimes_list[dep_num].append((next(number_generator), duration))
     return tuple(tuple(uptimes) for uptimes in uptimes_list)
 
 
@@ -126,9 +133,9 @@ def main():
     freqs_awake_list = [60]
     time_awakening = [30]
     nb_deps_list = [12]
-    overlap_percentages_list = [(0.02, 0.05), (0.20, 0.30), (0.50, 0.60)]
-    max_bound = 2000
-    step_range = 20
+    overlap_percentages_list = [(0.5, 0.6)]
+    max_bound = 4000
+    step_range = 1
     offset_between_draw = 30
     uptimes_by_params = generate_uptimes_by_params(
         freqs_awake_list,

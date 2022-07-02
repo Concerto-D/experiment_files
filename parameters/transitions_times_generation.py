@@ -2,14 +2,15 @@ import json
 import os
 import random
 from typing import Tuple
+import numpy as np
 
 
-def generate_server_transitions_time(nb_deps: int, min_value: float = 10., max_value: float = 60.) -> Tuple:
-    server_t_sa = round(random.uniform(min_value, max_value), 2)
-    server_t_sc = tuple(round(random.uniform(min_value, max_value), 2) for i in range(nb_deps))
-    server_t_sr = round(random.uniform(min_value, max_value), 2)
-    server_t_ss = tuple(round(random.uniform(min_value, max_value), 2) for i in range(nb_deps))
-    server_t_sp = tuple(round(random.uniform(min_value, max_value), 2) for i in range(nb_deps))
+def generate_server_transitions_time(nb_deps: int, number_generator) -> Tuple:
+    server_t_sa = round(next(number_generator), 2)
+    server_t_sc = tuple(round(next(number_generator), 2) for _ in range(nb_deps))
+    server_t_sr = round(next(number_generator), 2)
+    server_t_ss = tuple(round(next(number_generator), 2) for i in range(nb_deps))
+    server_t_sp = tuple(round(next(number_generator), 2) for i in range(nb_deps))
     return tuple({
         "t_sa": server_t_sa,
         "t_sc": server_t_sc,
@@ -19,10 +20,10 @@ def generate_server_transitions_time(nb_deps: int, min_value: float = 10., max_v
     }.items())
 
 
-def generate_deps_transitions_time(dep_num: int, min_value: float = 10., max_value: float = 60.) -> Tuple:
-    deps_t_di = round(random.uniform(min_value, max_value), 2)
-    deps_t_dr = round(random.uniform(min_value, max_value), 2)
-    deps_t_du = round(random.uniform(min_value, max_value), 2)
+def generate_deps_transitions_time(dep_num: int, number_generator) -> Tuple:
+    deps_t_di = round(next(number_generator), 2)
+    deps_t_dr = round(next(number_generator), 2)
+    deps_t_du = round(next(number_generator), 2)
     return tuple({
         "id": dep_num,
         "t_di": deps_t_di,
@@ -31,12 +32,12 @@ def generate_deps_transitions_time(dep_num: int, min_value: float = 10., max_val
     }.items())
 
 
-def generate_transitions_times(nb_deps_exp: int, nb_generations: int, min_value: int, max_value: int):
+def generate_transitions_times(nb_deps_exp: int, nb_generations: int, number_generator):
     all_generations_transitions_times = []
     for _ in range(nb_generations):
-        generations_tt = [generate_server_transitions_time(nb_deps_exp, min_value, max_value)]
+        generations_tt = [generate_server_transitions_time(nb_deps_exp, number_generator)]
         for dep_num in range(nb_deps_exp):
-            generations_tt.append(generate_deps_transitions_time(dep_num, min_value, max_value))
+            generations_tt.append(generate_deps_transitions_time(dep_num, number_generator))
         all_generations_transitions_times.append(tuple(generations_tt))
     return all_generations_transitions_times
 
@@ -57,9 +58,14 @@ def generate_transitions_time_file(transitions_times, nb_nodes):
 
 if __name__ == "__main__":
     nb_deps = 12
-    nb_generations = 1
+    nb_generations = 2
     min_value = 1
     max_value = 30
-    transitions_times_list = generate_transitions_times(nb_deps, nb_generations, min_value, max_value)
+    mu, sigma = 0.7, 1.1  # mean and standard deviation
+    nb_total_numbers = (3*nb_deps + 3*nb_deps + 3) * nb_generations
+    number_generator = np.random.lognormal(mu, sigma, nb_total_numbers + 100)
+    number_generator = list(filter(lambda x: 1 <= x <= 30, number_generator))
+    print(f"len_generator: {len(number_generator)}")
+    transitions_times_list = generate_transitions_times(nb_deps, nb_generations, iter(number_generator))
     for trans_time in transitions_times_list:
         generate_transitions_time_file(trans_time, nb_deps + 1)
