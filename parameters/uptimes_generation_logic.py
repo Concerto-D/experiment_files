@@ -21,7 +21,7 @@ def compute_uptimes(freq, duration, nb_deps, overlap_taux, overlap_time_max, lim
     min_taux, max_taux = overlap_taux
     amount_time_min = freq * duration * min_taux
     amount_time_max = freq * duration * max_taux
-
+    perc_100_overlap = min_taux == max_taux == 1
     nb_appearance_ok = False
     while not nb_appearance_ok:
         for dep_num in range(nb_deps):
@@ -36,7 +36,11 @@ def compute_uptimes(freq, duration, nb_deps, overlap_taux, overlap_time_max, lim
                 current_up = up_list[k]
                 nb_ups_assigned = len(current_up.keys()) - 1
                 if dep_num not in current_up.keys() and current_up["nb_up_allowed"] > nb_ups_assigned:
-                    min_o = next(number_generator) if limit_nb_up_allowed else random.uniform(0, overlap_time_max)
+                    # to refacto le 100 perc overlap
+                    if not perc_100_overlap:
+                        min_o = next(number_generator) if limit_nb_up_allowed else random.uniform(0, overlap_time_max)
+                    else:
+                        min_o = duration
                     overlap = min(min_o, amount_to_spread)
                     current_up[dep_num] = overlap
                     amount_to_spread -= overlap
@@ -102,27 +106,31 @@ def see_uptimes_files(f):
     n += 1
 
 
-def create_uptimes_nodes(uptimes_by_freq, freq, duration, nb_deps, overlap_taux, nb_generations):
+def create_uptimes_nodes(uptimes_by_freq, freq, duration, nb_deps, overlap_taux, nb_generations, perc_100_overlap):
     uptimes_nodes = [[] for _ in range(nb_deps + 1)]
     for up_num in range(freq):
-        before_u = 130 * up_num
-        uptime = before_u + duration + 5
+        offset = 130 if not perc_100_overlap else 65
+        before_u = offset * up_num
+        uptime = before_u + (duration if not perc_100_overlap else 0)
         after_u = uptime + duration + 5
         uptimes_nodes[0].append((uptime, duration))
         for dep_num in range(nb_deps):
-            current_up = uptimes_by_freq[up_num]
-            pos = random.randint(1, 2)
-            if str(dep_num) not in current_up.keys():
-                if pos == 1:
-                    uptimes_nodes[dep_num+1].append((before_u, duration))
-                else:
-                    uptimes_nodes[dep_num+1].append((after_u, duration))
+            if perc_100_overlap:
+                uptimes_nodes[dep_num+1].append((uptime, duration))
             else:
-                if pos == 1:
-                    uptime_dep = uptime - (duration - current_up[str(dep_num)])
+                current_up = uptimes_by_freq[up_num]
+                pos = random.randint(1, 2)
+                if str(dep_num) not in current_up.keys():
+                    if pos == 1:
+                        uptimes_nodes[dep_num+1].append((before_u, duration))
+                    else:
+                        uptimes_nodes[dep_num+1].append((after_u, duration))
                 else:
-                    uptime_dep = uptime + (duration - current_up[str(dep_num)])
-                uptimes_nodes[dep_num+1].append((uptime_dep, duration))
+                    if pos == 1:
+                        uptime_dep = uptime - (duration - current_up[str(dep_num)])
+                    else:
+                        uptime_dep = uptime + (duration - current_up[str(dep_num)])
+                    uptimes_nodes[dep_num+1].append((uptime_dep, duration))
 
     for dep_num, u in enumerate(uptimes_nodes):
         print(f"dep_num {dep_num}", u[:7])
@@ -131,11 +139,11 @@ def create_uptimes_nodes(uptimes_by_freq, freq, duration, nb_deps, overlap_taux,
 
 
 def generate_uptimes_nodes_file(
-    file_name, freq, duration, nb_deps, overlap_taux, nb_generations, perc_str
+    file_name, freq, duration, nb_deps, overlap_taux, nb_generations, perc_str, perc_100_overlap
 ):
     with open(file_name) as f:
         uptimes_by_freq = json.load(f)
-    uptimes_nodes = create_uptimes_nodes(uptimes_by_freq, freq, duration, nb_deps, overlap_taux, nb_generations)
+    uptimes_nodes = create_uptimes_nodes(uptimes_by_freq, freq, duration, nb_deps, overlap_taux, nb_generations, perc_100_overlap)
 
     with open(f"uptimes/uptimes-60-30-12-{perc_str}-1.json", "w") as f:
         json.dump(uptimes_nodes, f)
@@ -145,10 +153,11 @@ if __name__ == "__main__":
     freq = 60
     duration = 30
     nb_deps = 12
-    overlap_taux = (0.2, 0.3)
+    overlap_taux = (1, 1)
     nb_generations = 1
-    # generate_uptimes_files(freq, duration, nb_deps, overlap_taux, nb_generations, 30, False, "0_2-0_3")
+    # generate_uptimes_files(freq, duration, nb_deps, overlap_taux, nb_generations, 30, False, "1-1")
     # see_uptimes_files(file_name)
-    file_name = "generated_uptimes_for_0_2-0_3_specific-2022-07-02_12-22-01"
-    generate_uptimes_nodes_file(file_name, freq, duration, nb_deps, overlap_taux, nb_generations, "0_2-0_3")
+    file_name = "generated_uptimes_for_1-1_specific-2022-07-03_15-00-14"
+    perc_100_overlap = overlap_taux == (1, 1)
+    generate_uptimes_nodes_file(file_name, freq, duration, nb_deps, overlap_taux, nb_generations, "1-1", perc_100_overlap)
 
