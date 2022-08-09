@@ -1,6 +1,7 @@
 import copy
 import json
 import os
+import numpy as np
 
 output_trans = {
     "T0": {
@@ -89,50 +90,79 @@ def get_global_results(file_content):
     }
 
 
-for dir_name in os.listdir("to_analyse"):
-    print(dir_name)
-    for file_name in os.listdir(f"to_analyse/{dir_name}"):
-        if "finished_reconfiguration" not in file_name:
-            with open(f"to_analyse/{dir_name}/{file_name}") as f:
-                file_content = json.load(f)
+def main():
+    for dir_name in os.listdir("to_analyse"):
+        print(dir_name)
+        for file_name in os.listdir(f"to_analyse/{dir_name}"):
+            if "finished_reconfiguration" not in file_name:
+                with open(f"to_analyse/{dir_name}/{file_name}") as f:
+                    file_content = json.load(f)
 
-            if "perc-2-5" in file_name:
-                perc_name = "2-5"
-            elif "perc-20-30" in file_name:
-                perc_name = "20-30"
-            elif "perc-50-60" in file_name:
-                perc_name = "50-60"
-            else:
-                perc_name = "1-1"
-
-            if "T0" in file_name:
-                t_name = "T0"
-            else:
-                t_name = "T1"
-
-            to_s = f"{dir_name}/{file_name}"
-            if "expe_1" in file_name:
-                tab_name = "tab1"
-                version_name = "async" if "asynchrone" in file_name else "sync"
-                global_results = get_global_results(file_content)
-                for key, value in global_results.items():
-                    output[tab_name][perc_name][version_name][t_name][key].append(value)
-                if "files" not in output[tab_name][perc_name][version_name][t_name]:
-                    output[tab_name][perc_name][version_name][t_name]["files"] = [to_s]
+                if "perc-2-5" in file_name:
+                    perc_name = "2-5"
+                elif "perc-20-30" in file_name:
+                    perc_name = "20-30"
+                elif "perc-50-60" in file_name:
+                    perc_name = "50-60"
                 else:
-                    output[tab_name][perc_name][version_name][t_name]["files"].append(to_s)
+                    perc_name = "1-1"
 
-            else:
-                tab_name = "tab2"
-                version_name = "timeout0" if ("expe_2" in file_name and ("timeout" not in file_name or "timeout-False" in file_name)) else "timeout50"
-                global_results = get_global_results(file_content)
-                for key, value in global_results.items():
-                    output[tab_name][perc_name][version_name][t_name][key].append(value)
-                if "files" not in output[tab_name][perc_name][version_name][t_name]:
-                    output[tab_name][perc_name][version_name][t_name]["files"] = [to_s]
+                if "T0" in file_name:
+                    t_name = "T0"
                 else:
-                    output[tab_name][perc_name][version_name][t_name]["files"].append(to_s)
+                    t_name = "T1"
+
+                to_s = f"{dir_name}/{file_name}"
+                if "expe_1" in file_name:
+                    tab_name = "tab1"
+                    version_name = "async" if "asynchrone" in file_name else "sync"
+                    global_results = get_global_results(file_content)
+                    for key, value in global_results.items():
+                        if len(output[tab_name][perc_name][version_name][t_name][key]) < 4:
+                            output[tab_name][perc_name][version_name][t_name][key].append(value)
+                    if "files" not in output[tab_name][perc_name][version_name][t_name]:
+                        output[tab_name][perc_name][version_name][t_name]["files"] = [to_s]
+                    else:
+                        if len(output[tab_name][perc_name][version_name][t_name]["files"]) < 4:
+                            output[tab_name][perc_name][version_name][t_name]["files"].append(to_s)
+
+                else:
+                    tab_name = "tab2"
+                    version_name = "timeout0" if ("expe_2" in file_name and ("timeout" not in file_name or "timeout-False" in file_name)) else "timeout50"
+                    global_results = get_global_results(file_content)
+                    for key, value in global_results.items():
+                        if len(output[tab_name][perc_name][version_name][t_name][key]) < 4:
+                            output[tab_name][perc_name][version_name][t_name][key].append(value)
+                    if "files" not in output[tab_name][perc_name][version_name][t_name]:
+                        output[tab_name][perc_name][version_name][t_name]["files"] = [to_s]
+                    else:
+                        if len(output[tab_name][perc_name][version_name][t_name]["files"]) < 4:
+                            output[tab_name][perc_name][version_name][t_name]["files"].append(to_s)
+
+    with open("global_results.json", "w") as f:
+        json.dump(output, f, indent=4)
+
+    compute_mean_std(output)
 
 
-with open("global_results.json", "w") as f:
-    json.dump(output, f, indent=4)
+def compute_mean_std(output):
+    computed_output = copy.deepcopy(output)
+    for tab, tab_values in output.items():
+        for perc, perc_values in tab_values.items():
+            for categ, categ_values in perc_values.items():
+                for trans, trans_values in categ_values.items():
+                    for metric, metric_values in trans_values.items():
+                        if metric not in ["finished_reconf", "files"]:
+                            c_mean = np.mean(metric_values)
+                            c_std = np.std(metric_values)
+                            computed_output[tab][perc][categ][trans][metric] = {
+                                "mean": round(c_mean, 3),
+                                "std": round(c_std, 3)
+                            }
+
+    with open("global_results_computed.json", "w") as f:
+        json.dump(computed_output, f, indent=4)
+
+
+if __name__ == "__main__":
+    main()
