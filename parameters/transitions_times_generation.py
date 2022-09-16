@@ -51,7 +51,7 @@ def generate_transitions_time_file(transitions_times, nb_nodes):
     os.makedirs("generations", exist_ok=True)
     reconf_config_file = f"generations/transitions_times_{hash_file}.json"
     with open(reconf_config_file, "w") as f:
-        json.dump({"nb_deps_tot": nb_nodes - 1, "transitions_time": transitions_to_dump}, f, indent=4)
+        json.dump({"nb_deps_tot": nb_nodes - 1, "transitions_times": transitions_to_dump}, f, indent=4)
     print(f"Config file saved in {reconf_config_file}")
     return hash_file, reconf_config_file
 
