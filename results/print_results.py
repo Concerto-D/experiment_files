@@ -91,7 +91,7 @@ def get_global_results(file_content):
 
 
 def main():
-    for dir_name in os.listdir("to_analyse"):
+    for dir_name in os.listdir("raw_results"):
         print(dir_name)
         for file_name in os.listdir(f"to_analyse/{dir_name}"):
             if "finished_reconfiguration" not in file_name:
@@ -118,12 +118,12 @@ def main():
                     version_name = "async" if "asynchrone" in file_name else "sync"
                     global_results = get_global_results(file_content)
                     for key, value in global_results.items():
-                        if len(output[tab_name][perc_name][version_name][t_name][key]) < 4:
+                        if len(output[tab_name][perc_name][version_name][t_name][key]) < 40:
                             output[tab_name][perc_name][version_name][t_name][key].append(value)
                     if "files" not in output[tab_name][perc_name][version_name][t_name]:
                         output[tab_name][perc_name][version_name][t_name]["files"] = [to_s]
                     else:
-                        if len(output[tab_name][perc_name][version_name][t_name]["files"]) < 4:
+                        if len(output[tab_name][perc_name][version_name][t_name]["files"]) < 40:
                             output[tab_name][perc_name][version_name][t_name]["files"].append(to_s)
 
                 else:
@@ -131,12 +131,12 @@ def main():
                     version_name = "timeout0" if ("expe_2" in file_name and ("timeout" not in file_name or "timeout-False" in file_name)) else "timeout50"
                     global_results = get_global_results(file_content)
                     for key, value in global_results.items():
-                        if len(output[tab_name][perc_name][version_name][t_name][key]) < 4:
+                        if len(output[tab_name][perc_name][version_name][t_name][key]) < 40:
                             output[tab_name][perc_name][version_name][t_name][key].append(value)
                     if "files" not in output[tab_name][perc_name][version_name][t_name]:
                         output[tab_name][perc_name][version_name][t_name]["files"] = [to_s]
                     else:
-                        if len(output[tab_name][perc_name][version_name][t_name]["files"]) < 4:
+                        if len(output[tab_name][perc_name][version_name][t_name]["files"]) < 40:
                             output[tab_name][perc_name][version_name][t_name]["files"].append(to_s)
 
     with open("global_results.json", "w") as f:
