@@ -93,9 +93,9 @@ def get_global_results(file_content):
 def main():
     for dir_name in os.listdir("raw_results"):
         print(dir_name)
-        for file_name in os.listdir(f"to_analyse/{dir_name}"):
+        for file_name in os.listdir(f"raw_results/{dir_name}"):
             if "finished_reconfiguration" not in file_name:
-                with open(f"to_analyse/{dir_name}/{file_name}") as f:
+                with open(f"raw_results/{dir_name}/{file_name}") as f:
                     file_content = json.load(f)
 
                 if "perc-2-5" in file_name:
