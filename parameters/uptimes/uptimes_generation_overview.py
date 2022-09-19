@@ -12,11 +12,11 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 
-dir_name = "generations"
+dir_name = "../generations"
 
 
 def generate_uptimes_by_params(
-        freqs_awake_list: List[int],
+        rounds_awake_list: List[int],
         time_awakening: List[int],
         nb_deps_list: List[int],
         overlap_percentages_list: List[Tuple],
@@ -31,7 +31,7 @@ def generate_uptimes_by_params(
     """
     uptimes_by_params = {}
     # Compute each possible combination between parameters
-    for freq, duration, nb_deps in product(freqs_awake_list, time_awakening, nb_deps_list):
+    for round, duration, nb_deps in product(rounds_awake_list, time_awakening, nb_deps_list):
         covering_perc_values = {}
         for overlap_tuple in overlap_percentages_list:
             covering_perc_values[overlap_tuple] = None
@@ -41,30 +41,29 @@ def generate_uptimes_by_params(
         while not all(uptimes is not None for uptimes in covering_perc_values.values()):
             # On écarte de plus en plus la plage sur laquelle choisir les uptimes
             gap = 100
-            uptimes_list = compute_uptimes_for_params(freq, nb_deps, 100, duration, 10, offset_between_draw)
+            uptimes_list = compute_uptimes_for_params(round, nb_deps, 100, duration, 10, offset_between_draw)
 
             # Check if uptimes overlap fits into category
             dep_num = 0    # Check only server
-            cov_perc_list = compute_covering_time_dep(dep_num, freq, duration, uptimes_list)
+            cov_perc_list = compute_covering_time_dep(dep_num, round, duration, uptimes_list)
             server_means_coverage = round(sum(cov_perc_list)/len(cov_perc_list), 2)
             print(f"Server coverage: {server_means_coverage}% for gap {gap}")
             for cover_val in covering_perc_values.keys():
                 # TODO Mettre des intervals plus larges, entre 0.1 et 0.2, au lieu d'une valeur fixe
                 if covering_perc_values[cover_val] is None and cover_val[0] <= server_means_coverage <= cover_val[1]:
-                    print(f"Found for {(freq, duration, nb_deps)} {cover_val}")
+                    print(f"Found for {(round, duration, nb_deps)} {cover_val}")
                     covering_perc_values[cover_val] = uptimes_list
 
-        uptimes_by_params[(freq, duration, nb_deps)] = covering_perc_values
+        uptimes_by_params[(round, duration, nb_deps)] = covering_perc_values
 
     return uptimes_by_params
 
 
-def compute_uptimes_for_params(freq, nb_deps, gap, duration, spread, offset_between_draw):
+def compute_uptimes_for_params(round, nb_deps, gap, duration, spread, offset_between_draw):
     uptimes_list = [[] for _ in range(nb_deps + 1)]
-    for up_num in range(freq):
+    for up_num in range(round):
         b_min = gap * up_num + offset_between_draw * up_num
         b_max = gap * (up_num+1) + (duration*up_num - duration)
-        # print(b_min, b_max)
         mu, sigma = (b_min + b_max)/2, spread  # mean and standard deviation
         number_generator = list(filter(lambda x: b_min <= x <= b_max, np.random.normal(mu, sigma, 500)))
         number_generator = iter(number_generator)
@@ -73,7 +72,7 @@ def compute_uptimes_for_params(freq, nb_deps, gap, duration, spread, offset_betw
     return tuple(tuple(uptimes) for uptimes in uptimes_list)
 
 
-def compute_covering_time_dep(dep_num: int, freq: int, time_awoken: float, all_dep_uptimes):
+def compute_covering_time_dep(dep_num: int, round: int, time_awoken: float, all_dep_uptimes):
     uptimes_dep = all_dep_uptimes[dep_num]
     all_other_uptimes = [all_dep_uptimes[i] for i in range(len(all_dep_uptimes)) if dep_num != i]
     overlaps_list = []
@@ -84,7 +83,7 @@ def compute_covering_time_dep(dep_num: int, freq: int, time_awoken: float, all_d
                 overlap = min(uptime_dep[0] + time_awoken, other_uptime_dep[0] + time_awoken) - max(uptime_dep[0], other_uptime_dep[0])
                 covering_time += overlap if overlap > 0 else 0
 
-        percentage_overlap = covering_time/(time_awoken*freq)
+        percentage_overlap = covering_time/(time_awoken*round)
         overlaps_list.append(percentage_overlap)
 
     return overlaps_list
@@ -100,7 +99,7 @@ def plot_uptimes(uptimes_by_params, datetime_now_formatted: str):
     # For each combination of param, plot figure by covering percentage
     for params, uptimes_to_plot in uptimes_by_params.items():
         # Create dir to storage images for specific param combination
-        freq, duration, nb_deps = params
+        round, duration, nb_deps = params
 
         # Create image for each covering percentage
         for perc, all_uptimes in uptimes_to_plot.items():
@@ -119,7 +118,7 @@ def plot_uptimes(uptimes_by_params, datetime_now_formatted: str):
             min_p, max_p = perc
             min_p = str(min_p).replace(".", "_")
             max_p = str(max_p).replace(".", "_")
-            plt.savefig(f"{dir_name}/{datetime_now_formatted}/figure-{freq}-{duration}-{nb_deps}-{min_p}-{max_p}.png")
+            plt.savefig(f"{dir_name}/{datetime_now_formatted}/figure-{round}-{duration}-{nb_deps}-{min_p}-{max_p}.png")
             plt.close(figure_number)
             figure_number += 1
             line_number = 5
@@ -127,10 +126,7 @@ def plot_uptimes(uptimes_by_params, datetime_now_formatted: str):
 
 def main():
     # Compute uptimes
-    # freqs_awake_list = [30]
-    # time_awakening = [30, 60]
-    # nb_deps_list = [12]
-    freqs_awake_list = [60]
+    rounds_awake_list = [60]
     time_awakening = [30]
     nb_deps_list = [12]
     overlap_percentages_list = [(0.5, 0.6)]
@@ -138,7 +134,7 @@ def main():
     step_range = 1
     offset_between_draw = 30
     uptimes_by_params = generate_uptimes_by_params(
-        freqs_awake_list,
+        rounds_awake_list,
         time_awakening,
         nb_deps_list,
         overlap_percentages_list,
@@ -152,21 +148,17 @@ def main():
 
     os.makedirs(f"{dir_name}/{datetime_now_formatted}", exist_ok=True)
     for params, overlap_values in uptimes_by_params.items():
-        freq, duration, nb_deps = params
+        round, duration, nb_deps = params
         for overlap_perc, uptimes in overlap_values.items():
             min_p, max_p = overlap_perc
             min_p = str(min_p).replace(".", "_")
             max_p = str(max_p).replace(".", "_")
-            file_name = f"{dir_name}/{datetime_now_formatted}/uptimes-{freq}-{duration}-{nb_deps}-{min_p}-{max_p}.json"
+            file_name = f"{dir_name}/{datetime_now_formatted}/uptimes-{round}-{duration}-{nb_deps}-{min_p}-{max_p}.json"
             with open(file_name, "w") as f:
                 json.dump(uptimes, f)
 
     # Plot uptimes
     plot_uptimes(uptimes_by_params, datetime_now_formatted)
-
-    # Save uptimes
-    # with open(f"experiment/generated_covering_taux/{datetime_now_formatted}/uptimes.json", "w") as f:
-    #     json.dump({str(k): {str(perc): uptimes for perc, uptimes in v.items()} for k,v in uptimes_by_params.items()}, f)  # TODO: to refacto (que ce soit plus clair)
 
 
 if __name__ == '__main__':

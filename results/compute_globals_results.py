@@ -139,7 +139,7 @@ def main():
                         if len(output[tab_name][perc_name][version_name][t_name]["files"]) < 40:
                             output[tab_name][perc_name][version_name][t_name]["files"].append(to_s)
 
-    with open("global_results.json", "w") as f:
+    with open("global_results_4_draws.json", "w") as f:
         json.dump(output, f, indent=4)
 
     compute_mean_std(output)
@@ -160,7 +160,7 @@ def compute_mean_std(output):
                                 "std": round(c_std, 3)
                             }
 
-    with open("global_results_computed.json", "w") as f:
+    with open("global_results_computed_4_draws.json", "w") as f:
         json.dump(computed_output, f, indent=4)
 
 
