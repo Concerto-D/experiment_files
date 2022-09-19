@@ -37,8 +37,8 @@ the server, by respecting the desired overlap rate for dependency and for each r
 The ```raw_results``` folder contains all the results of the experiment that was conducted for the ICSOC 2022. These results
 are not ordered.
 
-The ```global_results_4_draws.json``` are the result of the execution of the script ```compute_globals_results.py```. In order to have the same
-amount of draws for every results, draws in excess are removed from the results (some results have 5 to 8 draws). However, removing these
-draws do not have a significant impact on the resulting std.
+The ```global_results_4_draws.json``` are the result of the execution of the script ```compute_globals_results.py``` on ```raw_results```. 
+In order to have the same amount of draws for every results, draws in excess are removed from the results (some results 
+have 5 to 8 draws). However, removing these draws do not have a significant impact on the resulting std.
 
 In order to get the full results, run the script ```python3 compute_globals_results.py```.
