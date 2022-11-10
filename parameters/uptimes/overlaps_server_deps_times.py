@@ -20,7 +20,7 @@ def compute_covering_time_dep(dep_num: int, round: int, time_awoken: float, all_
 
 
 if __name__ == "__main__":
-    file_name = sys.argv[1]
+    file_name = sys.argv[1] if len(sys.argv) > 1 else "uptimes-60-30-12-0_5-0_6.json"
     output = json.load(open(file_name))
 
     print(file_name)
@@ -31,7 +31,13 @@ if __name__ == "__main__":
             o2, d2 = output[k][i]
             print(output[0][i], end="")
             print(output[k][i], end="")
-            print(f"   Server/dep{k-1}   Overlap: {max(min(o0+d0, o2+d2) - max(o0, o2), 0)}")
+            if o2 < o0:
+                typeOverlap = "Left"
+            elif o2 > o0:
+                typeOverlap = "Right"
+            else:
+                typeOverlap = "Full"
+            print(f"   Server/dep{k-1}   Overlap: {max(min(o0+d0, o2+d2) - max(o0, o2), 0)}   {typeOverlap}")
         print("-----------------\n")
 
     dep_num = 0  # Check only server
