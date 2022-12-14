@@ -20,7 +20,7 @@ def compute_covering_time_dep(dep_num: int, round: int, time_awoken: float, all_
 
 
 if __name__ == "__main__":
-    file_name = sys.argv[1] if len(sys.argv) > 1 else "uptimes-60-30-12-0_02-0_05.json"
+    file_name = sys.argv[1] if len(sys.argv) > 1 else "uptimes-60-30-12-0_5-0_6.json"
     output = json.load(open(file_name))
 
     print(file_name)
