@@ -57,11 +57,16 @@ output = {
             "0.5": copy.deepcopy(output_trans),
             "1": copy.deepcopy(output_trans),
         },
+        "1-1": {
+            "0": copy.deepcopy(output_trans),
+            "0.5": copy.deepcopy(output_trans),
+            "1": copy.deepcopy(output_trans),
+        }
     }
 }
 
 def main():
-    results_dir = "/home/aomond/experiments_results/replay-grisou"
+    results_dir = "/home/aomond/experiments_results/concerto-d/prod/no-delay"
     for file_name in os.listdir(results_dir):
         with open(f"{results_dir}/{file_name}") as f:
             file_content = yaml.safe_load(f)
@@ -115,6 +120,11 @@ def compute_mean_std(results_dir, output):
                                 "mean": str(round(float(c_mean), 2)).replace(".", ","),
                                 "std": str(round(float(c_std), 2)).replace(".", ",")
                             }
+
+                            # Visualisation des std supérieures à 1
+                            resulted_std = computed_output[tab][perc][categ][trans][metric]["std"]
+                            if c_std > 1:
+                                computed_output[tab][perc][categ][trans][metric]["std"] += f"     # STD == {resulted_std}"
 
     with open(f"{results_dir}/global_results_expes_computed.yaml", "w") as f:
         yaml.safe_dump(computed_output, f, indent=4)
