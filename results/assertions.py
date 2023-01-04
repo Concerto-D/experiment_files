@@ -103,6 +103,7 @@ t_dus_1 = [k["t_du"] for n, k in transitions_times_1.items() if n != "server"]
 
 # max_du_dr = max([t_dus_1[i] + t_drs_1[i] for i in range(12)])
 # max_update_duration_100_T1 = max([t_ss_1[i] + max(t_sp_1[i], max_du_dr) + t_sr_1 for i in range(12)])   OLD
+# Au moment où la place s1, s2, etc est quittée, le use port rattaché à cette place est desactivé
 max_update_duration_100_T1 = max([t_ss_1[i] + max(t_sp_1[i], t_dus_1[i] + t_drs_1[i]) + t_sr_1 for i in range(12)])
 min_update_duration_100_T1 = min([t_ss_1[i] + t_dus_1[i] + t_drs_1[i] for i in range(12)])
 max_waitall_True_duration = max([t_ss_1[i] + t_dus_1[i] + t_drs_1[i] for i in range(12)])
@@ -153,6 +154,14 @@ theoretical_values = {
                 "max_deploy_time": 280.51,    # 4 rounds conns, 2 rounds 1er sync, 4 rounds 2eme sync + t_sr,
                 "max_update_time": 45,        # 2-3 rounds max (1 pour faire toutes les transitions + quelques connections, 1 autre pour le reste des connections + le temps des transitions donc entre 10 et 30 selon les temps de transitions)
             },
+        }
+    },
+    "central": {
+        "50-60": {
+            "T0": {
+                "max_deploy_time": 50.21,      # server: overlap right (21.17 sec added) + t_di (3.96) + t_sc3 (23.88) + t_sr (1.2)
+                "max_update_time": 56.56       # server: one whole awaken (30) + time to update and deploy dep9 (2.26 + 1.98) + timeoverlap (24.2) - executionstarttime (~1.9)
+            }
         }
     }
 }
