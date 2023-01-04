@@ -104,11 +104,11 @@ t_dus_1 = [k["t_du"] for n, k in transitions_times_1.items() if n != "server"]
 # max_du_dr = max([t_dus_1[i] + t_drs_1[i] for i in range(12)])
 # max_update_duration_100_T1 = max([t_ss_1[i] + max(t_sp_1[i], max_du_dr) + t_sr_1 for i in range(12)])   OLD
 # Au moment où la place s1, s2, etc est quittée, le use port rattaché à cette place est desactivé
-max_update_duration_100_T1 = max([t_ss_1[i] + max(t_sp_1[i], t_dus_1[i] + t_drs_1[i]) + t_sr_1 for i in range(12)])
+max_update_duration_100_T1 = max([(t_ss_1[i] + max(t_sp_1[i], t_dus_1[i] + t_drs_1[i]) + t_sr_1, i) for i in range(12)], key=lambda x: x[0])
 min_update_duration_100_T1 = min([t_ss_1[i] + t_dus_1[i] + t_drs_1[i] for i in range(12)])
 max_waitall_True_duration = max([t_ss_1[i] + t_dus_1[i] + t_drs_1[i] for i in range(12)])
-# print(max_update_duration_100_T1)
-print(max_waitall_True_duration)
+print(max_update_duration_100_T1)
+# print(max_waitall_True_duration)
 #
 # for i in range(12):
 #     print(i, t_ss_1[i] + t_dus_1[i] + t_drs_1[i])
@@ -188,6 +188,6 @@ def print_duration_delta(results_files: List[str]):
         print()
 
 
-print_duration_delta([
-    "results_synchronous_T0_perc-1-1_waiting_rate-1-2022-12-14_17-52-39.yaml",
-])
+# print_duration_delta([
+#     "results_synchronous_T0_perc-1-1_waiting_rate-1-2022-12-14_17-52-39.yaml",
+# ])
