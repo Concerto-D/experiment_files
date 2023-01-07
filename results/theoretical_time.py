@@ -57,14 +57,14 @@ def compute_theoretical_100_max_update_time(transitions_times_dict):
     return end_reconf, index_s
 
 
-T1_100_max_deploy_time, index_deploy_T0 = compute_theoretical_100_max_deploy_time(transitions_times_0)
-T1_100_max_update_time, index_update_T0 = compute_theoretical_100_max_update_time(transitions_times_0)
+T0_100_max_deploy_time, index_deploy_T0 = compute_theoretical_100_max_deploy_time(transitions_times_0)
+T0_100_max_update_time, index_update_T0 = compute_theoretical_100_max_update_time(transitions_times_0)
 
-print(T1_100_max_deploy_time)
-print(T1_100_max_update_time)
+print(f"T0_100_max_deploy_time: {T0_100_max_deploy_time}")
+print(f"T0_100_max_update_time: {T0_100_max_update_time}")
 
 T1_100_max_deploy_time, index_deploy_T1 = compute_theoretical_100_max_deploy_time(transitions_times_1)
 T1_100_max_update_time, index_update_T1 = compute_theoretical_100_max_update_time(transitions_times_1)
 
-print(T1_100_max_deploy_time)
-print(T1_100_max_update_time)
+print(f"T1_100_max_deploy_time: {T1_100_max_deploy_time}")
+print(f"T1_100_max_update_time: {T1_100_max_update_time}")
