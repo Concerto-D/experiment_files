@@ -68,6 +68,9 @@ output = {
 def main():
     results_dir = "/home/aomond/experiments_results/concerto-d/prod/no-delay"
     for file_name in os.listdir(results_dir):
+        if os.path.isdir(results_dir + "/" + file_name):
+            continue
+
         with open(f"{results_dir}/{file_name}") as f:
             file_content = yaml.safe_load(f)
         if "0_02-0_05" in file_content["expe_parameters"]["uptimes_file_name"]:
