@@ -56,6 +56,14 @@ def compute_theoretical_100_max_update_time(transitions_times_dict):
     end_reconf = first_sync_time
     return end_reconf, index_s
 
+t_sa_0, t_sc_0, t_sr_0, t_ss_0, t_sp_0, t_dis_0, t_drs_0, t_dus_0 = _get_transitions_times(transitions_times_0)
+server_suspend_time_T0 = max([t_ss_0[i] + t_sp_0[i] for i in range(12)])
+print(server_suspend_time_T0)
+
+t_sa_1, t_sc_1, t_sr_1, t_ss_1, t_sp_1, t_dis_1, t_drs_1, t_dus_1 = _get_transitions_times(transitions_times_1)
+server_suspend_time_T1 = max([t_ss_1[i] + t_sp_1[i] for i in range(12)])
+print(server_suspend_time_T1)
+
 
 T0_100_max_deploy_time, index_deploy_T0 = compute_theoretical_100_max_deploy_time(transitions_times_0)
 T0_100_max_update_time, index_update_T0 = compute_theoretical_100_max_update_time(transitions_times_0)
