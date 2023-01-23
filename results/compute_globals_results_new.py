@@ -65,8 +65,8 @@ output = {
     }
 }
 
-def main():
-    results_dir = "/home/aomond/experiments_results/concerto-d/prod/no-delay"
+
+def main(results_dir):
     for file_name in os.listdir(results_dir):
         if os.path.isdir(results_dir + "/" + file_name):
             continue
@@ -134,4 +134,4 @@ def compute_mean_std(results_dir, output):
 
 
 if __name__ == "__main__":
-    main()
+    main("/home/aomond/experiments_results/concerto-d/prod/raspberry-5_deps-no-conn-synced/synchrone")
