@@ -3,9 +3,8 @@ from openpyxl import Workbook
 
 case_mapping = {
     ("2-5", "synchronous", "T0", "max_deploy_time"): "C5",
-    ("2-5", "synchronous", "T0", "max_update_time"): "C6",
-    ("2-5", "synchronous", "T1", "max_deploy_time"): "C8",
-    ("2-5", "synchronous", "T1", "max_update_time"): "C9",
+    ("2-5", "synchronous", "T0", "max_update_time"): "C8",
+    ("2-5", "synchronous", "T1", "max_deploy_time"): "C6",
     ("2-5", "synchronous", "T1", "max_update_time"): "C9",
     ("2-5", "synchronous", "T0", "global_finished_reconf"): "C20",
     ("2-5", "synchronous", "T0", "files"): "C21",
@@ -13,8 +12,8 @@ case_mapping = {
     ("2-5", "synchronous", "T1", "files"): "C23",
 
     ("20-30", "synchronous", "T0", "max_deploy_time"): "F5",
-    ("20-30", "synchronous", "T0", "max_update_time"): "F6",
-    ("20-30", "synchronous", "T1", "max_deploy_time"): "F8",
+    ("20-30", "synchronous", "T0", "max_update_time"): "F8",
+    ("20-30", "synchronous", "T1", "max_deploy_time"): "F6",
     ("20-30", "synchronous", "T1", "max_update_time"): "F9",
     ("20-30", "synchronous", "T0", "global_finished_reconf"): "F20",
     ("20-30", "synchronous", "T0", "files"): "F21",
@@ -22,8 +21,8 @@ case_mapping = {
     ("20-30", "synchronous", "T1", "files"): "F23",
 
     ("50-60", "synchronous", "T0", "max_deploy_time"): "I5",
-    ("50-60", "synchronous", "T0", "max_update_time"): "I6",
-    ("50-60", "synchronous", "T1", "max_deploy_time"): "I8",
+    ("50-60", "synchronous", "T0", "max_update_time"): "I8",
+    ("50-60", "synchronous", "T1", "max_deploy_time"): "I6",
     ("50-60", "synchronous", "T1", "max_update_time"): "I9",
     ("50-60", "synchronous", "T0", "global_finished_reconf"): "I20",
     ("50-60", "synchronous", "T0", "files"): "I21",
@@ -31,8 +30,8 @@ case_mapping = {
     ("50-60", "synchronous", "T1", "files"): "I23",
 
     ("1-1", "synchronous", "T0", "max_deploy_time"): "L5",
-    ("1-1", "synchronous", "T0", "max_update_time"): "L6",
-    ("1-1", "synchronous", "T1", "max_deploy_time"): "L8",
+    ("1-1", "synchronous", "T0", "max_update_time"): "L8",
+    ("1-1", "synchronous", "T1", "max_deploy_time"): "L6",
     ("1-1", "synchronous", "T1", "max_update_time"): "L9",
     ("1-1", "synchronous", "T0", "global_finished_reconf"): "L20",
     ("1-1", "synchronous", "T0", "files"): "L21",
