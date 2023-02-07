@@ -1,50 +1,29 @@
 import yaml
 from openpyxl import Workbook
 
-case_mapping = {
-    ("2-5", "synchronous", "T0", "max_deploy_time"): "C5",
-    ("2-5", "synchronous", "T0", "max_update_time"): "C8",
-    ("2-5", "synchronous", "T1", "max_deploy_time"): "C6",
-    ("2-5", "synchronous", "T1", "max_update_time"): "C9",
-    ("2-5", "synchronous", "T0", "global_finished_reconf"): "C20",
-    ("2-5", "synchronous", "T0", "files"): "C21",
-    ("2-5", "synchronous", "T1", "global_finished_reconf"): "C22",
-    ("2-5", "synchronous", "T1", "files"): "C23",
 
-    ("20-30", "synchronous", "T0", "max_deploy_time"): "F5",
-    ("20-30", "synchronous", "T0", "max_update_time"): "F8",
-    ("20-30", "synchronous", "T1", "max_deploy_time"): "F6",
-    ("20-30", "synchronous", "T1", "max_update_time"): "F9",
-    ("20-30", "synchronous", "T0", "global_finished_reconf"): "F20",
-    ("20-30", "synchronous", "T0", "files"): "F21",
-    ("20-30", "synchronous", "T1", "global_finished_reconf"): "F22",
-    ("20-30", "synchronous", "T1", "files"): "F23",
+def generate_sheet_expe_1(wb: Workbook, expe_name, data_path):
+    col_mapping = {
+        "2-5": {"synchronous": "C", "asynchronous": "D", "mjuz": "E"},
+        "20-30": {"synchronous": "F", "asynchronous": "G", "mjuz": "H"},
+        "50-60": {"synchronous": "I", "asynchronous": "J", "mjuz": "K"},
+        "1-1": {"synchronous": "L", "asynchronous": "M", "mjuz": "N"},
+    }
 
-    ("50-60", "synchronous", "T0", "max_deploy_time"): "I5",
-    ("50-60", "synchronous", "T0", "max_update_time"): "I8",
-    ("50-60", "synchronous", "T1", "max_deploy_time"): "I6",
-    ("50-60", "synchronous", "T1", "max_update_time"): "I9",
-    ("50-60", "synchronous", "T0", "global_finished_reconf"): "I20",
-    ("50-60", "synchronous", "T0", "files"): "I21",
-    ("50-60", "synchronous", "T1", "global_finished_reconf"): "I22",
-    ("50-60", "synchronous", "T1", "files"): "I23",
+    def case_mapping(perc, categ):
+        col = col_mapping[perc][categ]
+        return {
+            (perc, categ, "T0", "max_deploy_time"): f"{col}5",
+            (perc, categ, "T0", "max_update_time"): f"{col}8",
+            (perc, categ, "T1", "max_deploy_time"): f"{col}6",
+            (perc, categ, "T1", "max_update_time"): f"{col}9",
+            (perc, categ, "T0", "global_finished_reconf"): f"{col}20",
+            (perc, categ, "T0", "files"): f"{col}21",
+            (perc, categ, "T1", "global_finished_reconf"): f"{col}22",
+            (perc, categ, "T1", "files"): f"{col}23",
+        }
 
-    ("1-1", "synchronous", "T0", "max_deploy_time"): "L5",
-    ("1-1", "synchronous", "T0", "max_update_time"): "L8",
-    ("1-1", "synchronous", "T1", "max_deploy_time"): "L6",
-    ("1-1", "synchronous", "T1", "max_update_time"): "L9",
-    ("1-1", "synchronous", "T0", "global_finished_reconf"): "L20",
-    ("1-1", "synchronous", "T0", "files"): "L21",
-    ("1-1", "synchronous", "T1", "global_finished_reconf"): "L22",
-    ("1-1", "synchronous", "T1", "files"): "L23",
-}
-
-
-def generate_table_1(data_path):
-    wb = Workbook()
-
-    # grab the active worksheet
-    ws = wb.active
+    ws = wb.create_sheet("expe_1")
 
     # Titles
     ws["A4"] = "DEPLOY"
@@ -70,30 +49,128 @@ def generate_table_1(data_path):
     ws["H2"] = "50-60%"
     ws["K2"] = "100%"
 
-    # Put results
-    with open(data_path) as f:
-        tab_values = yaml.safe_load(f)["tab1"]
+    fill_ws_from_results(case_mapping, data_path, expe_name, ws, ["synchronous", "asynchronous"], "tab1")
 
-    # Refacto avec compute_globals_results_new.py
-    for perc, perc_values in tab_values.items():
-        for categ, categ_values in perc_values.items():
-            for trans, trans_values in categ_values.items():
-                for metric, metric_values in trans_values.items():
-                    if len(metric_values) > 0:
-                        mapped_case = case_mapping.get((perc, categ, trans, metric))
-                        if mapped_case is not None:
-                            col = mapped_case[0]
-                            lig = int(mapped_case[1:])
 
-                            if metric == "global_finished_reconf":
-                                ws[mapped_case] = all(metric_values)
-                            elif metric == "files":
-                                ws[mapped_case] = len(metric_values)
-                            else:
-                                ws[mapped_case] = metric_values["mean"]
-                                ws[col+str(lig+8)] = metric_values["std"]
+def fill_ws_from_results(case_mapping, data_path, expe_name, ws, categ_dirs_list, tab_name):
+    # For each category put results
+    result_file_name = "global_results_expes_computed.yaml"
+    for categ_file in categ_dirs_list:
+        with open(f"{data_path}/{expe_name}/{categ_file}/{result_file_name}") as f:
+            tab_values = yaml.safe_load(f)[tab_name]
 
-    # Save the file
-    wb.save("table1.xlsx")
+        # Refacto avec compute_globals_results_new.py
+        for perc, perc_values in tab_values.items():
+            for categ, categ_values in perc_values.items():
+                for trans, trans_values in categ_values.items():
+                    for metric, metric_values in trans_values.items():
+                        if len(metric_values) > 0:
+                            mapped_case = case_mapping(perc, categ).get((perc, categ, trans, metric))
+                            if mapped_case is not None:
+                                col = mapped_case[0]
+                                lig = int(mapped_case[1:])
 
-generate_table_1("/home/aomond/experiments_results/concerto-d/prod/raspberry-5_deps-no-conn-synced/synchrone/global_results_expes_computed.yaml")
+                                if metric == "global_finished_reconf":
+                                    ws[mapped_case] = all(metric_values)
+                                elif metric == "files":
+                                    ws[mapped_case] = len(metric_values)
+                                else:
+                                    ws[mapped_case] = metric_values["mean"]
+                                    ws[col + str(lig + 8)] = metric_values["std"]
+
+
+def generate_sheet_expe_2(wb, expe_name, data_path):
+    col_mapping = {
+        "2-5": {"0": "B", "0.5": "D", "1": "E"},
+        "20-30": {"0": "G", "0.5": "I", "1": "K"},
+        "50-60": {"0": "L", "0.5": "N", "1": "P"},
+    }
+    def case_mapping(perc, categ):
+        col = col_mapping.get(perc, {}).get(categ, None)
+        if col is None:
+            return {}
+        return {
+            (perc, categ, "T0", "max_reconf_time"): f"{col}4",
+            (perc, categ, "T0", "max_sleeping_time"): f"{col}5",
+            (perc, categ, "T0", "max_execution_time"): f"{col}6",
+
+            (perc, categ, "T1", "max_reconf_time"): f"{col}8",
+            (perc, categ, "T1", "max_sleeping_time"): f"{col}9",
+            (perc, categ, "T1", "max_execution_time"): f"{col}10",
+
+            (perc, categ, "T0", "global_finished_reconf"): f"{col}20",
+            (perc, categ, "T0", "files"): f"{col}21",
+            (perc, categ, "T1", "global_finished_reconf"): f"{col}22",
+            (perc, categ, "T1", "files"): f"{col}23",
+        }
+
+    ws = wb.create_sheet("expe_2")
+
+    # Titles
+    ws["A3"] = "T0"
+    ws["A4"] = "max uptime duration"
+    ws["A5"] = "max Sleeping duration"
+    ws["A6"] = "max reconf duration"
+    ws["A7"] = "T1"
+    ws["A8"] = "max uptime duration"
+    ws["A9"] = "max Sleeping duration"
+    ws["A10"] = "max reconf duration"
+
+    ws["B1"] = "2-5%"
+    ws["G1"] = "20-30%"
+    ws["L1"] = "50-60%"
+
+    ws["B2"] = "timeout=0%"
+    ws["D2"] = "timeout=50%"
+    ws["F2"] = "timeout=100%"
+    ws["G2"] = "timeout=0%"
+    ws["I2"] = "timeout=50%"
+    ws["K2"] = "timeout=100%"
+    ws["L2"] = "timeout=0%"
+    ws["N2"] = "timeout=50%"
+    ws["P2"] = "timeout=100%"
+
+    ws["B3"] = "seconds"
+    ws["C3"] = "gain (%)"
+    ws["D3"] = "seconds"
+    ws["E3"] = "gain (%)"
+    ws["F3"] = "seconds"
+    ws["G3"] = "seconds"
+    ws["H3"] = "gain (%)"
+    ws["I3"] = "seconds"
+    ws["J3"] = "gain (%)"
+    ws["K3"] = "seconds"
+    ws["L3"] = "seconds"
+    ws["M3"] = "gain (%)"
+    ws["N3"] = "seconds"
+    ws["O3"] = "gain (%)"
+    ws["P3"] = "seconds"
+
+    ws["B7"] = "seconds"
+    ws["C7"] = "gain (%)"
+    ws["D7"] = "seconds"
+    ws["E7"] = "gain (%)"
+    ws["F7"] = "seconds"
+    ws["G7"] = "seconds"
+    ws["H7"] = "gain (%)"
+    ws["I7"] = "seconds"
+    ws["J7"] = "gain (%)"
+    ws["K7"] = "seconds"
+    ws["L7"] = "seconds"
+    ws["M7"] = "gain (%)"
+    ws["N7"] = "seconds"
+    ws["O7"] = "gain (%)"
+    ws["P7"] = "seconds"
+
+    fill_ws_from_results(case_mapping, data_path, expe_name, ws, ["asynchronous"], "tab2")
+
+
+wb = Workbook()
+expe_name = "raspberry-5_deps-no-conn-synced"
+
+# Generate sheets
+generate_sheet_expe_1(wb, expe_name, "/home/aomond/experiments_results/concerto-d/prod")
+generate_sheet_expe_2(wb, expe_name, "/home/aomond/experiments_results/concerto-d/prod")
+
+# Save the file
+wb.save(f"{expe_name}iuh.xlsx")
