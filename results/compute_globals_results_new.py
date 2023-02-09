@@ -65,10 +65,15 @@ output = {
     }
 }
 
-
+excluded_files_name = [
+    "global_results_expes.yaml",
+    "global_results_expes_computed.yaml",
+    "old_global_results_expes.yaml",
+    "old_global_results_expes_computed.yaml",
+]
 def main(results_dir):
     for file_name in os.listdir(results_dir):
-        if os.path.isdir(results_dir + "/" + file_name):
+        if os.path.isdir(results_dir + "/" + file_name) or file_name in excluded_files_name:
             continue
 
         with open(f"{results_dir}/{file_name}") as f:
@@ -116,6 +121,7 @@ def compute_mean_std(results_dir, output):
             for categ, categ_values in perc_values.items():
                 for trans, trans_values in categ_values.items():
                     for metric, metric_values in trans_values.items():
+                        need_to_report_to_tab2 = tab == "tab1" and perc != "1-1" and categ == "asynchronous"
                         if metric not in ["global_finished_reconf", "files"] and len(metric_values) > 0:
                             c_mean = np.mean(metric_values)
                             c_std = np.std(metric_values)
@@ -124,14 +130,23 @@ def compute_mean_std(results_dir, output):
                                 "std": str(round(float(c_std), 2)).replace(".", ",")
                             }
 
+                            if need_to_report_to_tab2:
+                                computed_output["tab2"][perc]["1"][trans][metric] = copy.deepcopy(computed_output[tab][perc][categ][trans][metric])
+
                             # Visualisation des std supérieures à 1
                             resulted_std = computed_output[tab][perc][categ][trans][metric]["std"]
                             if c_std > 1:
                                 computed_output[tab][perc][categ][trans][metric]["std"] += f"     # STD == {resulted_std}"
+
+                                if need_to_report_to_tab2:
+                                    computed_output["tab2"][perc]["1"][trans][metric]["std"] = copy.deepcopy(computed_output[tab][perc][categ][trans][metric]["std"])
+                        else:
+                            if need_to_report_to_tab2:
+                                computed_output["tab2"][perc]["1"][trans][metric] = copy.deepcopy(metric_values)
 
     with open(f"{results_dir}/global_results_expes_computed.yaml", "w") as f:
         yaml.safe_dump(computed_output, f, indent=4)
 
 
 if __name__ == "__main__":
-    main("/home/aomond/experiments_results/concerto-d/prod/raspberry-5_deps-no-conn-synced/synchrone")
+    main("/home/aomond/experiments_results/concerto-d/prod/raspberry-5_deps-no-conn-synced/asynchronous")

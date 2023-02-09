@@ -81,7 +81,7 @@ def fill_ws_from_results(case_mapping, data_path, expe_name, ws, categ_dirs_list
 
 def generate_sheet_expe_2(wb, expe_name, data_path):
     col_mapping = {
-        "2-5": {"0": "B", "0.5": "D", "1": "E"},
+        "2-5": {"0": "B", "0.5": "D", "1": "F"},
         "20-30": {"0": "G", "0.5": "I", "1": "K"},
         "50-60": {"0": "L", "0.5": "N", "1": "P"},
     }
@@ -164,6 +164,38 @@ def generate_sheet_expe_2(wb, expe_name, data_path):
 
     fill_ws_from_results(case_mapping, data_path, expe_name, ws, ["asynchronous"], "tab2")
 
+    # Fill gains
+    gain_col_mapping = {
+        "2-5": {"0": "C", "0.5": "E"},
+        "20-30": {"0": "H", "0.5": "J"},
+        "50-60": {"0": "M", "0.5": "O"},
+    }
+    def gain_case_mapping(perc, categ):
+        col = gain_col_mapping.get(perc, {}).get(categ, None)
+        if col is None:
+            return {}
+        return {
+            (perc, categ, "T0", "max_reconf_time"): f"{col}4",
+            (perc, categ, "T0", "max_sleeping_time"): f"{col}5",
+            (perc, categ, "T0", "max_execution_time"): f"{col}6",
+
+            (perc, categ, "T1", "max_reconf_time"): f"{col}8",
+            (perc, categ, "T1", "max_sleeping_time"): f"{col}9",
+            (perc, categ, "T1", "max_execution_time"): f"{col}10",
+        }
+
+    def compute_gain(begin, end):
+        return round(begin-end)*100/end
+
+    for perc in ["2-5", "20-30", "50-60"]:
+        for categ in ["0", "0.5"]:
+            for parameters, output_case in gain_case_mapping(perc, categ).items():
+                end_perc, end_categ, end_trans, end_metric = parameters
+                begin_case = float(ws[case_mapping(perc, categ)[parameters]].value.replace(",", "."))
+                end_case = float(ws[case_mapping(perc, "1")[(end_perc, "1", end_trans, end_metric)]].value.replace(",", "."))
+                result_gain = compute_gain(begin_case, end_case)
+                ws[output_case] = result_gain
+
 
 wb = Workbook()
 expe_name = "raspberry-5_deps-no-conn-synced"
@@ -173,4 +205,4 @@ generate_sheet_expe_1(wb, expe_name, "/home/aomond/experiments_results/concerto-
 generate_sheet_expe_2(wb, expe_name, "/home/aomond/experiments_results/concerto-d/prod")
 
 # Save the file
-wb.save(f"{expe_name}iuh.xlsx")
+wb.save(f"{expe_name}iuhzzfzef.xlsx")
