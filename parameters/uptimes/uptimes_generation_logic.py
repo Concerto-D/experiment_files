@@ -1,3 +1,4 @@
+import copy
 import json
 import os
 import random
@@ -8,16 +9,24 @@ from datetime import datetime
 import numpy as np
 
 
-def compute_uptimes(round, duration, nb_deps, overlap_taux, overlap_time_max, max_nb_up_allowed):
-    init_up_list = -1 if max_nb_up_allowed else nb_deps
+def compute_uptimes(round, duration, nb_deps, overlap_taux, overlap_time_max, max_nb_up_allowed, nb_zero_overlap_rounds=0):
+    """
+    Brute force way to compute overlaps until the percentage and conditions are met
+    """
+    init_up_list = nb_deps
     up_list = [{"max_nb_up_allowed": init_up_list} for _ in range(round)]
-    nb_ups = [15, 15, 10, 15, 5]
-    while any(up["max_nb_up_allowed"] == -1 for up in up_list):
-        k = random.randint(0, round - 1)
-        d = random.randint(0, 4)
-        if nb_ups[d] > 0 and up_list[k]["max_nb_up_allowed"] == -1:
-            up_list[k]["max_nb_up_allowed"] = d
-            nb_ups[d] -= 1
+    # for zero_round in random.sample(range(len(up_list)), nb_zero_overlap_rounds):
+    #     up_list[zero_round]["max_nb_up_allowed"] = 0
+
+    if max_nb_up_allowed:
+        # nb_ups = [15, 15, 10, 15, 5]
+        nb_ups = [5, 5, 6, 5, 15]  # Tweak these values
+        while any(nb_up > 0 for nb_up in nb_ups):
+            k = random.randint(0, round - 1)
+            d = random.randint(0, 4)
+            if nb_ups[d] > 0 and up_list[k]["max_nb_up_allowed"] == nb_deps:
+                up_list[k]["max_nb_up_allowed"] = d
+                nb_ups[d] -= 1
 
     min_taux, max_taux = overlap_taux
     amount_time_min = round * duration * min_taux
@@ -26,20 +35,28 @@ def compute_uptimes(round, duration, nb_deps, overlap_taux, overlap_time_max, ma
     nb_appearance_ok = False
     while not nb_appearance_ok:
         for dep_num in range(nb_deps):
-            mu, sigma = 3, 1.1  # mean and standard deviation
-            number_generator = np.random.lognormal(mu, sigma, 10000)
-            number_generator = list(filter(lambda x: 1 < x <= overlap_time_max, number_generator))
-            number_generator = iter(number_generator)
-            amount_to_spread = random.uniform(amount_time_min, amount_time_max)
-            s = time.time() + 2
-            while amount_to_spread > 0.000001 and time.time() - s < 0:
+            amount_to_spread_to_search = random.uniform(amount_time_min, amount_time_max)
+            save_uplist = copy.deepcopy(up_list)
+            amount_to_spread = amount_to_spread_to_search
+            # while amount_to_spread > 0.001 and time.time() - s < 0:
+            while amount_to_spread > 0.001:
+                # Check if need to reset
+                no_room = True
+                for up in up_list:
+                    if dep_num not in up.keys() and up["max_nb_up_allowed"] > len(up.keys()) - 1:
+                        no_room = False
+                if amount_to_spread > 0.001 and no_room:
+                    print(amount_to_spread)
+                    up_list = copy.deepcopy(save_uplist)
+                    amount_to_spread = amount_to_spread_to_search
+
                 k = random.randint(0, round - 1)
                 current_up = up_list[k]
                 nb_ups_assigned = len(current_up.keys()) - 1
                 if dep_num not in current_up.keys() and current_up["max_nb_up_allowed"] > nb_ups_assigned:
                     # to refacto le 100 perc overlap
                     if not perc_100_overlap:
-                        min_o = next(number_generator) if max_nb_up_allowed else random.uniform(0, overlap_time_max)
+                        min_o = random.uniform(1, 10)  # Tweak these values
                     else:
                         min_o = duration
                     overlap = min(min_o, amount_to_spread)
@@ -74,14 +91,16 @@ def compute_uptimes(round, duration, nb_deps, overlap_taux, overlap_time_max, ma
     return up_list
 
 
-def generate_uptimes_per_dep_num_files(round, duration, nb_deps, overlap_taux, nb_generations, overlap_time_max, max_nb_up_allowed, perc_str):
-    for i in range(nb_generations):
-        up_list = compute_uptimes(round, duration, nb_deps, overlap_taux, overlap_time_max, max_nb_up_allowed=max_nb_up_allowed)
-        timestamp_log_dir = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-        with open(f"uptimes_per_dep_num_for_{perc_str}_overlap-{timestamp_log_dir}", "w") as f:
-            print(f"Generated file: generated_uptimes_for_{perc_str}_specific-{timestamp_log_dir}")
-            json.dump(up_list, f)
-            time.sleep(1)
+def generate_uptimes_per_dep_num_files(round, duration, nb_deps, overlap_taux, nb_generations, overlap_time_max, max_nb_up_allowed, perc_str, nb_zero_overlap_rounds=0):
+    up_list = compute_uptimes(round, duration, nb_deps, overlap_taux, overlap_time_max, max_nb_up_allowed=max_nb_up_allowed, nb_zero_overlap_rounds=nb_zero_overlap_rounds)
+    timestamp_log_dir = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    uptimes_file_name = f"uptimes_per_dep_num_for_{perc_str}_overlap-{timestamp_log_dir}"
+    with open(uptimes_file_name, "w") as f:
+        print(f"Generated file: {uptimes_file_name}")
+        json.dump(up_list, f)
+        time.sleep(1)
+
+    return uptimes_file_name
 
 
 def see_uptimes_files(f):
@@ -108,7 +127,8 @@ def see_uptimes_files(f):
 def create_uptimes_nodes(uptimes_by_round, round, duration, nb_deps, overlap_taux, nb_generations, perc_100_overlap):
     uptimes_nodes = [[] for _ in range(nb_deps + 1)]
     for up_num in range(round):
-        offset = 130 if not perc_100_overlap else 65
+
+        offset = duration * 4 + 10 if not perc_100_overlap else duration * 2 + 5
         before_u = offset * up_num
         uptime = before_u + (duration if not perc_100_overlap else 0)
         after_u = uptime + duration + 5
@@ -144,28 +164,25 @@ def generate_uptimes_nodes_file(
         uptimes_by_round = json.load(f)
     uptimes_nodes = create_uptimes_nodes(uptimes_by_round, round, duration, nb_deps, overlap_taux, nb_generations, perc_100_overlap)
 
-    with open(f"uptimes/uptimes-60-30-12-{perc_str}-zefezf.json", "w") as f:
+    with open(f"uptimes-{round}-{duration}-12-{perc_str}-generated.json", "w") as f:
         json.dump(uptimes_nodes, f)
 
 
 if __name__ == "__main__":
-    round = 60
-    duration = 30
+    round = 36
+    duration = 50
     nb_deps = 12
-    overlap_taux = (0.2, 0.3)
-    nb_generations = 1
+    overlap_taux = (1, 1)
+    nb_generations = 1  # Keep it a 1 bc it will always generate 1 TODO: remove this param
+    overlap_taux_str = f"{str(overlap_taux[0]).replace('.', '_')}-{str(overlap_taux[1]).replace('.', '_')}"
 
-    print("Select order: generate, see <file_name>, compute <file_name>")
-    order = sys.argv[1] if len(sys.argv) > 1 else ""
+    order = sys.argv[1] if len(sys.argv) > 1 else "generate"
     if order == "generate":
-        generate_uptimes_per_dep_num_files(round, duration, nb_deps, overlap_taux, nb_generations, 30, False, "1-1")
+        uptimes_file_name = generate_uptimes_per_dep_num_files(round, duration, nb_deps, overlap_taux, nb_generations, duration, False, overlap_taux_str, nb_zero_overlap_rounds=5)
+        perc_100_overlap = overlap_taux == (1, 1)
+        generate_uptimes_nodes_file(uptimes_file_name, round, duration, nb_deps, overlap_taux, nb_generations, overlap_taux_str, perc_100_overlap)
     elif order == "see":
         file_name = sys.argv[2]
         see_uptimes_files(file_name)
-    elif order == "compute":
-        file_name = sys.argv[2]
-        perc_100_overlap = overlap_taux == (1, 1)
-        generate_uptimes_nodes_file(file_name, round, duration, nb_deps, overlap_taux, nb_generations, "1-1", perc_100_overlap)
     else:
-        print("Wrong order")
-
+        print("Args: generate, see <file_name> or compute <file_name>")

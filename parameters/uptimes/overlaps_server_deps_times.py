@@ -20,28 +20,69 @@ def compute_covering_time_dep(dep_num: int, round: int, time_awoken: float, all_
 
 
 if __name__ == "__main__":
-    file_name = sys.argv[1] if len(sys.argv) > 1 else "uptimes-60-30-12-0_5-0_6.json"
+    # default_file_name = "uptimes-60-30-12-0_02-0_05"
+    # default_file_name = "uptimes-60-30-12-0_2-0_3"
+    # default_file_name = "uptimes-60-30-12-0_5-0_6"
+    # default_file_name = "uptimes-60-30-12-0_7-0_8"
+    # default_file_name = "uptimes-60-30-12-0_8-0_9"
+    # default_file_name = "uptimes-60-30-12-0_5-0_6-generated"
+    # default_file_name = "uptimes-60-50-12-0_02-0_02-generated"
+    # default_file_name = "uptimes-30-50-12-0_02-0_02-generated-best"
+    # default_file_name = "uptimes-36-50-12-0_02-0_02-generated"
+    # default_file_name = "uptimes-36-50-12-0_25-0_25-generated"
+    # default_file_name = "uptimes-36-50-12-0_5-0_5-generated"
+    default_file_name = "uptimes-36-50-12-1-1"
+    file_name = sys.argv[1] if len(sys.argv) > 1 else f"{default_file_name}.json"
     output = json.load(open(file_name))
 
-    print(file_name)
+    # file_output = open(f"output_overlaps_{default_file_name}.txt", "w")
+    file_output = sys.stdout
+    print(file_name, file=file_output)
+    nb_appearances = [0]*12
     for i in range(len(output[0])):
-        print(f"--- FREQ: {i} -----")
+        print(f"--- FREQ: {i} -----", file=file_output)
+        uptimes_str_list = []
+        server_dep_str_list = []
+        overlap_values_list = []
+        typeOverlap_list = []
         for k in range(1, len(output)):
             o0, d0 = output[0][i]
             o2, d2 = output[k][i]
-            print(output[0][i], end="")
-            print(output[k][i], end="")
+            uptime_server = f"[{o0}, {d0}]"
+            uptime_dep    = f"[{round(o2, 3)}, {d2}]"
+            uptime_str = uptime_server + uptime_dep
+            overlap_value = round(max(min(o0 + d0, o2 + d2) - max(o0, o2), 0), 3)
             if o2 < o0:
                 typeOverlap = "Left"
             elif o2 > o0:
                 typeOverlap = "Right"
             else:
                 typeOverlap = "Full"
-            print(f"   Server/dep{k-1}   Overlap: {max(min(o0+d0, o2+d2) - max(o0, o2), 0)}   {typeOverlap}")
-        print("-----------------\n")
+            uptimes_str_list.append(uptime_str)
+            server_dep_str_list.append(f"Server/dep{k-1}")
+            overlap_values_list.append(str(overlap_value))
+            typeOverlap_list.append(typeOverlap)
+            if overlap_value > 0:
+                nb_appearances[k-1] += 1
+
+        max_len_uptimes_str_list = len(max(uptimes_str_list, key=lambda element: len(element)))
+        max_len_server_dep_str_list = len(max(server_dep_str_list, key=lambda element: len(element)))
+        max_list_overlap_values_list = len(max(overlap_values_list, key=lambda element: len(element)))
+        offset = 3
+        for k in range(0, len(uptimes_str_list)):
+            result_str =  uptimes_str_list[k].ljust(max_len_uptimes_str_list + offset, ' ')
+            result_str += server_dep_str_list[k].ljust(max_len_server_dep_str_list + offset, ' ')
+            result_str += overlap_values_list[k].ljust(max_list_overlap_values_list + offset, ' ')
+            result_str += typeOverlap_list[k]
+            print(result_str, file=file_output)
+        print("-----------------\n", file=file_output)
 
     dep_num = 0  # Check only server
-    cov_perc_list = compute_covering_time_dep(dep_num, 60, 30, output)
+    cov_perc_list = compute_covering_time_dep(dep_num, 36, 50, output)
     server_means_coverage = round(sum(cov_perc_list) / len(cov_perc_list), 2)
 
-    print(server_means_coverage)
+    print(f"Total mean coverage: {server_means_coverage}", file=file_output)
+
+    # Nb appearance
+    print(f"Appearances: {nb_appearances}")
+
