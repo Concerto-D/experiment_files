@@ -20,7 +20,7 @@ def compute_uptimes(round, duration, nb_deps, overlap_taux, overlap_time_max, ma
 
     if max_nb_up_allowed:
         # nb_ups = [15, 15, 10, 15, 5]
-        nb_ups = [5, 5, 6, 5, 15]  # Tweak these values
+        nb_ups = [3, 5, 13, 10, 5]  # Tweak these values
         while any(nb_up > 0 for nb_up in nb_ups):
             k = random.randint(0, round - 1)
             d = random.randint(0, 4)
@@ -56,7 +56,7 @@ def compute_uptimes(round, duration, nb_deps, overlap_taux, overlap_time_max, ma
                 if dep_num not in current_up.keys() and current_up["max_nb_up_allowed"] > nb_ups_assigned:
                     # to refacto le 100 perc overlap
                     if not perc_100_overlap:
-                        min_o = random.uniform(1, 10)  # Tweak these values
+                        min_o = random.uniform(2, 10)  # Tweak these values
                     else:
                         min_o = duration
                     overlap = min(min_o, amount_to_spread)
@@ -130,7 +130,7 @@ def create_uptimes_nodes(uptimes_by_round, round, duration, nb_deps, overlap_tau
 
         offset = duration * 4 + 10 if not perc_100_overlap else duration * 2 + 5
         before_u = offset * up_num
-        uptime = before_u + (duration if not perc_100_overlap else 0)
+        uptime = before_u + (duration if not perc_100_overlap else 0) + 5
         after_u = uptime + duration + 5
         uptimes_nodes[0].append((uptime, duration))
         for dep_num in range(nb_deps):
@@ -164,7 +164,7 @@ def generate_uptimes_nodes_file(
         uptimes_by_round = json.load(f)
     uptimes_nodes = create_uptimes_nodes(uptimes_by_round, round, duration, nb_deps, overlap_taux, nb_generations, perc_100_overlap)
 
-    with open(f"uptimes-{round}-{duration}-12-{perc_str}-generated.json", "w") as f:
+    with open(f"uptimes-{round}-{duration}-{nb_deps}-{perc_str}-re-generated.json", "w") as f:
         json.dump(uptimes_nodes, f)
 
 
@@ -172,7 +172,7 @@ if __name__ == "__main__":
     round = 36
     duration = 50
     nb_deps = 12
-    overlap_taux = (1, 1)
+    overlap_taux = (0.02, 0.02)
     nb_generations = 1  # Keep it a 1 bc it will always generate 1 TODO: remove this param
     overlap_taux_str = f"{str(overlap_taux[0]).replace('.', '_')}-{str(overlap_taux[1]).replace('.', '_')}"
 
