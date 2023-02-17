@@ -25,18 +25,22 @@ output_trans = {
 output = {
     "tab1": {
         "2-5": {
+            "mjuz-2-comps": copy.deepcopy(output_trans),
             "synchronous": copy.deepcopy(output_trans),
             "asynchronous": copy.deepcopy(output_trans)
         },
         "20-30": {
+            "mjuz-2-comps": copy.deepcopy(output_trans),
             "synchronous": copy.deepcopy(output_trans),
             "asynchronous": copy.deepcopy(output_trans)
         },
         "50-60": {
+            "mjuz-2-comps": copy.deepcopy(output_trans),
             "synchronous": copy.deepcopy(output_trans),
             "asynchronous": copy.deepcopy(output_trans)
         },
         "1-1": {
+            "mjuz-2-comps": copy.deepcopy(output_trans),
             "synchronous": copy.deepcopy(output_trans),
             "asynchronous": copy.deepcopy(output_trans)
         }
@@ -78,11 +82,12 @@ def main(results_dir):
 
         with open(f"{results_dir}/{file_name}") as f:
             file_content = yaml.safe_load(f)
-        if "0_02-0_05" in file_content["expe_parameters"]["uptimes_file_name"]:
+        # TODO: change percs (2-2 for 0_02-0_02)
+        if "0_02-0_05" in file_content["expe_parameters"]["uptimes_file_name"] or "0_02-0_02" in file_content["expe_parameters"]["uptimes_file_name"]:
             perc_name = "2-5"
-        elif "0_2-0_3" in file_content["expe_parameters"]["uptimes_file_name"]:
+        elif "0_2-0_3" in file_content["expe_parameters"]["uptimes_file_name"] or "0_25-0_25" in file_content["expe_parameters"]["uptimes_file_name"]:
             perc_name = "20-30"
-        elif "0_5-0_6" in file_content["expe_parameters"]["uptimes_file_name"]:
+        elif "0_5-0_6" in file_content["expe_parameters"]["uptimes_file_name"] or "0_5-0_5" in file_content["expe_parameters"]["uptimes_file_name"]:
             perc_name = "50-60"
         else:
             perc_name = "1-1"
@@ -149,4 +154,4 @@ def compute_mean_std(results_dir, output):
 
 
 if __name__ == "__main__":
-    main("/home/aomond/experiments_results/concerto-d/prod/raspberry-5_deps-no-conn-synced/asynchronous")
+    main("/home/aomond/experiments_results/concerto-d/prod/raspberry-5_deps-50-duration/mjuz")
