@@ -56,7 +56,7 @@ def compute_uptimes(round, duration, nb_deps, overlap_taux, overlap_time_max, ma
                 if dep_num not in current_up.keys() and current_up["max_nb_up_allowed"] > nb_ups_assigned:
                     # to refacto le 100 perc overlap
                     if not perc_100_overlap:
-                        min_o = random.uniform(2, 10)  # Tweak these values
+                        min_o = random.uniform(6, duration)  # Tweak these values
                     else:
                         min_o = duration
                     overlap = min(min_o, amount_to_spread)
