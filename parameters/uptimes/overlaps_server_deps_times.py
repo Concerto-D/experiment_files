@@ -27,7 +27,7 @@ def compute_overlap_for_round(round_num, output, nb_appearances, combo=None):
     server_dep_str_list = []
     overlap_values_list = []
     typeOverlap_list = []
-    for k in range(1, len(output)):
+    for k in range(1, 6):
         o0, d0 = output[0][round_num]
         o2, d2 = output[k][round_num]
         uptime_server = f"[{o0}, {d0}]"
@@ -72,9 +72,11 @@ if __name__ == "__main__":
     # default_file_name = "uptimes-60-30-12-0_5-0_6-generated"
     # default_file_name = "uptimes-60-50-12-0_02-0_02-generated"
     # default_file_name = "uptimes-30-50-12-0_02-0_02-generated-best"
+    # default_file_name = "uptimes-36-50-12-0_02-0_02-generated"
     default_file_name = "uptimes-36-50-12-0_02-0_02"
+    # default_file_name = "uptimes-36-50-12-0_25-0_25-generated-again"
     # default_file_name = "uptimes-36-50-12-0_25-0_25"
-    # default_file_name = "uptimes-36-50-12-0_5-0_5"
+    # default_file_name = "uptimes-36-50-12-0_5-0_5-generated-again"
     # default_file_name = "uptimes-36-50-12-1-1"
     file_name = sys.argv[1] if len(sys.argv) > 1 else f"{default_file_name}.json"
     output = json.load(open(file_name))

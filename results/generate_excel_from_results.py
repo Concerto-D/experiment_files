@@ -49,7 +49,7 @@ def generate_sheet_expe_1(wb: Workbook, expe_name, data_path):
     ws["H2"] = "50-60%"
     ws["K2"] = "100%"
 
-    fill_ws_from_results(case_mapping, data_path, expe_name, ws, ["synchronous", "asynchronous"], "tab1")
+    fill_ws_from_results(case_mapping, data_path, expe_name, ws, ["asynchronous", "synchronous", "mjuz"], "tab1")
 
 
 def fill_ws_from_results(case_mapping, data_path, expe_name, ws, categ_dirs_list, tab_name):
@@ -200,11 +200,11 @@ def generate_sheet_expe_2(wb, expe_name, data_path):
 
 
 wb = Workbook()
-expe_name = "raspberry-5_deps-no-conn-synced"
+expe_name = "raspberry-5_deps-50-duration"
 
 # Generate sheets
 generate_sheet_expe_1(wb, expe_name, "/home/aomond/experiments_results/concerto-d/prod")
 generate_sheet_expe_2(wb, expe_name, "/home/aomond/experiments_results/concerto-d/prod")
 
 # Save the file
-wb.save(f"{expe_name}iuhzzfzef.xlsx")
+wb.save(f"{expe_name}-prod-new-uptimes-2-2.xlsx")

@@ -164,7 +164,7 @@ def generate_uptimes_nodes_file(
         uptimes_by_round = json.load(f)
     uptimes_nodes = create_uptimes_nodes(uptimes_by_round, round, duration, nb_deps, overlap_taux, nb_generations, perc_100_overlap)
 
-    with open(f"uptimes-{round}-{duration}-{nb_deps}-{perc_str}-re-generated.json", "w") as f:
+    with open(f"uptimes-{round}-{duration}-{nb_deps}-{perc_str}-generated-again.json", "w") as f:
         json.dump(uptimes_nodes, f)
 
 
@@ -172,7 +172,7 @@ if __name__ == "__main__":
     round = 36
     duration = 50
     nb_deps = 12
-    overlap_taux = (0.02, 0.02)
+    overlap_taux = (0.50, 0.50)
     nb_generations = 1  # Keep it a 1 bc it will always generate 1 TODO: remove this param
     overlap_taux_str = f"{str(overlap_taux[0]).replace('.', '_')}-{str(overlap_taux[1]).replace('.', '_')}"
 
