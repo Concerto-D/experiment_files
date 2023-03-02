@@ -91,10 +91,10 @@ if __name__ == "__main__":
         if len(combo) == 5:
             combo = []
             count_combo += [round_num]
-            print(f"COMBO{count_combo}: round_num {round_num}")
+            print(f"COMBO{count_combo}: round_num {round_num}", file=file_output)
     print(result, file=file_output)
     for i, c in enumerate(count_combo):
-        print(f"COMBO{i}: {c}")
+        print(f"COMBO{i}: {c}", file=file_output)
 
     dep_num = 0  # Check only server
     cov_perc_list = compute_covering_time_dep(dep_num, 36, 50, output)
@@ -103,5 +103,5 @@ if __name__ == "__main__":
     print(f"Total mean coverage: {server_means_coverage}", file=file_output)
 
     # Nb appearance
-    print(f"Appearances: {nb_appearances}")
+    print(f"Appearances: {nb_appearances}", file=file_output)
 
