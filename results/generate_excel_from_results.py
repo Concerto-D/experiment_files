@@ -4,10 +4,10 @@ from openpyxl import Workbook
 
 def generate_sheet_expe_1(wb: Workbook, expe_name, data_path):
     col_mapping = {
-        "2-5": {"synchronous": "C", "asynchronous": "D", "mjuz": "E"},
-        "20-30": {"synchronous": "F", "asynchronous": "G", "mjuz": "H"},
-        "50-60": {"synchronous": "I", "asynchronous": "J", "mjuz": "K"},
-        "1-1": {"synchronous": "L", "asynchronous": "M", "mjuz": "N"},
+        "2-2": {"synchronous": "C", "asynchronous": "D", "mjuz-2-comps": "B"},
+        "25-35": {"synchronous": "F", "asynchronous": "G", "mjuz-2-comps": "E"},
+        "50-50": {"synchronous": "I", "asynchronous": "J", "mjuz-2-comps": "H"},
+        "1-1": {"synchronous": "L", "asynchronous": "M", "mjuz-2-comps": "K"},
     }
 
     def case_mapping(perc, categ):
@@ -81,9 +81,9 @@ def fill_ws_from_results(case_mapping, data_path, expe_name, ws, categ_dirs_list
 
 def generate_sheet_expe_2(wb, expe_name, data_path):
     col_mapping = {
-        "2-5": {"0": "B", "0.5": "D", "1": "F"},
-        "20-30": {"0": "G", "0.5": "I", "1": "K"},
-        "50-60": {"0": "L", "0.5": "N", "1": "P"},
+        "2-2": {"0": "B", "0.5": "D", "1": "F"},
+        "25-35": {"0": "G", "0.5": "I", "1": "K"},
+        "50-50": {"0": "L", "0.5": "N", "1": "P"},
     }
     def case_mapping(perc, categ):
         col = col_mapping.get(perc, {}).get(categ, None)
@@ -116,9 +116,9 @@ def generate_sheet_expe_2(wb, expe_name, data_path):
     ws["A9"] = "max Sleeping duration"
     ws["A10"] = "max reconf duration"
 
-    ws["B1"] = "2-5%"
-    ws["G1"] = "20-30%"
-    ws["L1"] = "50-60%"
+    ws["B1"] = "2%"
+    ws["G1"] = "25%"
+    ws["L1"] = "50%"
 
     ws["B2"] = "timeout=0%"
     ws["D2"] = "timeout=50%"
@@ -166,9 +166,9 @@ def generate_sheet_expe_2(wb, expe_name, data_path):
 
     # Fill gains
     gain_col_mapping = {
-        "2-5": {"0": "C", "0.5": "E"},
-        "20-30": {"0": "H", "0.5": "J"},
-        "50-60": {"0": "M", "0.5": "O"},
+        "2-2": {"0": "C", "0.5": "E"},
+        "25-35": {"0": "H", "0.5": "J"},
+        "50-50": {"0": "M", "0.5": "O"},
     }
     def gain_case_mapping(perc, categ):
         col = gain_col_mapping.get(perc, {}).get(categ, None)
@@ -187,14 +187,16 @@ def generate_sheet_expe_2(wb, expe_name, data_path):
     def compute_gain(begin, end):
         return round(begin-end)*100/end
 
-    for perc in ["2-5", "20-30", "50-60"]:
+    for perc in ["2-2", "25-35", "50-50"]:
         for categ in ["0", "0.5"]:
             for parameters, output_case in gain_case_mapping(perc, categ).items():
                 end_perc, end_categ, end_trans, end_metric = parameters
-                begin_case = float(ws[case_mapping(perc, categ)[parameters]].value.replace(",", "."))
-                end_case = float(ws[case_mapping(perc, "1")[(end_perc, "1", end_trans, end_metric)]].value.replace(",", "."))
-                result_gain = compute_gain(begin_case, end_case)
-                ws[output_case] = result_gain
+                map_b = ws[case_mapping(perc, categ)[parameters]].value
+                if map_b:
+                    begin_case = float(map_b.replace(",", "."))
+                    end_case = float(ws[case_mapping(perc, "1")[(end_perc, "1", end_trans, end_metric)]].value.replace(",", "."))
+                    result_gain = compute_gain(begin_case, end_case)
+                    ws[output_case] = round(result_gain, 2)
 
 
 wb = Workbook()

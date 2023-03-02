@@ -24,17 +24,17 @@ output_trans = {
 
 output = {
     "tab1": {
-        "2-5": {
+        "2-2": {
             "mjuz-2-comps": copy.deepcopy(output_trans),
             "synchronous": copy.deepcopy(output_trans),
             "asynchronous": copy.deepcopy(output_trans)
         },
-        "20-30": {
+        "25-35": {
             "mjuz-2-comps": copy.deepcopy(output_trans),
             "synchronous": copy.deepcopy(output_trans),
             "asynchronous": copy.deepcopy(output_trans)
         },
-        "50-60": {
+        "50-50": {
             "mjuz-2-comps": copy.deepcopy(output_trans),
             "synchronous": copy.deepcopy(output_trans),
             "asynchronous": copy.deepcopy(output_trans)
@@ -46,17 +46,17 @@ output = {
         }
     },
     "tab2": {
-        "2-5": {
+        "2-2": {
             "0": copy.deepcopy(output_trans),
             "0.5": copy.deepcopy(output_trans),
             "1": copy.deepcopy(output_trans),
         },
-        "20-30": {
+        "25-35": {
             "0": copy.deepcopy(output_trans),
             "0.5": copy.deepcopy(output_trans),
             "1": copy.deepcopy(output_trans),
         },
-        "50-60": {
+        "50-50": {
             "0": copy.deepcopy(output_trans),
             "0.5": copy.deepcopy(output_trans),
             "1": copy.deepcopy(output_trans),
@@ -84,11 +84,11 @@ def main(results_dir):
             file_content = yaml.safe_load(f)
         # TODO: change percs (2-2 for 0_02-0_02)
         if "0_02-0_05" in file_content["expe_parameters"]["uptimes_file_name"] or "0_02-0_02" in file_content["expe_parameters"]["uptimes_file_name"]:
-            perc_name = "2-5"
+            perc_name = "2-2"
         elif "0_2-0_3" in file_content["expe_parameters"]["uptimes_file_name"] or "0_25-0_25" in file_content["expe_parameters"]["uptimes_file_name"]:
-            perc_name = "20-30"
+            perc_name = "25-35"
         elif "0_5-0_6" in file_content["expe_parameters"]["uptimes_file_name"] or "0_5-0_5" in file_content["expe_parameters"]["uptimes_file_name"]:
-            perc_name = "50-60"
+            perc_name = "50-50"
         else:
             perc_name = "1-1"
 
@@ -137,14 +137,6 @@ def compute_mean_std(results_dir, output):
 
                             if need_to_report_to_tab2:
                                 computed_output["tab2"][perc]["1"][trans][metric] = copy.deepcopy(computed_output[tab][perc][categ][trans][metric])
-
-                            # Visualisation des std supérieures à 1
-                            resulted_std = computed_output[tab][perc][categ][trans][metric]["std"]
-                            if c_std > 1:
-                                computed_output[tab][perc][categ][trans][metric]["std"] += f"     # STD == {resulted_std}"
-
-                                if need_to_report_to_tab2:
-                                    computed_output["tab2"][perc]["1"][trans][metric]["std"] = copy.deepcopy(computed_output[tab][perc][categ][trans][metric]["std"])
                         else:
                             if need_to_report_to_tab2:
                                 computed_output["tab2"][perc]["1"][trans][metric] = copy.deepcopy(metric_values)
@@ -154,4 +146,5 @@ def compute_mean_std(results_dir, output):
 
 
 if __name__ == "__main__":
-    main("/home/aomond/experiments_results/concerto-d/prod/raspberry-5_deps-50-duration/mjuz")
+    for n in ["asynchronous", "synchronous", "mjuz"]:
+        main(f"/home/aomond/experiments_results/concerto-d/prod/raspberry-5_deps-50-duration/{n}")
