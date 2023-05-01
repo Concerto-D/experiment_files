@@ -1,6 +1,10 @@
 import json
 import sys
 
+nb_rounds_ups = 45
+uptime_duration = 50
+nb_nodes = 6
+
 
 def compute_covering_time_dep(dep_num: int, round: int, time_awoken: float, all_dep_uptimes):
     uptimes_dep = all_dep_uptimes[dep_num]
@@ -10,7 +14,10 @@ def compute_covering_time_dep(dep_num: int, round: int, time_awoken: float, all_
         covering_time = 0
         for uptime_dep in uptimes_dep:
             for other_uptime_dep in other_uptimes_dep:
-                overlap = min(uptime_dep[0] + time_awoken, other_uptime_dep[0] + time_awoken) - max(uptime_dep[0], other_uptime_dep[0])
+                if other_uptime_dep == [-1, -1] or uptime_dep == [-1, -1]:
+                    overlap = 0
+                else:
+                    overlap = min(uptime_dep[0] + time_awoken, other_uptime_dep[0] + time_awoken) - max(uptime_dep[0], other_uptime_dep[0])
                 covering_time += overlap if overlap > 0 else 0
 
         percentage_overlap = covering_time/(time_awoken*round)
@@ -28,13 +35,18 @@ def compute_overlap_for_round(round_num, output, nb_appearances, combo=None):
     overlap_values_list = []
     typeOverlap_list = []
     for k in range(1, 6):
-        o0, d0 = output[0][round_num]
-        o2, d2 = output[k][round_num]
-        uptime_server = f"[{o0}, {d0}]"
-        uptime_dep = f"[{round(o2, 3)}, {d2}]"
+        o0, s0 = output[0][round_num]
+        o2, s2 = output[k][round_num]
+        uptime_server = f"[{o0}, {uptime_duration}]"
+        uptime_dep = f"[{round(o2, 3)}, {uptime_duration}]"
         uptime_str = uptime_server + uptime_dep
-        overlap_value = round(max(min(o0 + d0, o2 + d2) - max(o0, o2), 0), 3)
-        if o2 < o0:
+        if o0 == -1 or o2 == -1:
+            overlap_value = 0
+        else:
+            overlap_value = round(max(min(o0 + uptime_duration, o2 + uptime_duration) - max(o0, o2), 0), 3)
+        if o0 == -1 or o2 == -1:
+            typeOverlap = "None"
+        elif o2 < o0:
             typeOverlap = "Left"
         elif o2 > o0:
             typeOverlap = "Right"
@@ -73,7 +85,7 @@ if __name__ == "__main__":
     # default_file_name = "uptimes-60-50-12-0_02-0_02-generated"
     # default_file_name = "uptimes-30-50-12-0_02-0_02-generated-best"
     # default_file_name = "uptimes-36-50-12-0_02-0_02-generated"
-    default_file_name = "uptimes-36-50-12-0_02-0_02"
+    default_file_name = "mascots_uptimes-60-50-5-ud0_od0_15_2_perc"
     # default_file_name = "uptimes-36-50-12-0_25-0_25-generated-again"
     # default_file_name = "uptimes-36-50-12-0_25-0_25"
     # default_file_name = "uptimes-36-50-12-0_5-0_5-generated-again"
@@ -82,7 +94,7 @@ if __name__ == "__main__":
     output = json.load(open(file_name))
     result = ""
     result += file_name + "\n"
-    nb_appearances = [0] * 12
+    nb_appearances = [0] * (nb_nodes-1)
     # file_output = open(f"output_overlaps_{default_file_name}.txt", "w")
     file_output = sys.stdout
     combo = []
@@ -99,7 +111,7 @@ if __name__ == "__main__":
         print(f"COMBO{i}: {c}", file=file_output)
 
     dep_num = 0  # Check only server
-    cov_perc_list = compute_covering_time_dep(dep_num, 36, 50, output)
+    cov_perc_list = compute_covering_time_dep(dep_num, nb_rounds_ups, uptime_duration, output)
     server_means_coverage = round(sum(cov_perc_list) / len(cov_perc_list), 2)
 
     print(f"Total mean coverage: {server_means_coverage}", file=file_output)
