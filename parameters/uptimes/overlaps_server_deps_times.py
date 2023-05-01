@@ -26,9 +26,11 @@ def compute_covering_time_dep(dep_num: int, round: int, time_awoken: float, all_
     return overlaps_list
 
 
-def compute_overlap_for_round(round_num, output, nb_appearances, combo=None):
+def compute_overlap_for_round(round_num, output, nb_appearances, combo=None, combo_up=None):
     if combo == None:
         combo = []
+    if combo_up == None:
+        combo_up = []
     r = f"--- FREQ: {round_num} -----\n"
     uptimes_str_list = []
     server_dep_str_list = []
@@ -60,6 +62,8 @@ def compute_overlap_for_round(round_num, output, nb_appearances, combo=None):
             nb_appearances[k - 1] += 1
             if k < 6 and k not in combo:
                 combo.append(k)
+        if o2 > 0 and k not in combo_up:
+            combo_up.append(k)
 
     max_len_uptimes_str_list = len(max(uptimes_str_list, key=lambda element: len(element)))
     max_len_server_dep_str_list = len(max(server_dep_str_list, key=lambda element: len(element)))
@@ -72,7 +76,7 @@ def compute_overlap_for_round(round_num, output, nb_appearances, combo=None):
         result_str += typeOverlap_list[k]
         r += f"{result_str}\n"
     r += "-----------------\n\n"
-    return r, nb_appearances, combo
+    return r, nb_appearances, combo, combo_up
 
 
 if __name__ == "__main__":
@@ -85,7 +89,7 @@ if __name__ == "__main__":
     # default_file_name = "uptimes-60-50-12-0_02-0_02-generated"
     # default_file_name = "uptimes-30-50-12-0_02-0_02-generated-best"
     # default_file_name = "uptimes-36-50-12-0_02-0_02-generated"
-    default_file_name = "mascots_uptimes-60-50-5-ud0_od0_15_2_perc"
+    default_file_name = "mascots_uptimes-60-50-5-ud2_od0_15_25_perc"
     # default_file_name = "uptimes-36-50-12-0_25-0_25-generated-again"
     # default_file_name = "uptimes-36-50-12-0_25-0_25"
     # default_file_name = "uptimes-36-50-12-0_5-0_5-generated-again"
@@ -99,16 +103,29 @@ if __name__ == "__main__":
     file_output = sys.stdout
     combo = []
     count_combo = []
+    combo_up = []
+    count_combo_up = []
     for round_num in range(len(output[0])):
-        r, nb_appearances, combo = compute_overlap_for_round(round_num, output, nb_appearances, combo)
+        r, nb_appearances, combo, combo_up = compute_overlap_for_round(round_num, output, nb_appearances, combo, combo_up)
         result += r
         if len(combo) == 5:
             combo = []
             count_combo += [round_num]
             print(f"COMBO{count_combo}: round_num {round_num}", file=file_output)
+        if len(combo_up) == 5:
+            combo_up = []
+            count_combo_up += [round_num]
+            print(f"COMBO_UP{count_combo_up}: round_num {round_num}", file=file_output)
     print(result, file=file_output)
-    for i, c in enumerate(count_combo):
-        print(f"COMBO{i}: {c}", file=file_output)
+    print("---- COMBO SYNC ----")
+    print(count_combo)
+    print("---- COMBO ASYNC ----")
+    print(count_combo_up)
+
+    # for i, c in enumerate(count_combo):
+    #     print(f"COMBO{i}: {c}", file=file_output)
+    # for i, c in enumerate(count_combo_up):
+    #     print(f"COMBO_UP{i}: {c}", file=file_output)
 
     dep_num = 0  # Check only server
     cov_perc_list = compute_covering_time_dep(dep_num, nb_rounds_ups, uptime_duration, output)
