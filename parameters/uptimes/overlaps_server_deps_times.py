@@ -89,7 +89,7 @@ if __name__ == "__main__":
     # default_file_name = "uptimes-60-50-12-0_02-0_02-generated"
     # default_file_name = "uptimes-30-50-12-0_02-0_02-generated-best"
     # default_file_name = "uptimes-36-50-12-0_02-0_02-generated"
-    default_file_name = "mascots_uptimes-60-50-5-ud2_od0_15_25_perc"
+    default_file_name = "mascots_uptimes-60-50-5-ud0_od0_7_25_perc"
     # default_file_name = "uptimes-36-50-12-0_25-0_25-generated-again"
     # default_file_name = "uptimes-36-50-12-0_25-0_25"
     # default_file_name = "uptimes-36-50-12-0_5-0_5-generated-again"
