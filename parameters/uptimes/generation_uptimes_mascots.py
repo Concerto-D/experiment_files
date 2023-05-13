@@ -56,7 +56,8 @@ def generate_uptimes_distribution(
             if uptime_round in [r[0] for r in mandatory_rounds[node_num]]:
                 for i, r in enumerate(mandatory_rounds[node_num]):
                     if r[0] == uptime_round:
-                        node_schedule.append((uptime_round*total_interval_duration + slot_duration*slot_num, slot_num))
+                        s = 1 if node_num == 0 else r[1]  # Reprise du slot num: fix bug TODO à simplifier
+                        node_schedule.append((uptime_round*total_interval_duration + slot_duration*s, s))
                         break
             elif uptime_round in all_uptime_rounds_up[node_num]:
                 node_schedule.append((uptime_round*total_interval_duration + slot_duration*slot_num, slot_num))
@@ -152,8 +153,7 @@ def generate_uptimes_distribution_from_overlaps(overlaps_distribution_per_dep):
 
         mandatory_rounds.append(dep_mantory_rounds)
 
-    ud1 = generate_uptimes_distribution(mandatory_rounds=mandatory_rounds)
-    return ud1
+    return generate_uptimes_distribution(mandatory_rounds=mandatory_rounds)
 
 
 if __name__ == '__main__':
