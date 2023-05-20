@@ -1,0 +1,1513 @@
+dep1 - 2023-05-03 04:07:55,536 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_06-07-54', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'deploy', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 04:07:55,537 Current round: --- FREQ: 1 -----
+[250, 50][-1, 50]      Server/dep0   0      None
+[250, 50][212.5, 50]   Server/dep1   12.5   Left
+[250, 50][305, 50]     Server/dep2   0      Right
+[250, 50][305, 50]     Server/dep3   0      Right
+[250, 50][-1, 50]      Server/dep4   0      None
+-----------------
+dep1 - 2023-05-03 04:07:55,537 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 04:07:55,538 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 04:07:55,538 '[33m'----- Previous config doesn't NOT exists, starting from zero ----'[0m'
+dep1 - 2023-05-03 04:07:55,538 '[33m'----- Searched in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json -----'[0m'
+dep1 - 2023-05-03 04:07:55,538 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 04:07:55,538 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 04:07:55,544 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 04:07:55,544 Cache DOES NOT exists
+dep1 - 2023-05-03 04:07:55,550 Saved timestamp: event_deploy () {} start
+dep1 - 2023-05-03 04:07:55,560 Saved timestamp: instruction_add ('0', 'dep1', 'Dep') {} start
+dep1 - 2023-05-03 04:07:55,566 Saved timestamp: instruction_add ('0', 'dep1', 'Dep') {} end
+dep1 - 2023-05-03 04:07:55,567 Saved timestamp: instruction_conn ('1', 'dep1', 'ip', 'server', 'serviceu_ip1') {} start
+dep1 - 2023-05-03 04:07:55,568 Creating connection: dep1 ip server serviceu_ip1
+dep1 - 2023-05-03 04:07:55,569 Saved timestamp: instruction_conn ('1', 'dep1', 'ip', 'server', 'serviceu_ip1') {} end
+dep1 - 2023-05-03 04:07:55,569 Saved timestamp: instruction_conn ('2', 'dep1', 'service', 'server', 'serviceu1') {} start
+dep1 - 2023-05-03 04:07:55,570 Creating connection: dep1 service server serviceu1
+dep1 - 2023-05-03 04:07:55,570 Saved timestamp: instruction_conn ('2', 'dep1', 'service', 'server', 'serviceu1') {} end
+dep1 - 2023-05-03 04:07:55,570 Saved timestamp: instruction_push_b ('3', 'dep1', 'deploy') {} start
+dep1 - 2023-05-03 04:07:55,571 [35m[dep1] Queing behavior 'deploy'[0m
+dep1 - 2023-05-03 04:07:55,571 Saved timestamp: instruction_push_b ('3', 'dep1', 'deploy') {} end
+dep1 - 2023-05-03 04:07:55,571 Saved timestamp: instruction_wait ('4', 'dep1') {} start
+dep1 - 2023-05-03 04:07:55,572 Waiting for component dep1 to finish its behaviors execution
+dep1 - 2023-05-03 04:07:55,572 [35m[dep1] Ending transition '_init'[0m
+dep1 - 2023-05-03 04:07:55,623 Move from idocks to place (undeployed)
+dep1 - 2023-05-03 04:07:55,623 [35m[dep1] Entering place 'undeployed'[0m
+dep1 - 2023-05-03 04:07:55,623 Move from place to odocks (undeployed)
+dep1 - 2023-05-03 04:07:55,624 Saved timestamp: behavior ('deploy', 'dep1') {} start
+dep1 - 2023-05-03 04:07:55,624 [35m[dep1] Changing behavior to 'deploy'[0m
+dep1 - 2023-05-03 04:07:55,675 [35m[dep1] Leaving place 'undeployed'[0m
+dep1 - 2023-05-03 04:07:55,675 [35m[dep1] Starting transition 'install'[0m
+dep1 - 2023-05-03 04:07:55,677 [35m[dep1] allocating resources[0m
+dep1 - 2023-05-03 04:07:56,928 [35m[dep1] got IP 123.124.1.1[0m
+dep1 - 2023-05-03 04:07:56,929 [35m[dep1] finished allocation[0m
+dep1 - 2023-05-03 04:07:56,933 [35m[dep1] Ending transition 'install'[0m
+dep1 - 2023-05-03 04:07:56,984 Move from idocks to place (installed)
+dep1 - 2023-05-03 04:07:56,984 [35m[dep1] Entering place 'installed'[0m
+dep1 - 2023-05-03 04:07:56,985 [35m[dep1] Starting to use place dependency 'ip'[0m
+dep1 - 2023-05-03 04:07:56,985 Move from place to odocks (installed)
+dep1 - 2023-05-03 04:07:56,986 [35m[dep1] Leaving place 'installed'[0m
+dep1 - 2023-05-03 04:07:56,986 [35m[dep1] Starting transition 'run'[0m
+dep1 - 2023-05-03 04:07:56,987 [35m[dep1] preparing to run[0m
+dep1 - 2023-05-03 04:07:58,510 [35m[dep1] running[0m
+dep1 - 2023-05-03 04:07:58,546 [35m[dep1] Ending transition 'run'[0m
+dep1 - 2023-05-03 04:07:58,597 Move from idocks to place (running)
+dep1 - 2023-05-03 04:07:58,597 [35m[dep1] Entering place 'running'[0m
+dep1 - 2023-05-03 04:07:58,598 [35m[dep1] Starting to use place dependency 'service'[0m
+dep1 - 2023-05-03 04:07:58,598 Move from place to odocks (running)
+dep1 - 2023-05-03 04:07:58,599 Saved timestamp: behavior ('deploy', 'dep1') {} end
+dep1 - 2023-05-03 04:07:58,599 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 04:07:58,600 [35m[dep1] Going IDLE[0m
+dep1 - 2023-05-03 04:07:58,651 Saved timestamp: instruction_wait ('4', 'dep1') {} end
+dep1 - 2023-05-03 04:07:58,651 Saved timestamp: event_deploy () {} end
+dep1 - 2023-05-03 04:07:58,652 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 04:07:58,652 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 04:07:58,653 Saved timestamp: instruction_waitall ('5',) {} start
+dep1 - 2023-05-03 04:07:58,708 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_2', 'dep_assembly_4', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:07:59,957 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_2', 'dep_assembly_4', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:08:05,042 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_2', 'dep_assembly_4', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:08:10,076 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_2', 'dep_assembly_4', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:08:15,102 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_2', 'dep_assembly_4', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:08:20,122 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_2', 'dep_assembly_4', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:08:25,124 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_2', 'dep_assembly_4', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:08:30,127 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_2', 'dep_assembly_4', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:08:35,134 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_2', 'dep_assembly_4', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:08:40,165 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_2', 'dep_assembly_4', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:08:45,214 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_2', 'dep_assembly_4', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:08:45,560 Everyone blocked
+dep1 - 2023-05-03 04:08:45,560 Going sleeping bye
+dep1 - 2023-05-03 04:08:45,561 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 04:08:45,561 Saving current conf ...
+dep1 - 2023-05-03 04:08:45,570 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 04:08:45,570 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 04:08:45,572 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 04:08:45,572 Saved timestamp: instruction_waitall_5 end
+dep1 - 2023-05-03 04:08:45,573 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_04-08-45-925.5730266571045.yaml
+dep1 - 2023-05-03 04:08:45,591 
+dep1 - 2023-05-03 04:12:42,961 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_06-12-41', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'deploy', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 04:12:42,961 Current round: --- FREQ: 2 -----
+[-1, 50][-1, 50]    Server/dep0   0   None
+[-1, 50][500, 50]   Server/dep1   0   None
+[-1, 50][-1, 50]    Server/dep2   0   None
+[-1, 50][390, 50]   Server/dep3   0   None
+[-1, 50][-1, 50]    Server/dep4   0   None
+-----------------
+dep1 - 2023-05-03 04:12:42,962 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 04:12:42,962 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 04:12:42,962 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 04:12:42,963 Retrieving previous conf ...
+dep1 - 2023-05-03 04:12:42,963 done
+dep1 - 2023-05-03 04:12:42,964 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_04-12-42.json
+dep1 - 2023-05-03 04:12:42,964 Removing previous conf ...
+dep1 - 2023-05-03 04:12:42,965 done
+dep1 - 2023-05-03 04:12:42,966 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 04:12:42,966 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 04:12:42,966 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 04:12:42,971 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 04:12:42,972 Cache EXISTS
+dep1 - 2023-05-03 04:12:42,978 Saved timestamp: event_deploy () {} start
+dep1 - 2023-05-03 04:12:42,989 Saved timestamp: event_deploy () {} end
+dep1 - 2023-05-03 04:12:42,994 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 04:12:42,995 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 04:12:42,996 Saved timestamp: instruction_waitall ('5',) {} start
+dep1 - 2023-05-03 04:12:43,027 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_0', 'dep_assembly_4', 'dep_assembly_2', 'dep_assembly_3'} not finished, waiting for it
+dep1 - 2023-05-03 04:12:47,430 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_0', 'dep_assembly_4', 'dep_assembly_2', 'dep_assembly_3'} not finished, waiting for it
+dep1 - 2023-05-03 04:12:52,467 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_0', 'dep_assembly_4', 'dep_assembly_2', 'dep_assembly_3'} not finished, waiting for it
+dep1 - 2023-05-03 04:12:57,497 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_0', 'dep_assembly_4', 'dep_assembly_2', 'dep_assembly_3'} not finished, waiting for it
+dep1 - 2023-05-03 04:13:02,522 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_0', 'dep_assembly_4', 'dep_assembly_2', 'dep_assembly_3'} not finished, waiting for it
+dep1 - 2023-05-03 04:13:07,603 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_0', 'dep_assembly_4', 'dep_assembly_2', 'dep_assembly_3'} not finished, waiting for it
+dep1 - 2023-05-03 04:13:12,691 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_0', 'dep_assembly_4', 'dep_assembly_2', 'dep_assembly_3'} not finished, waiting for it
+dep1 - 2023-05-03 04:13:17,768 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_0', 'dep_assembly_4', 'dep_assembly_2', 'dep_assembly_3'} not finished, waiting for it
+dep1 - 2023-05-03 04:13:22,854 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_0', 'dep_assembly_4', 'dep_assembly_2', 'dep_assembly_3'} not finished, waiting for it
+dep1 - 2023-05-03 04:13:27,924 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_0', 'dep_assembly_4', 'dep_assembly_2', 'dep_assembly_3'} not finished, waiting for it
+dep1 - 2023-05-03 04:13:32,992 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_0', 'dep_assembly_4', 'dep_assembly_2', 'dep_assembly_3'} not finished, waiting for it
+dep1 - 2023-05-03 04:13:32,993 Everyone blocked
+dep1 - 2023-05-03 04:13:32,995 Going sleeping bye
+dep1 - 2023-05-03 04:13:32,995 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 04:13:32,996 Saving current conf ...
+dep1 - 2023-05-03 04:13:33,004 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 04:13:33,005 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 04:13:33,006 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 04:13:33,006 Saved timestamp: instruction_waitall_5 end
+dep1 - 2023-05-03 04:13:33,007 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_04-13-33-213.00701332092285.yaml
+dep1 - 2023-05-03 04:13:33,018 
+dep1 - 2023-05-03 04:15:40,545 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_06-15-39', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'deploy', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 04:15:40,545 Current round: --- FREQ: 3 -----
+[640, 50][677.5, 50]   Server/dep0   12.5   Right
+[640, 50][677.5, 50]   Server/dep1   12.5   Right
+[640, 50][677.5, 50]   Server/dep2   12.5   Right
+[640, 50][-1, 50]      Server/dep3   0      None
+[640, 50][-1, 50]      Server/dep4   0      None
+-----------------
+dep1 - 2023-05-03 04:15:40,545 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 04:15:40,546 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 04:15:40,546 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 04:15:40,546 Retrieving previous conf ...
+dep1 - 2023-05-03 04:15:40,547 done
+dep1 - 2023-05-03 04:15:40,547 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_04-15-40.json
+dep1 - 2023-05-03 04:15:40,548 Removing previous conf ...
+dep1 - 2023-05-03 04:15:40,548 done
+dep1 - 2023-05-03 04:15:40,549 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 04:15:40,549 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 04:15:40,549 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 04:15:40,555 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 04:15:40,555 Cache EXISTS
+dep1 - 2023-05-03 04:15:40,561 Saved timestamp: event_deploy () {} start
+dep1 - 2023-05-03 04:15:40,572 Saved timestamp: event_deploy () {} end
+dep1 - 2023-05-03 04:15:40,578 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 04:15:40,578 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 04:15:40,579 Saved timestamp: instruction_waitall ('5',) {} start
+dep1 - 2023-05-03 04:15:40,641 WAIT ALL False --- Remote assembly {'dep_assembly_4', 'server_assembly', 'dep_assembly_3', 'dep_assembly_2', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 04:15:40,925 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_3', 'dep_assembly_4', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 04:15:45,050 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_3', 'dep_assembly_4', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 04:15:50,063 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_3', 'dep_assembly_4', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 04:15:55,105 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_3', 'dep_assembly_4', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 04:16:00,240 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_3', 'dep_assembly_4', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 04:16:02,615 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_3', 'dep_assembly_4'} not finished, waiting for it
+dep1 - 2023-05-03 04:16:05,292 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_3', 'dep_assembly_4'} not finished, waiting for it
+dep1 - 2023-05-03 04:16:10,355 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_3', 'dep_assembly_4'} not finished, waiting for it
+dep1 - 2023-05-03 04:16:15,356 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_3', 'dep_assembly_4'} not finished, waiting for it
+dep1 - 2023-05-03 04:16:20,473 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_3', 'dep_assembly_4'} not finished, waiting for it
+dep1 - 2023-05-03 04:16:25,581 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_3', 'dep_assembly_4'} not finished, waiting for it
+dep1 - 2023-05-03 04:16:30,567 Everyone blocked
+dep1 - 2023-05-03 04:16:30,568 Going sleeping bye
+dep1 - 2023-05-03 04:16:30,568 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 04:16:30,569 Saving current conf ...
+dep1 - 2023-05-03 04:16:30,577 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 04:16:30,577 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 04:16:30,578 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 04:16:30,579 Saved timestamp: instruction_waitall_5 end
+dep1 - 2023-05-03 04:16:30,579 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_04-16-30-390.5798239707947.yaml
+dep1 - 2023-05-03 04:16:30,591 
+dep1 - 2023-05-03 04:17:22,964 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_06-17-21', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'deploy', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 04:17:22,964 Current round: --- FREQ: 4 -----
+[835, 50][797.5, 50]   Server/dep0   12.5   Left
+[835, 50][780, 50]     Server/dep1   0      Left
+[835, 50][872.5, 50]   Server/dep2   12.5   Right
+[835, 50][890, 50]     Server/dep3   0      Right
+[835, 50][780, 50]     Server/dep4   0      Left
+-----------------
+dep1 - 2023-05-03 04:17:22,965 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 04:17:22,965 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 04:17:22,965 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 04:17:22,965 Retrieving previous conf ...
+dep1 - 2023-05-03 04:17:22,966 done
+dep1 - 2023-05-03 04:17:22,966 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_04-17-22.json
+dep1 - 2023-05-03 04:17:22,967 Removing previous conf ...
+dep1 - 2023-05-03 04:17:22,967 done
+dep1 - 2023-05-03 04:17:22,968 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 04:17:22,968 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 04:17:22,969 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 04:17:22,974 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 04:17:22,974 Cache EXISTS
+dep1 - 2023-05-03 04:17:22,983 Saved timestamp: event_deploy () {} start
+dep1 - 2023-05-03 04:17:22,994 Saved timestamp: event_deploy () {} end
+dep1 - 2023-05-03 04:17:22,994 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 04:17:23,000 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 04:17:23,000 Saved timestamp: instruction_waitall ('5',) {} start
+dep1 - 2023-05-03 04:17:23,032 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_4', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:17:23,141 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:17:27,476 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:17:32,595 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:17:37,646 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:17:42,690 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:17:47,814 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:17:52,946 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:17:58,087 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:18:03,119 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:18:08,243 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:18:13,127 Everyone blocked
+dep1 - 2023-05-03 04:18:13,127 Going sleeping bye
+dep1 - 2023-05-03 04:18:13,128 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 04:18:13,128 Saving current conf ...
+dep1 - 2023-05-03 04:18:13,137 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 04:18:13,140 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 04:18:13,141 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 04:18:13,142 Saved timestamp: instruction_waitall_5 end
+dep1 - 2023-05-03 04:18:13,142 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_04-18-13-493.1424331665039.yaml
+dep1 - 2023-05-03 04:18:13,149 
+dep1 - 2023-05-03 04:28:58,070 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_06-28-57', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'deploy', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 04:28:58,071 Current round: --- FREQ: 7 -----
+[1420, 50][1457.5, 50]   Server/dep0   12.5   Right
+[1420, 50][1475, 50]     Server/dep1   0      Right
+[1420, 50][1475, 50]     Server/dep2   0      Right
+[1420, 50][1457.5, 50]   Server/dep3   12.5   Right
+[1420, 50][1475, 50]     Server/dep4   0      Right
+-----------------
+dep1 - 2023-05-03 04:28:58,071 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 04:28:58,071 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 04:28:58,072 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 04:28:58,072 Retrieving previous conf ...
+dep1 - 2023-05-03 04:28:58,072 done
+dep1 - 2023-05-03 04:28:58,073 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_04-28-58.json
+dep1 - 2023-05-03 04:28:58,074 Removing previous conf ...
+dep1 - 2023-05-03 04:28:58,074 done
+dep1 - 2023-05-03 04:28:58,075 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 04:28:58,075 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 04:28:58,075 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 04:28:58,081 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 04:28:58,081 Cache EXISTS
+dep1 - 2023-05-03 04:28:58,087 Saved timestamp: event_deploy () {} start
+dep1 - 2023-05-03 04:28:58,098 Saved timestamp: event_deploy () {} end
+dep1 - 2023-05-03 04:28:58,099 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 04:28:58,104 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 04:28:58,105 Saved timestamp: instruction_waitall ('5',) {} start
+dep1 - 2023-05-03 04:28:58,198 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:29:02,613 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:29:07,704 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:29:12,770 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:29:17,945 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:29:23,099 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:29:28,256 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:29:33,297 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:29:38,437 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:29:43,495 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:29:48,094 Everyone blocked
+dep1 - 2023-05-03 04:29:48,095 Going sleeping bye
+dep1 - 2023-05-03 04:29:48,096 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 04:29:48,099 Saving current conf ...
+dep1 - 2023-05-03 04:29:48,105 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 04:29:48,105 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 04:29:48,106 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 04:29:48,106 Saved timestamp: instruction_waitall_5 end
+dep1 - 2023-05-03 04:29:48,107 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_04-29-48-188.10724663734436.yaml
+dep1 - 2023-05-03 04:29:48,118 
+dep1 - 2023-05-03 04:33:55,505 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_06-33-54', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'deploy', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 04:33:55,506 Current round: --- FREQ: 9 -----
+[1810, 50][1865, 50]     Server/dep0   0      Right
+[1810, 50][1772.5, 50]   Server/dep1   12.5   Left
+[1810, 50][1772.5, 50]   Server/dep2   12.5   Left
+[1810, 50][-1, 50]       Server/dep3   0      None
+[1810, 50][-1, 50]       Server/dep4   0      None
+-----------------
+dep1 - 2023-05-03 04:33:55,506 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 04:33:55,506 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 04:33:55,507 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 04:33:55,507 Retrieving previous conf ...
+dep1 - 2023-05-03 04:33:55,507 done
+dep1 - 2023-05-03 04:33:55,508 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_04-33-55.json
+dep1 - 2023-05-03 04:33:55,508 Removing previous conf ...
+dep1 - 2023-05-03 04:33:55,509 done
+dep1 - 2023-05-03 04:33:55,509 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 04:33:55,510 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 04:33:55,510 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 04:33:55,515 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 04:33:55,516 Cache EXISTS
+dep1 - 2023-05-03 04:33:55,522 Saved timestamp: event_deploy () {} start
+dep1 - 2023-05-03 04:33:55,533 Saved timestamp: event_deploy () {} end
+dep1 - 2023-05-03 04:33:55,538 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 04:33:55,539 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 04:33:55,539 Saved timestamp: instruction_waitall ('5',) {} start
+dep1 - 2023-05-03 04:33:55,571 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:33:59,921 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:34:05,043 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:34:10,119 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:34:15,234 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:34:20,310 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:34:25,327 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:34:30,420 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:34:35,477 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:34:40,547 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:34:45,565 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:34:45,566 Everyone blocked
+dep1 - 2023-05-03 04:34:45,566 Going sleeping bye
+dep1 - 2023-05-03 04:34:45,567 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 04:34:45,568 Saving current conf ...
+dep1 - 2023-05-03 04:34:45,576 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 04:34:45,576 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 04:34:45,578 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 04:34:45,578 Saved timestamp: instruction_waitall_5 end
+dep1 - 2023-05-03 04:34:45,579 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_04-34-45-485.5791211128235.yaml
+dep1 - 2023-05-03 04:34:45,592 
+dep1 - 2023-05-03 04:38:25,545 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_06-38-24', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'deploy', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 04:38:25,545 Current round: --- FREQ: 10 -----
+[2005, 50][-1, 50]       Server/dep0   0      None
+[2005, 50][2042.5, 50]   Server/dep1   12.5   Right
+[2005, 50][1950, 50]     Server/dep2   0      Left
+[2005, 50][1967.5, 50]   Server/dep3   12.5   Left
+[2005, 50][1950, 50]     Server/dep4   0      Left
+-----------------
+dep1 - 2023-05-03 04:38:25,546 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 04:38:25,546 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 04:38:25,546 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 04:38:25,546 Retrieving previous conf ...
+dep1 - 2023-05-03 04:38:25,547 done
+dep1 - 2023-05-03 04:38:25,547 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_04-38-25.json
+dep1 - 2023-05-03 04:38:25,548 Removing previous conf ...
+dep1 - 2023-05-03 04:38:25,548 done
+dep1 - 2023-05-03 04:38:25,549 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 04:38:25,549 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 04:38:25,550 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 04:38:25,555 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 04:38:25,555 Cache EXISTS
+dep1 - 2023-05-03 04:38:25,561 Saved timestamp: event_deploy () {} start
+dep1 - 2023-05-03 04:38:25,572 Saved timestamp: event_deploy () {} end
+dep1 - 2023-05-03 04:38:25,573 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 04:38:25,578 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 04:38:25,579 Saved timestamp: instruction_waitall ('5',) {} start
+dep1 - 2023-05-03 04:38:25,624 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:38:30,029 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:38:35,047 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:38:40,098 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:38:45,119 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:38:50,211 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:38:55,293 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:39:00,377 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:39:05,463 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:39:10,545 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:39:15,630 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:39:15,631 Everyone blocked
+dep1 - 2023-05-03 04:39:15,632 Going sleeping bye
+dep1 - 2023-05-03 04:39:15,632 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 04:39:15,633 Saving current conf ...
+dep1 - 2023-05-03 04:39:15,641 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 04:39:15,641 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 04:39:15,642 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 04:39:15,643 Saved timestamp: instruction_waitall_5 end
+dep1 - 2023-05-03 04:39:15,643 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_04-39-15-755.643655538559.yaml
+dep1 - 2023-05-03 04:39:15,653 
+dep1 - 2023-05-03 04:40:07,982 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_06-40-06', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'deploy', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 04:40:07,983 Current round: --- FREQ: 11 -----
+[2200, 50][2237.5, 50]   Server/dep0   12.5   Right
+[2200, 50][2145, 50]     Server/dep1   0      Left
+[2200, 50][2162.5, 50]   Server/dep2   12.5   Left
+[2200, 50][2237.5, 50]   Server/dep3   12.5   Right
+[2200, 50][2255, 50]     Server/dep4   0      Right
+-----------------
+dep1 - 2023-05-03 04:40:07,983 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 04:40:07,983 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 04:40:07,984 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 04:40:07,984 Retrieving previous conf ...
+dep1 - 2023-05-03 04:40:07,984 done
+dep1 - 2023-05-03 04:40:07,985 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_04-40-07.json
+dep1 - 2023-05-03 04:40:07,986 Removing previous conf ...
+dep1 - 2023-05-03 04:40:07,986 done
+dep1 - 2023-05-03 04:40:07,987 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 04:40:07,987 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 04:40:07,987 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 04:40:07,993 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 04:40:07,993 Cache EXISTS
+dep1 - 2023-05-03 04:40:07,999 Saved timestamp: event_deploy () {} start
+dep1 - 2023-05-03 04:40:08,010 Saved timestamp: event_deploy () {} end
+dep1 - 2023-05-03 04:40:08,011 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 04:40:08,016 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 04:40:08,017 Saved timestamp: instruction_waitall ('5',) {} start
+dep1 - 2023-05-03 04:40:08,049 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:40:12,452 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:40:17,490 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:40:22,539 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:40:27,607 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:40:32,665 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:40:37,686 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:40:42,758 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:40:47,821 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:40:52,846 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:40:57,900 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:40:58,032 Everyone blocked
+dep1 - 2023-05-03 04:40:58,032 Going sleeping bye
+dep1 - 2023-05-03 04:40:58,033 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 04:40:58,033 Saving current conf ...
+dep1 - 2023-05-03 04:40:58,040 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 04:40:58,041 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 04:40:58,042 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 04:40:58,043 Saved timestamp: instruction_waitall_5 end
+dep1 - 2023-05-03 04:40:58,043 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_04-40-58-858.043568611145.yaml
+dep1 - 2023-05-03 04:40:58,053 
+dep1 - 2023-05-03 04:43:23,033 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_06-43-21', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'deploy', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 04:43:23,033 Current round: --- FREQ: 12 -----
+[2395, 50][2432.5, 50]   Server/dep0   12.5   Right
+[2395, 50][2340, 50]     Server/dep1   0      Left
+[2395, 50][2450, 50]     Server/dep2   0      Right
+[2395, 50][2432.5, 50]   Server/dep3   12.5   Right
+[2395, 50][-1, 50]       Server/dep4   0      None
+-----------------
+dep1 - 2023-05-03 04:43:23,033 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 04:43:23,034 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 04:43:23,034 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 04:43:23,034 Retrieving previous conf ...
+dep1 - 2023-05-03 04:43:23,034 done
+dep1 - 2023-05-03 04:43:23,035 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_04-43-23.json
+dep1 - 2023-05-03 04:43:23,036 Removing previous conf ...
+dep1 - 2023-05-03 04:43:23,036 done
+dep1 - 2023-05-03 04:43:23,037 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 04:43:23,037 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 04:43:23,037 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 04:43:23,043 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 04:43:23,043 Cache EXISTS
+dep1 - 2023-05-03 04:43:23,049 Saved timestamp: event_deploy () {} start
+dep1 - 2023-05-03 04:43:23,060 Saved timestamp: event_deploy () {} end
+dep1 - 2023-05-03 04:43:23,060 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 04:43:23,066 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 04:43:23,066 Saved timestamp: instruction_waitall ('5',) {} start
+dep1 - 2023-05-03 04:43:23,097 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:43:27,506 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:43:32,540 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:43:37,562 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:43:42,585 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:43:47,667 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:43:52,755 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:43:57,835 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:44:02,917 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:44:08,005 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:44:13,082 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:44:13,083 Everyone blocked
+dep1 - 2023-05-03 04:44:13,089 Going sleeping bye
+dep1 - 2023-05-03 04:44:13,089 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 04:44:13,090 Saving current conf ...
+dep1 - 2023-05-03 04:44:13,098 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 04:44:13,098 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 04:44:13,099 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 04:44:13,100 Saved timestamp: instruction_waitall_5 end
+dep1 - 2023-05-03 04:44:13,100 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_04-44-13-53.10068702697754.yaml
+dep1 - 2023-05-03 04:44:13,112 
+dep1 - 2023-05-03 04:46:37,957 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_06-46-36', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'deploy', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 04:46:37,957 Current round: --- FREQ: 13 -----
+[2590, 50][2552.5, 50]   Server/dep0   12.5   Left
+[2590, 50][2535, 50]     Server/dep1   0      Left
+[2590, 50][2552.5, 50]   Server/dep2   12.5   Left
+[2590, 50][2552.5, 50]   Server/dep3   12.5   Left
+[2590, 50][2552.5, 50]   Server/dep4   12.5   Left
+-----------------
+dep1 - 2023-05-03 04:46:37,958 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 04:46:37,958 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 04:46:37,958 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 04:46:37,959 Retrieving previous conf ...
+dep1 - 2023-05-03 04:46:37,959 done
+dep1 - 2023-05-03 04:46:37,960 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_04-46-37.json
+dep1 - 2023-05-03 04:46:37,960 Removing previous conf ...
+dep1 - 2023-05-03 04:46:37,961 done
+dep1 - 2023-05-03 04:46:37,961 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 04:46:37,962 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 04:46:37,962 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 04:46:37,967 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 04:46:37,968 Cache EXISTS
+dep1 - 2023-05-03 04:46:37,974 Saved timestamp: event_deploy () {} start
+dep1 - 2023-05-03 04:46:37,985 Saved timestamp: event_deploy () {} end
+dep1 - 2023-05-03 04:46:37,985 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 04:46:37,991 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 04:46:37,991 Saved timestamp: instruction_waitall ('5',) {} start
+dep1 - 2023-05-03 04:46:38,022 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:46:42,420 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:46:47,448 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:46:52,467 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:46:57,628 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:47:02,743 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:47:07,873 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:47:12,907 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:47:18,056 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:47:23,132 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:47:28,034 Everyone blocked
+dep1 - 2023-05-03 04:47:28,035 Going sleeping bye
+dep1 - 2023-05-03 04:47:28,035 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 04:47:28,035 Saving current conf ...
+dep1 - 2023-05-03 04:47:28,044 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 04:47:28,047 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 04:47:28,048 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 04:47:28,049 Saved timestamp: instruction_waitall_5 end
+dep1 - 2023-05-03 04:47:28,049 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_04-47-28-248.049498796463.yaml
+dep1 - 2023-05-03 04:47:28,057 
+dep1 - 2023-05-03 04:51:43,052 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_06-51-41', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'deploy', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 04:51:43,052 Current round: --- FREQ: 14 -----
+[-1, 50][2730, 50]   Server/dep0   0   None
+[-1, 50][2840, 50]   Server/dep1   0   None
+[-1, 50][2730, 50]   Server/dep2   0   None
+[-1, 50][2730, 50]   Server/dep3   0   None
+[-1, 50][-1, 50]     Server/dep4   0   None
+-----------------
+dep1 - 2023-05-03 04:51:43,053 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 04:51:43,053 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 04:51:43,053 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 04:51:43,053 Retrieving previous conf ...
+dep1 - 2023-05-03 04:51:43,054 done
+dep1 - 2023-05-03 04:51:43,054 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_04-51-43.json
+dep1 - 2023-05-03 04:51:43,055 Removing previous conf ...
+dep1 - 2023-05-03 04:51:43,055 done
+dep1 - 2023-05-03 04:51:43,056 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 04:51:43,056 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 04:51:43,057 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 04:51:43,062 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 04:51:43,062 Cache EXISTS
+dep1 - 2023-05-03 04:51:43,068 Saved timestamp: event_deploy () {} start
+dep1 - 2023-05-03 04:51:43,079 Saved timestamp: event_deploy () {} end
+dep1 - 2023-05-03 04:51:43,080 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 04:51:43,085 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 04:51:43,086 Saved timestamp: instruction_waitall ('5',) {} start
+dep1 - 2023-05-03 04:51:43,117 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:51:47,448 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:51:52,498 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:51:57,530 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:52:02,562 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:52:07,652 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:52:12,745 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:52:17,833 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:52:22,921 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:52:28,011 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:52:33,098 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:52:33,099 Everyone blocked
+dep1 - 2023-05-03 04:52:33,099 Going sleeping bye
+dep1 - 2023-05-03 04:52:33,100 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 04:52:33,100 Saving current conf ...
+dep1 - 2023-05-03 04:52:33,108 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 04:52:33,109 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 04:52:33,110 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 04:52:33,110 Saved timestamp: instruction_waitall_5 end
+dep1 - 2023-05-03 04:52:33,111 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_04-52-33-553.1113045215607.yaml
+dep1 - 2023-05-03 04:52:33,123 
+dep1 - 2023-05-03 04:53:07,983 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_06-53-06', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'deploy', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 04:53:07,984 Current round: --- FREQ: 15 -----
+[2980, 50][2925, 50]   Server/dep0   0   Left
+[2980, 50][2925, 50]   Server/dep1   0   Left
+[2980, 50][3035, 50]   Server/dep2   0   Right
+[2980, 50][-1, 50]     Server/dep3   0   None
+[2980, 50][2925, 50]   Server/dep4   0   Left
+-----------------
+dep1 - 2023-05-03 04:53:07,984 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 04:53:07,984 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 04:53:07,985 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 04:53:07,985 Retrieving previous conf ...
+dep1 - 2023-05-03 04:53:07,985 done
+dep1 - 2023-05-03 04:53:07,986 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_04-53-07.json
+dep1 - 2023-05-03 04:53:07,986 Removing previous conf ...
+dep1 - 2023-05-03 04:53:07,987 done
+dep1 - 2023-05-03 04:53:07,987 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 04:53:07,988 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 04:53:07,988 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 04:53:07,993 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 04:53:07,994 Cache EXISTS
+dep1 - 2023-05-03 04:53:08,000 Saved timestamp: event_deploy () {} start
+dep1 - 2023-05-03 04:53:08,011 Saved timestamp: event_deploy () {} end
+dep1 - 2023-05-03 04:53:08,011 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 04:53:08,017 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 04:53:08,017 Saved timestamp: instruction_waitall ('5',) {} start
+dep1 - 2023-05-03 04:53:08,048 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:53:12,428 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:53:17,452 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:53:22,480 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:53:27,504 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:53:32,589 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:53:37,659 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:53:42,729 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:53:47,779 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:53:52,819 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:53:57,862 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:53:58,049 Everyone blocked
+dep1 - 2023-05-03 04:53:58,050 Going sleeping bye
+dep1 - 2023-05-03 04:53:58,050 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 04:53:58,051 Saving current conf ...
+dep1 - 2023-05-03 04:53:58,060 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 04:53:58,061 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 04:53:58,062 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 04:53:58,063 Saved timestamp: instruction_waitall_5 end
+dep1 - 2023-05-03 04:53:58,063 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_04-53-58-638.0634987354279.yaml
+dep1 - 2023-05-03 04:53:58,074 
+dep1 - 2023-05-03 04:58:13,050 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_06-58-11', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'deploy', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 04:58:13,050 Current round: --- FREQ: 16 -----
+[-1, 50][3120, 50]   Server/dep0   0   None
+[-1, 50][3230, 50]   Server/dep1   0   None
+[-1, 50][3230, 50]   Server/dep2   0   None
+[-1, 50][-1, 50]     Server/dep3   0   None
+[-1, 50][3230, 50]   Server/dep4   0   None
+-----------------
+dep1 - 2023-05-03 04:58:13,050 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 04:58:13,051 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 04:58:13,051 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 04:58:13,051 Retrieving previous conf ...
+dep1 - 2023-05-03 04:58:13,051 done
+dep1 - 2023-05-03 04:58:13,052 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_04-58-13.json
+dep1 - 2023-05-03 04:58:13,053 Removing previous conf ...
+dep1 - 2023-05-03 04:58:13,053 done
+dep1 - 2023-05-03 04:58:13,054 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 04:58:13,054 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 04:58:13,054 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 04:58:13,059 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 04:58:13,060 Cache EXISTS
+dep1 - 2023-05-03 04:58:13,066 Saved timestamp: event_deploy () {} start
+dep1 - 2023-05-03 04:58:13,077 Saved timestamp: event_deploy () {} end
+dep1 - 2023-05-03 04:58:13,082 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 04:58:13,083 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 04:58:13,083 Saved timestamp: instruction_waitall ('5',) {} start
+dep1 - 2023-05-03 04:58:13,114 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:58:17,519 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:58:22,560 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:58:27,583 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:58:32,584 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:58:37,644 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:58:42,704 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:58:47,765 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:58:52,828 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:58:57,889 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:59:02,953 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 04:59:03,141 Everyone blocked
+dep1 - 2023-05-03 04:59:03,142 Going sleeping bye
+dep1 - 2023-05-03 04:59:03,142 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 04:59:03,143 Saving current conf ...
+dep1 - 2023-05-03 04:59:03,152 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 04:59:03,153 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 04:59:03,154 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 04:59:03,154 Saved timestamp: instruction_waitall_5 end
+dep1 - 2023-05-03 04:59:03,155 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_04-59-03-943.1552951335907.yaml
+dep1 - 2023-05-03 04:59:03,165 
+dep1 - 2023-05-03 05:01:28,052 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_07-01-26', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'deploy', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 05:01:28,053 Current round: --- FREQ: 17 -----
+[-1, 50][-1, 50]     Server/dep0   0   None
+[-1, 50][3425, 50]   Server/dep1   0   None
+[-1, 50][3425, 50]   Server/dep2   0   None
+[-1, 50][3315, 50]   Server/dep3   0   None
+[-1, 50][3425, 50]   Server/dep4   0   None
+-----------------
+dep1 - 2023-05-03 05:01:28,053 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 05:01:28,053 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 05:01:28,054 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 05:01:28,054 Retrieving previous conf ...
+dep1 - 2023-05-03 05:01:28,054 done
+dep1 - 2023-05-03 05:01:28,055 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_05-01-28.json
+dep1 - 2023-05-03 05:01:28,055 Removing previous conf ...
+dep1 - 2023-05-03 05:01:28,056 done
+dep1 - 2023-05-03 05:01:28,056 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 05:01:28,057 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 05:01:28,057 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 05:01:28,062 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 05:01:28,063 Cache EXISTS
+dep1 - 2023-05-03 05:01:28,069 Saved timestamp: event_deploy () {} start
+dep1 - 2023-05-03 05:01:28,080 Saved timestamp: event_deploy () {} end
+dep1 - 2023-05-03 05:01:28,085 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 05:01:28,086 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 05:01:28,086 Saved timestamp: instruction_waitall ('5',) {} start
+dep1 - 2023-05-03 05:01:28,118 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:01:32,516 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:01:37,547 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:01:42,569 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:01:47,595 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:01:52,682 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:01:57,688 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:02:02,775 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:02:07,857 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:02:12,938 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:02:18,014 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:02:18,109 Everyone blocked
+dep1 - 2023-05-03 05:02:18,110 Going sleeping bye
+dep1 - 2023-05-03 05:02:18,110 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 05:02:18,111 Saving current conf ...
+dep1 - 2023-05-03 05:02:18,119 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 05:02:18,119 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 05:02:18,120 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 05:02:18,121 Saved timestamp: instruction_waitall_5 end
+dep1 - 2023-05-03 05:02:18,121 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_05-02-18-138.12171006202698.yaml
+dep1 - 2023-05-03 05:02:18,132 
+dep1 - 2023-05-03 05:02:52,964 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_07-02-51', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'deploy', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 05:02:52,965 Current round: --- FREQ: 18 -----
+[3565, 50][3602.5, 50]   Server/dep0   12.5   Right
+[3565, 50][3510, 50]     Server/dep1   0      Left
+[3565, 50][-1, 50]       Server/dep2   0      None
+[3565, 50][3510, 50]     Server/dep3   0      Left
+[3565, 50][3620, 50]     Server/dep4   0      Right
+-----------------
+dep1 - 2023-05-03 05:02:52,965 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 05:02:52,965 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 05:02:52,966 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 05:02:52,966 Retrieving previous conf ...
+dep1 - 2023-05-03 05:02:52,967 done
+dep1 - 2023-05-03 05:02:52,967 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_05-02-52.json
+dep1 - 2023-05-03 05:02:52,968 Removing previous conf ...
+dep1 - 2023-05-03 05:02:52,968 done
+dep1 - 2023-05-03 05:02:52,969 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 05:02:52,969 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 05:02:52,970 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 05:02:52,975 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 05:02:52,975 Cache EXISTS
+dep1 - 2023-05-03 05:02:52,982 Saved timestamp: event_deploy () {} start
+dep1 - 2023-05-03 05:02:52,992 Saved timestamp: event_deploy () {} end
+dep1 - 2023-05-03 05:02:52,993 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 05:02:52,998 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 05:02:52,999 Saved timestamp: instruction_waitall ('5',) {} start
+dep1 - 2023-05-03 05:02:53,033 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:02:57,354 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:03:02,398 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:03:07,412 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:03:12,503 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:03:17,566 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:03:22,616 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:03:27,665 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:03:32,718 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:03:37,769 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:03:42,813 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:03:43,000 Everyone blocked
+dep1 - 2023-05-03 05:03:43,001 Going sleeping bye
+dep1 - 2023-05-03 05:03:43,001 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 05:03:43,001 Saving current conf ...
+dep1 - 2023-05-03 05:03:43,011 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 05:03:43,011 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 05:03:43,013 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 05:03:43,013 Saved timestamp: instruction_waitall_5 end
+dep1 - 2023-05-03 05:03:43,014 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_05-03-43-223.0140724182129.yaml
+dep1 - 2023-05-03 05:03:43,024 
+dep1 - 2023-05-03 05:07:40,545 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_07-07-39', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'deploy', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 05:07:40,545 Current round: --- FREQ: 19 -----
+[3760, 50][-1, 50]       Server/dep0   0      None
+[3760, 50][3797.5, 50]   Server/dep1   12.5   Right
+[3760, 50][-1, 50]       Server/dep2   0      None
+[3760, 50][3705, 50]     Server/dep3   0      Left
+[3760, 50][3722.5, 50]   Server/dep4   12.5   Left
+-----------------
+dep1 - 2023-05-03 05:07:40,545 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 05:07:40,546 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 05:07:40,546 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 05:07:40,546 Retrieving previous conf ...
+dep1 - 2023-05-03 05:07:40,547 done
+dep1 - 2023-05-03 05:07:40,547 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_05-07-40.json
+dep1 - 2023-05-03 05:07:40,548 Removing previous conf ...
+dep1 - 2023-05-03 05:07:40,548 done
+dep1 - 2023-05-03 05:07:40,549 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 05:07:40,549 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 05:07:40,549 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 05:07:40,555 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 05:07:40,555 Cache EXISTS
+dep1 - 2023-05-03 05:07:40,562 Saved timestamp: event_deploy () {} start
+dep1 - 2023-05-03 05:07:40,572 Saved timestamp: event_deploy () {} end
+dep1 - 2023-05-03 05:07:40,573 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 05:07:40,579 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 05:07:40,579 Saved timestamp: instruction_waitall ('5',) {} start
+dep1 - 2023-05-03 05:07:40,640 No assembly to wait, all are inactives
+dep1 - 2023-05-03 05:07:40,641 Saved timestamp: instruction_waitall ('5',) {} end
+dep1 - 2023-05-03 05:07:40,641 Saved timestamp: event_uptime_wait_all () {} end
+dep1 - 2023-05-03 05:07:40,642 ---------------------- END OF RECONFIGURATION GG -----------------------
+dep1 - 2023-05-03 05:07:40,642 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 05:07:40,642 Saving current conf ...
+dep1 - 2023-05-03 05:07:40,647 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 05:07:40,647 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 05:07:40,648 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_05-07-40-460.64842677116394.yaml
+dep1 - 2023-05-03 05:07:40,654 
+dep1 - 2023-05-03 05:14:17,439 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_07-14-16', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'update', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 05:14:17,439 Current round: --- FREQ: 21 -----
+[4150, 50][4095, 50]     Server/dep0   0      Left
+[4150, 50][4187.5, 50]   Server/dep1   12.5   Right
+[4150, 50][4205, 50]     Server/dep2   0      Right
+[4150, 50][4205, 50]     Server/dep3   0      Right
+[4150, 50][4187.5, 50]   Server/dep4   12.5   Right
+-----------------
+dep1 - 2023-05-03 05:14:17,440 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 05:14:17,440 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 05:14:17,440 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 05:14:17,440 Retrieving previous conf ...
+dep1 - 2023-05-03 05:14:17,441 done
+dep1 - 2023-05-03 05:14:17,441 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_05-14-17.json
+dep1 - 2023-05-03 05:14:17,442 Removing previous conf ...
+dep1 - 2023-05-03 05:14:17,442 done
+dep1 - 2023-05-03 05:14:17,443 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 05:14:17,444 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 05:14:17,444 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 05:14:17,449 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 05:14:17,449 Cache EXISTS
+dep1 - 2023-05-03 05:14:17,456 Saved timestamp: event_update () {} start
+dep1 - 2023-05-03 05:14:17,466 Saved timestamp: instruction_push_b ('0', 'dep1', 'update') {} start
+dep1 - 2023-05-03 05:14:17,472 Saved timestamp: behavior ('update', 'dep1') {} start
+dep1 - 2023-05-03 05:14:17,473 [35m[dep1] Changing behavior to 'update'[0m
+dep1 - 2023-05-03 05:14:17,473 Saved timestamp: instruction_push_b ('0', 'dep1', 'update') {} end
+dep1 - 2023-05-03 05:14:17,473 Saved timestamp: instruction_push_b ('1', 'dep1', 'deploy') {} start
+dep1 - 2023-05-03 05:14:17,474 [35m[dep1] Queing behavior 'deploy'[0m
+dep1 - 2023-05-03 05:14:17,475 Saved timestamp: instruction_push_b ('1', 'dep1', 'deploy') {} end
+dep1 - 2023-05-03 05:14:17,475 Saved timestamp: instruction_wait ('2', 'dep1') {} start
+dep1 - 2023-05-03 05:14:17,476 Waiting for component dep1 to finish its behaviors execution
+dep1 - 2023-05-03 05:14:17,476 Move from place to odocks (running)
+dep1 - 2023-05-03 05:14:17,476 Provide dep service is now refusing
+dep1 - 2023-05-03 05:14:17,505 [35m[dep1] Leaving place 'running'[0m
+dep1 - 2023-05-03 05:14:17,505 [35m[dep1] Stopping to use place dependency 'service'[0m
+dep1 - 2023-05-03 05:14:17,506 [35m[dep1] Starting transition 'update'[0m
+dep1 - 2023-05-03 05:14:17,506 [35m[dep1] updating[0m
+dep1 - 2023-05-03 05:14:21,839 Waiting for component dep1 to finish its behaviors execution
+dep1 - 2023-05-03 05:14:26,842 Waiting for component dep1 to finish its behaviors execution
+dep1 - 2023-05-03 05:14:31,886 Waiting for component dep1 to finish its behaviors execution
+dep1 - 2023-05-03 05:14:36,923 Waiting for component dep1 to finish its behaviors execution
+dep1 - 2023-05-03 05:14:38,658 [35m[dep1] updated[0m
+dep1 - 2023-05-03 05:14:38,687 [35m[dep1] Ending transition 'update'[0m
+dep1 - 2023-05-03 05:14:38,738 Move from idocks to place (installed)
+dep1 - 2023-05-03 05:14:38,739 [35m[dep1] Entering place 'installed'[0m
+dep1 - 2023-05-03 05:14:38,739 [35m[dep1] Starting to use place dependency 'ip'[0m
+dep1 - 2023-05-03 05:14:38,740 Move from place to odocks (installed)
+dep1 - 2023-05-03 05:14:38,740 Saved timestamp: behavior ('update', 'dep1') {} end
+dep1 - 2023-05-03 05:14:38,741 Saved timestamp: behavior ('deploy', 'dep1') {} start
+dep1 - 2023-05-03 05:14:38,741 [35m[dep1] Changing behavior to 'deploy'[0m
+dep1 - 2023-05-03 05:14:38,792 [35m[dep1] Leaving place 'installed'[0m
+dep1 - 2023-05-03 05:14:38,793 [35m[dep1] Starting transition 'run'[0m
+dep1 - 2023-05-03 05:14:38,794 [35m[dep1] preparing to run[0m
+dep1 - 2023-05-03 05:14:40,316 [35m[dep1] running[0m
+dep1 - 2023-05-03 05:14:40,355 [35m[dep1] Ending transition 'run'[0m
+dep1 - 2023-05-03 05:14:40,405 Move from idocks to place (running)
+dep1 - 2023-05-03 05:14:40,406 [35m[dep1] Entering place 'running'[0m
+dep1 - 2023-05-03 05:14:40,406 [35m[dep1] Starting to use place dependency 'service'[0m
+dep1 - 2023-05-03 05:14:40,407 Move from place to odocks (running)
+dep1 - 2023-05-03 05:14:40,407 Saved timestamp: behavior ('deploy', 'dep1') {} end
+dep1 - 2023-05-03 05:14:40,407 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 05:14:40,408 [35m[dep1] Going IDLE[0m
+dep1 - 2023-05-03 05:14:40,458 Saved timestamp: instruction_wait ('2', 'dep1') {} end
+dep1 - 2023-05-03 05:14:40,459 Saved timestamp: event_update () {} end
+dep1 - 2023-05-03 05:14:40,459 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 05:14:40,460 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 05:14:40,461 Saved timestamp: instruction_waitall ('3',) {} start
+dep1 - 2023-05-03 05:14:40,583 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_2', 'dep_assembly_3', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 05:14:41,933 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_2', 'dep_assembly_3', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 05:14:46,981 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_2', 'dep_assembly_3', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 05:14:52,116 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_2', 'dep_assembly_3', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 05:14:57,149 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_2', 'dep_assembly_3', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 05:15:02,202 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_2', 'dep_assembly_3', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 05:15:07,307 WAIT ALL False --- Remote assembly {'server_assembly', 'dep_assembly_2', 'dep_assembly_3', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 05:15:07,471 Everyone blocked
+dep1 - 2023-05-03 05:15:07,472 Going sleeping bye
+dep1 - 2023-05-03 05:15:07,472 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 05:15:07,472 Saving current conf ...
+dep1 - 2023-05-03 05:15:07,480 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 05:15:07,481 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 05:15:07,482 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 05:15:07,483 Saved timestamp: instruction_waitall_3 end
+dep1 - 2023-05-03 05:15:07,483 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_05-15-07-907.4834432601929.yaml
+dep1 - 2023-05-03 05:15:07,501 
+dep1 - 2023-05-03 05:17:49,912 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_07-17-48', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'update', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 05:17:49,912 Current round: --- FREQ: 22 -----
+[4345, 50][4400, 50]     Server/dep0   0      Right
+[4345, 50][4400, 50]     Server/dep1   0      Right
+[4345, 50][4382.5, 50]   Server/dep2   12.5   Right
+[4345, 50][-1, 50]       Server/dep3   0      None
+[4345, 50][4400, 50]     Server/dep4   0      Right
+-----------------
+dep1 - 2023-05-03 05:17:49,913 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 05:17:49,913 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 05:17:49,913 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 05:17:49,913 Retrieving previous conf ...
+dep1 - 2023-05-03 05:17:49,914 done
+dep1 - 2023-05-03 05:17:49,914 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_05-17-49.json
+dep1 - 2023-05-03 05:17:49,915 Removing previous conf ...
+dep1 - 2023-05-03 05:17:49,915 done
+dep1 - 2023-05-03 05:17:49,916 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 05:17:49,916 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 05:17:49,917 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 05:17:49,922 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 05:17:49,922 Cache EXISTS
+dep1 - 2023-05-03 05:17:49,928 Saved timestamp: event_update () {} start
+dep1 - 2023-05-03 05:17:49,939 Saved timestamp: event_update () {} end
+dep1 - 2023-05-03 05:17:49,940 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 05:17:49,945 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 05:17:49,946 Saved timestamp: instruction_waitall ('3',) {} start
+dep1 - 2023-05-03 05:17:49,994 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'server_assembly', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 05:17:54,313 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'server_assembly', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 05:17:59,367 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'server_assembly', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 05:18:04,466 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'server_assembly', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 05:18:09,527 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'server_assembly', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 05:18:14,700 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'server_assembly', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 05:18:19,845 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'server_assembly', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 05:18:24,922 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'server_assembly', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 05:18:29,934 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'server_assembly', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 05:18:35,065 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'server_assembly', 'dep_assembly_0'} not finished, waiting for it
+dep1 - 2023-05-03 05:18:40,060 Everyone blocked
+dep1 - 2023-05-03 05:18:40,060 Going sleeping bye
+dep1 - 2023-05-03 05:18:40,061 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 05:18:40,061 Saving current conf ...
+dep1 - 2023-05-03 05:18:40,069 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 05:18:40,070 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 05:18:40,071 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 05:18:40,072 Saved timestamp: instruction_waitall_3 end
+dep1 - 2023-05-03 05:18:40,072 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_05-18-40-120.07266616821289.yaml
+dep1 - 2023-05-03 05:18:40,084 
+dep1 - 2023-05-03 05:20:47,461 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_07-20-46', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'update', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 05:20:47,461 Current round: --- FREQ: 23 -----
+[4540, 50][4485, 50]     Server/dep0   0      Left
+[4540, 50][4577.5, 50]   Server/dep1   12.5   Right
+[4540, 50][4485, 50]     Server/dep2   0      Left
+[4540, 50][4595, 50]     Server/dep3   0      Right
+[4540, 50][4577.5, 50]   Server/dep4   12.5   Right
+-----------------
+dep1 - 2023-05-03 05:20:47,462 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 05:20:47,462 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 05:20:47,462 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 05:20:47,462 Retrieving previous conf ...
+dep1 - 2023-05-03 05:20:47,463 done
+dep1 - 2023-05-03 05:20:47,463 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_05-20-47.json
+dep1 - 2023-05-03 05:20:47,464 Removing previous conf ...
+dep1 - 2023-05-03 05:20:47,464 done
+dep1 - 2023-05-03 05:20:47,465 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 05:20:47,465 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 05:20:47,466 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 05:20:47,471 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 05:20:47,471 Cache EXISTS
+dep1 - 2023-05-03 05:20:47,477 Saved timestamp: event_update () {} start
+dep1 - 2023-05-03 05:20:47,488 Saved timestamp: event_update () {} end
+dep1 - 2023-05-03 05:20:47,488 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 05:20:47,494 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 05:20:47,494 Saved timestamp: instruction_waitall ('3',) {} start
+dep1 - 2023-05-03 05:20:47,582 WAIT ALL False --- Remote assembly {'dep_assembly_0', 'dep_assembly_3', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:20:51,925 WAIT ALL False --- Remote assembly {'dep_assembly_0', 'dep_assembly_3', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:20:57,091 WAIT ALL False --- Remote assembly {'dep_assembly_0', 'dep_assembly_3', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:21:02,165 WAIT ALL False --- Remote assembly {'dep_assembly_0', 'dep_assembly_3', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:21:07,286 WAIT ALL False --- Remote assembly {'dep_assembly_0', 'dep_assembly_3', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:21:12,409 WAIT ALL False --- Remote assembly {'dep_assembly_0', 'dep_assembly_3', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:21:17,411 WAIT ALL False --- Remote assembly {'dep_assembly_0', 'dep_assembly_3', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:21:22,547 WAIT ALL False --- Remote assembly {'dep_assembly_0', 'dep_assembly_3', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:21:27,682 WAIT ALL False --- Remote assembly {'dep_assembly_0', 'dep_assembly_3', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:21:32,813 WAIT ALL False --- Remote assembly {'dep_assembly_0', 'dep_assembly_3', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:21:37,518 Everyone blocked
+dep1 - 2023-05-03 05:21:37,519 Going sleeping bye
+dep1 - 2023-05-03 05:21:37,519 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 05:21:37,520 Saving current conf ...
+dep1 - 2023-05-03 05:21:37,528 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 05:21:37,528 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 05:21:37,530 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 05:21:37,530 Saved timestamp: instruction_waitall_3 end
+dep1 - 2023-05-03 05:21:37,531 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_05-21-37-297.53092193603516.yaml
+dep1 - 2023-05-03 05:21:37,541 
+dep1 - 2023-05-03 05:22:29,924 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_07-22-28', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'update', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 05:22:29,924 Current round: --- FREQ: 24 -----
+[4735, 50][4680, 50]   Server/dep0   0   Left
+[4735, 50][4680, 50]   Server/dep1   0   Left
+[4735, 50][-1, 50]     Server/dep2   0   None
+[4735, 50][4790, 50]   Server/dep3   0   Right
+[4735, 50][4790, 50]   Server/dep4   0   Right
+-----------------
+dep1 - 2023-05-03 05:22:29,925 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 05:22:29,925 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 05:22:29,925 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 05:22:29,925 Retrieving previous conf ...
+dep1 - 2023-05-03 05:22:29,926 done
+dep1 - 2023-05-03 05:22:29,926 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_05-22-29.json
+dep1 - 2023-05-03 05:22:29,927 Removing previous conf ...
+dep1 - 2023-05-03 05:22:29,927 done
+dep1 - 2023-05-03 05:22:29,928 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 05:22:29,928 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 05:22:29,929 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 05:22:29,934 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 05:22:29,934 Cache EXISTS
+dep1 - 2023-05-03 05:22:29,940 Saved timestamp: event_update () {} start
+dep1 - 2023-05-03 05:22:29,951 Saved timestamp: event_update () {} end
+dep1 - 2023-05-03 05:22:29,956 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 05:22:29,957 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 05:22:29,958 Saved timestamp: instruction_waitall ('3',) {} start
+dep1 - 2023-05-03 05:22:29,989 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:22:34,340 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:22:39,400 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:22:44,434 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:22:49,504 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:22:54,606 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:22:59,612 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:23:04,726 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:23:09,825 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:23:14,905 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:23:19,978 WAIT ALL False --- Remote assembly {'dep_assembly_3', 'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:23:19,979 Everyone blocked
+dep1 - 2023-05-03 05:23:19,980 Going sleeping bye
+dep1 - 2023-05-03 05:23:19,980 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 05:23:19,980 Saving current conf ...
+dep1 - 2023-05-03 05:23:19,989 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 05:23:19,989 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 05:23:19,991 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 05:23:19,991 Saved timestamp: instruction_waitall_3 end
+dep1 - 2023-05-03 05:23:19,992 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_05-23-19-399.9919283390045.yaml
+dep1 - 2023-05-03 05:23:20,002 
+dep1 - 2023-05-03 05:27:34,971 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_07-27-33', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'update', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 05:27:34,971 Current round: --- FREQ: 25 -----
+[4930, 50][4967.5, 50]   Server/dep0   12.5   Right
+[4930, 50][4985, 50]     Server/dep1   0      Right
+[4930, 50][4985, 50]     Server/dep2   0      Right
+[4930, 50][4967.5, 50]   Server/dep3   12.5   Right
+[4930, 50][4967.5, 50]   Server/dep4   12.5   Right
+-----------------
+dep1 - 2023-05-03 05:27:34,972 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 05:27:34,972 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 05:27:34,972 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 05:27:34,972 Retrieving previous conf ...
+dep1 - 2023-05-03 05:27:34,973 done
+dep1 - 2023-05-03 05:27:34,973 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_05-27-34.json
+dep1 - 2023-05-03 05:27:34,974 Removing previous conf ...
+dep1 - 2023-05-03 05:27:34,974 done
+dep1 - 2023-05-03 05:27:34,975 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 05:27:34,975 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 05:27:34,976 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 05:27:34,981 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 05:27:34,981 Cache EXISTS
+dep1 - 2023-05-03 05:27:34,987 Saved timestamp: event_update () {} start
+dep1 - 2023-05-03 05:27:34,998 Saved timestamp: event_update () {} end
+dep1 - 2023-05-03 05:27:35,004 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 05:27:35,004 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 05:27:35,005 Saved timestamp: instruction_waitall ('3',) {} start
+dep1 - 2023-05-03 05:27:35,112 WAIT ALL False --- Remote assembly {'dep_assembly_0', 'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:27:36,050 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:27:39,419 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:27:44,440 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:27:49,606 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:27:54,695 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:27:59,873 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:28:05,040 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:28:10,114 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:28:15,219 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:28:20,222 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:28:25,091 Everyone blocked
+dep1 - 2023-05-03 05:28:25,092 Going sleeping bye
+dep1 - 2023-05-03 05:28:25,092 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 05:28:25,093 Saving current conf ...
+dep1 - 2023-05-03 05:28:25,101 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 05:28:25,101 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 05:28:25,103 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 05:28:25,103 Saved timestamp: instruction_waitall_3 end
+dep1 - 2023-05-03 05:28:25,104 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_05-28-25-705.1040019989014.yaml
+dep1 - 2023-05-03 05:28:25,114 
+dep1 - 2023-05-03 05:28:59,909 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_07-28-58', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'update', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 05:28:59,910 Current round: --- FREQ: 26 -----
+[-1, 50][-1, 50]     Server/dep0   0   None
+[-1, 50][5070, 50]   Server/dep1   0   None
+[-1, 50][5070, 50]   Server/dep2   0   None
+[-1, 50][-1, 50]     Server/dep3   0   None
+[-1, 50][5180, 50]   Server/dep4   0   None
+-----------------
+dep1 - 2023-05-03 05:28:59,910 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 05:28:59,910 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 05:28:59,910 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 05:28:59,911 Retrieving previous conf ...
+dep1 - 2023-05-03 05:28:59,911 done
+dep1 - 2023-05-03 05:28:59,911 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_05-28-59.json
+dep1 - 2023-05-03 05:28:59,912 Removing previous conf ...
+dep1 - 2023-05-03 05:28:59,913 done
+dep1 - 2023-05-03 05:28:59,913 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 05:28:59,914 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 05:28:59,914 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 05:28:59,919 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 05:28:59,919 Cache EXISTS
+dep1 - 2023-05-03 05:28:59,926 Saved timestamp: event_update () {} start
+dep1 - 2023-05-03 05:28:59,936 Saved timestamp: event_update () {} end
+dep1 - 2023-05-03 05:28:59,937 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 05:28:59,943 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 05:28:59,943 Saved timestamp: instruction_waitall ('3',) {} start
+dep1 - 2023-05-03 05:28:59,974 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:29:04,335 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:29:09,413 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:29:14,443 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:29:19,484 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:29:24,510 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:29:29,540 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:29:34,565 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:29:39,578 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:29:44,591 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:29:49,610 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:29:49,984 Everyone blocked
+dep1 - 2023-05-03 05:29:49,984 Going sleeping bye
+dep1 - 2023-05-03 05:29:49,985 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 05:29:49,985 Saving current conf ...
+dep1 - 2023-05-03 05:29:49,990 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 05:29:49,991 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 05:29:49,992 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 05:29:49,992 Saved timestamp: instruction_waitall_3 end
+dep1 - 2023-05-03 05:29:49,993 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_05-29-49-789.993262052536.yaml
+dep1 - 2023-05-03 05:29:50,004 
+dep1 - 2023-05-03 05:32:14,953 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_07-32-13', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'update', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 05:32:14,954 Current round: --- FREQ: 27 -----
+[5320, 50][5375, 50]     Server/dep0   0      Right
+[5320, 50][5265, 50]     Server/dep1   0      Left
+[5320, 50][5265, 50]     Server/dep2   0      Left
+[5320, 50][5375, 50]     Server/dep3   0      Right
+[5320, 50][5357.5, 50]   Server/dep4   12.5   Right
+-----------------
+dep1 - 2023-05-03 05:32:14,954 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 05:32:14,954 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 05:32:14,954 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 05:32:14,955 Retrieving previous conf ...
+dep1 - 2023-05-03 05:32:14,955 done
+dep1 - 2023-05-03 05:32:14,955 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_05-32-14.json
+dep1 - 2023-05-03 05:32:14,956 Removing previous conf ...
+dep1 - 2023-05-03 05:32:14,957 done
+dep1 - 2023-05-03 05:32:14,957 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 05:32:14,958 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 05:32:14,958 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 05:32:14,963 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 05:32:14,964 Cache EXISTS
+dep1 - 2023-05-03 05:32:14,970 Saved timestamp: event_update () {} start
+dep1 - 2023-05-03 05:32:14,980 Saved timestamp: event_update () {} end
+dep1 - 2023-05-03 05:32:14,986 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 05:32:14,987 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 05:32:14,987 Saved timestamp: instruction_waitall ('3',) {} start
+dep1 - 2023-05-03 05:32:15,017 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:32:19,411 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:32:24,488 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:32:29,583 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:32:34,656 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:32:39,729 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:32:44,774 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:32:49,832 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:32:54,883 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:32:59,935 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:33:04,982 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:33:04,982 Everyone blocked
+dep1 - 2023-05-03 05:33:04,982 Going sleeping bye
+dep1 - 2023-05-03 05:33:04,983 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 05:33:04,983 Saving current conf ...
+dep1 - 2023-05-03 05:33:04,991 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 05:33:04,991 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 05:33:04,993 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 05:33:04,993 Saved timestamp: instruction_waitall_3 end
+dep1 - 2023-05-03 05:33:04,994 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_05-33-04-984.9938714504242.yaml
+dep1 - 2023-05-03 05:33:05,004 
+dep1 - 2023-05-03 05:35:29,877 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_07-35-28', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'update', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 05:35:29,877 Current round: --- FREQ: 28 -----
+[5515, 50][-1, 50]       Server/dep0   0      None
+[5515, 50][5460, 50]     Server/dep1   0      Left
+[5515, 50][5477.5, 50]   Server/dep2   12.5   Left
+[5515, 50][5570, 50]     Server/dep3   0      Right
+[5515, 50][-1, 50]       Server/dep4   0      None
+-----------------
+dep1 - 2023-05-03 05:35:29,878 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 05:35:29,878 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 05:35:29,878 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 05:35:29,878 Retrieving previous conf ...
+dep1 - 2023-05-03 05:35:29,879 done
+dep1 - 2023-05-03 05:35:29,879 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_05-35-29.json
+dep1 - 2023-05-03 05:35:29,880 Removing previous conf ...
+dep1 - 2023-05-03 05:35:29,880 done
+dep1 - 2023-05-03 05:35:29,881 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 05:35:29,881 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 05:35:29,882 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 05:35:29,887 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 05:35:29,887 Cache EXISTS
+dep1 - 2023-05-03 05:35:29,893 Saved timestamp: event_update () {} start
+dep1 - 2023-05-03 05:35:29,904 Saved timestamp: event_update () {} end
+dep1 - 2023-05-03 05:35:29,910 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 05:35:29,910 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 05:35:29,911 Saved timestamp: instruction_waitall ('3',) {} start
+dep1 - 2023-05-03 05:35:29,942 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:35:34,350 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:35:39,403 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:35:44,431 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:35:49,434 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:35:54,505 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:35:59,602 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:36:04,627 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:36:09,689 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:36:14,708 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:36:19,775 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:36:19,896 Everyone blocked
+dep1 - 2023-05-03 05:36:19,896 Going sleeping bye
+dep1 - 2023-05-03 05:36:19,896 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 05:36:19,897 Saving current conf ...
+dep1 - 2023-05-03 05:36:19,902 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 05:36:19,902 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 05:36:19,903 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 05:36:19,904 Saved timestamp: instruction_waitall_3 end
+dep1 - 2023-05-03 05:36:19,904 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_05-36-19-179.9044065475464.yaml
+dep1 - 2023-05-03 05:36:19,913 
+dep1 - 2023-05-03 05:38:44,972 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_07-38-43', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'update', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 05:38:44,973 Current round: --- FREQ: 29 -----
+[-1, 50][5765, 50]   Server/dep0   0   None
+[-1, 50][5655, 50]   Server/dep1   0   None
+[-1, 50][-1, 50]     Server/dep2   0   None
+[-1, 50][5765, 50]   Server/dep3   0   None
+[-1, 50][5765, 50]   Server/dep4   0   None
+-----------------
+dep1 - 2023-05-03 05:38:44,973 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 05:38:44,973 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 05:38:44,974 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 05:38:44,974 Retrieving previous conf ...
+dep1 - 2023-05-03 05:38:44,974 done
+dep1 - 2023-05-03 05:38:44,975 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_05-38-44.json
+dep1 - 2023-05-03 05:38:44,975 Removing previous conf ...
+dep1 - 2023-05-03 05:38:44,976 done
+dep1 - 2023-05-03 05:38:44,976 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 05:38:44,977 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 05:38:44,977 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 05:38:44,982 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 05:38:44,983 Cache EXISTS
+dep1 - 2023-05-03 05:38:44,989 Saved timestamp: event_update () {} start
+dep1 - 2023-05-03 05:38:44,999 Saved timestamp: event_update () {} end
+dep1 - 2023-05-03 05:38:45,005 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 05:38:45,006 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 05:38:45,006 Saved timestamp: instruction_waitall ('3',) {} start
+dep1 - 2023-05-03 05:38:45,036 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:38:49,417 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:38:54,429 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:38:59,432 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:39:04,441 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:39:09,518 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:39:14,584 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:39:19,649 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:39:24,729 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:39:29,794 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:39:34,862 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:39:35,049 Everyone blocked
+dep1 - 2023-05-03 05:39:35,050 Going sleeping bye
+dep1 - 2023-05-03 05:39:35,050 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 05:39:35,051 Saving current conf ...
+dep1 - 2023-05-03 05:39:35,060 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 05:39:35,061 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 05:39:35,062 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 05:39:35,063 Saved timestamp: instruction_waitall_3 end
+dep1 - 2023-05-03 05:39:35,063 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_05-39-35-375.0635030269623.yaml
+dep1 - 2023-05-03 05:39:35,073 
+dep1 - 2023-05-03 05:41:59,957 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_07-41-58', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'update', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 05:41:59,958 Current round: --- FREQ: 30 -----
+[-1, 50][5850, 50]   Server/dep0   0   None
+[-1, 50][5850, 50]   Server/dep1   0   None
+[-1, 50][-1, 50]     Server/dep2   0   None
+[-1, 50][5850, 50]   Server/dep3   0   None
+[-1, 50][5850, 50]   Server/dep4   0   None
+-----------------
+dep1 - 2023-05-03 05:41:59,958 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 05:41:59,958 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 05:41:59,959 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 05:41:59,959 Retrieving previous conf ...
+dep1 - 2023-05-03 05:41:59,959 done
+dep1 - 2023-05-03 05:41:59,960 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_05-41-59.json
+dep1 - 2023-05-03 05:41:59,961 Removing previous conf ...
+dep1 - 2023-05-03 05:41:59,961 done
+dep1 - 2023-05-03 05:41:59,962 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 05:41:59,962 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 05:41:59,962 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 05:41:59,967 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 05:41:59,968 Cache EXISTS
+dep1 - 2023-05-03 05:41:59,974 Saved timestamp: event_update () {} start
+dep1 - 2023-05-03 05:41:59,985 Saved timestamp: event_update () {} end
+dep1 - 2023-05-03 05:41:59,985 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 05:41:59,991 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 05:41:59,992 Saved timestamp: instruction_waitall ('3',) {} start
+dep1 - 2023-05-03 05:42:00,091 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:42:04,447 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:42:09,452 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:42:14,556 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:42:19,689 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:42:24,854 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:42:29,863 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:42:34,868 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:42:39,876 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:42:44,942 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:42:49,978 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:42:49,978 Everyone blocked
+dep1 - 2023-05-03 05:42:49,979 Going sleeping bye
+dep1 - 2023-05-03 05:42:49,979 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 05:42:49,980 Saving current conf ...
+dep1 - 2023-05-03 05:42:49,988 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 05:42:49,988 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 05:42:49,990 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 05:42:49,990 Saved timestamp: instruction_waitall_3 end
+dep1 - 2023-05-03 05:42:49,991 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_05-42-49-569.9909937381744.yaml
+dep1 - 2023-05-03 05:42:50,001 
+dep1 - 2023-05-03 05:45:32,473 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_07-45-31', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'update', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 05:45:32,473 Current round: --- FREQ: 31 -----
+[6100, 50][6155, 50]     Server/dep0   0      Right
+[6100, 50][6062.5, 50]   Server/dep1   12.5   Left
+[6100, 50][6137.5, 50]   Server/dep2   12.5   Right
+[6100, 50][6045, 50]     Server/dep3   0      Left
+[6100, 50][-1, 50]       Server/dep4   0      None
+-----------------
+dep1 - 2023-05-03 05:45:32,474 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 05:45:32,474 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 05:45:32,474 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 05:45:32,474 Retrieving previous conf ...
+dep1 - 2023-05-03 05:45:32,475 done
+dep1 - 2023-05-03 05:45:32,475 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_05-45-32.json
+dep1 - 2023-05-03 05:45:32,476 Removing previous conf ...
+dep1 - 2023-05-03 05:45:32,477 done
+dep1 - 2023-05-03 05:45:32,477 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 05:45:32,478 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 05:45:32,478 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 05:45:32,483 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 05:45:32,484 Cache EXISTS
+dep1 - 2023-05-03 05:45:32,490 Saved timestamp: event_update () {} start
+dep1 - 2023-05-03 05:45:32,501 Saved timestamp: event_update () {} end
+dep1 - 2023-05-03 05:45:32,501 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 05:45:32,507 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 05:45:32,507 Saved timestamp: instruction_waitall ('3',) {} start
+dep1 - 2023-05-03 05:45:32,556 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:45:36,943 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:45:41,964 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:45:47,049 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:45:52,132 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:45:57,197 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:46:02,262 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:46:07,295 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:46:12,410 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:46:17,470 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:46:22,541 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:46:22,542 Everyone blocked
+dep1 - 2023-05-03 05:46:22,542 Going sleeping bye
+dep1 - 2023-05-03 05:46:22,543 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 05:46:22,543 Saving current conf ...
+dep1 - 2023-05-03 05:46:22,550 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 05:46:22,551 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 05:46:22,552 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 05:46:22,553 Saved timestamp: instruction_waitall_3 end
+dep1 - 2023-05-03 05:46:22,553 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_05-46-22-782.5534200668335.yaml
+dep1 - 2023-05-03 05:46:22,564 
+dep1 - 2023-05-03 05:52:02,446 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_07-52-01', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'update', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 05:52:02,447 Current round: --- FREQ: 33 -----
+[6490, 50][6545, 50]     Server/dep0   0      Right
+[6490, 50][6452.5, 50]   Server/dep1   12.5   Left
+[6490, 50][6435, 50]     Server/dep2   0      Left
+[6490, 50][6527.5, 50]   Server/dep3   12.5   Right
+[6490, 50][6545, 50]     Server/dep4   0      Right
+-----------------
+dep1 - 2023-05-03 05:52:02,447 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 05:52:02,447 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 05:52:02,447 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 05:52:02,447 Retrieving previous conf ...
+dep1 - 2023-05-03 05:52:02,448 done
+dep1 - 2023-05-03 05:52:02,448 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_05-52-02.json
+dep1 - 2023-05-03 05:52:02,449 Removing previous conf ...
+dep1 - 2023-05-03 05:52:02,450 done
+dep1 - 2023-05-03 05:52:02,450 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 05:52:02,451 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 05:52:02,451 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 05:52:02,456 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 05:52:02,457 Cache EXISTS
+dep1 - 2023-05-03 05:52:02,463 Saved timestamp: event_update () {} start
+dep1 - 2023-05-03 05:52:02,473 Saved timestamp: event_update () {} end
+dep1 - 2023-05-03 05:52:02,474 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 05:52:02,479 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 05:52:02,480 Saved timestamp: instruction_waitall ('3',) {} start
+dep1 - 2023-05-03 05:52:02,544 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:52:06,875 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:52:11,998 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:52:17,042 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:52:22,092 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:52:27,136 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:52:32,197 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:52:37,262 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:52:42,353 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:52:47,358 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:52:52,393 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:52:52,505 Everyone blocked
+dep1 - 2023-05-03 05:52:52,506 Going sleeping bye
+dep1 - 2023-05-03 05:52:52,506 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 05:52:52,507 Saving current conf ...
+dep1 - 2023-05-03 05:52:52,515 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 05:52:52,519 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 05:52:52,522 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 05:52:52,522 Saved timestamp: instruction_waitall_3 end
+dep1 - 2023-05-03 05:52:52,523 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_05-52-52-172.52348828315735.yaml
+dep1 - 2023-05-03 05:52:52,535 
+dep1 - 2023-05-03 05:59:47,471 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_07-59-46', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'update', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 05:59:47,472 Current round: --- FREQ: 35 -----
+[6880, 50][6935, 50]     Server/dep0   0      Right
+[6880, 50][6917.5, 50]   Server/dep1   12.5   Right
+[6880, 50][6825, 50]     Server/dep2   0      Left
+[6880, 50][6825, 50]     Server/dep3   0      Left
+[6880, 50][-1, 50]       Server/dep4   0      None
+-----------------
+dep1 - 2023-05-03 05:59:47,472 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 05:59:47,472 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 05:59:47,473 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 05:59:47,473 Retrieving previous conf ...
+dep1 - 2023-05-03 05:59:47,473 done
+dep1 - 2023-05-03 05:59:47,474 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_05-59-47.json
+dep1 - 2023-05-03 05:59:47,475 Removing previous conf ...
+dep1 - 2023-05-03 05:59:47,475 done
+dep1 - 2023-05-03 05:59:47,476 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 05:59:47,476 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 05:59:47,476 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 05:59:47,482 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 05:59:47,482 Cache EXISTS
+dep1 - 2023-05-03 05:59:47,488 Saved timestamp: event_update () {} start
+dep1 - 2023-05-03 05:59:47,499 Saved timestamp: event_update () {} end
+dep1 - 2023-05-03 05:59:47,505 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 05:59:47,505 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 05:59:47,506 Saved timestamp: instruction_waitall ('3',) {} start
+dep1 - 2023-05-03 05:59:47,553 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:59:51,922 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 05:59:56,989 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:00:02,056 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:00:07,110 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:00:12,127 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:00:17,247 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:00:22,276 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:00:27,300 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:00:32,337 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:00:37,351 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:00:37,589 Everyone blocked
+dep1 - 2023-05-03 06:00:37,590 Going sleeping bye
+dep1 - 2023-05-03 06:00:37,591 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 06:00:37,591 Saving current conf ...
+dep1 - 2023-05-03 06:00:37,596 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 06:00:37,597 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 06:00:37,598 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 06:00:37,598 Saved timestamp: instruction_waitall_3 end
+dep1 - 2023-05-03 06:00:37,598 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_06-00-37-637.5986285209656.yaml
+dep1 - 2023-05-03 06:00:37,605 
+dep1 - 2023-05-03 06:03:02,436 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_08-03-01', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'update', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 06:03:02,437 Current round: --- FREQ: 36 -----
+[7075, 50][7130, 50]     Server/dep0   0      Right
+[7075, 50][7112.5, 50]   Server/dep1   12.5   Right
+[7075, 50][7112.5, 50]   Server/dep2   12.5   Right
+[7075, 50][7130, 50]     Server/dep3   0      Right
+[7075, 50][7112.5, 50]   Server/dep4   12.5   Right
+-----------------
+dep1 - 2023-05-03 06:03:02,437 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 06:03:02,437 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 06:03:02,438 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 06:03:02,438 Retrieving previous conf ...
+dep1 - 2023-05-03 06:03:02,438 done
+dep1 - 2023-05-03 06:03:02,439 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_06-03-02.json
+dep1 - 2023-05-03 06:03:02,440 Removing previous conf ...
+dep1 - 2023-05-03 06:03:02,440 done
+dep1 - 2023-05-03 06:03:02,441 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 06:03:02,441 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 06:03:02,441 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 06:03:02,447 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 06:03:02,447 Cache EXISTS
+dep1 - 2023-05-03 06:03:02,453 Saved timestamp: event_update () {} start
+dep1 - 2023-05-03 06:03:02,464 Saved timestamp: event_update () {} end
+dep1 - 2023-05-03 06:03:02,465 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 06:03:02,470 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 06:03:02,471 Saved timestamp: instruction_waitall ('3',) {} start
+dep1 - 2023-05-03 06:03:02,519 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:03:06,979 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:03:11,998 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:03:17,139 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:03:22,157 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:03:27,344 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:03:32,474 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:03:37,578 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:03:42,630 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:03:47,715 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:03:52,639 Everyone blocked
+dep1 - 2023-05-03 06:03:52,642 Going sleeping bye
+dep1 - 2023-05-03 06:03:52,642 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 06:03:52,642 Saving current conf ...
+dep1 - 2023-05-03 06:03:52,648 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 06:03:52,648 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 06:03:52,649 Saved timestamp: event_uptime_wait_all end
+dep1 - 2023-05-03 06:03:52,649 Saved timestamp: instruction_waitall_3 end
+dep1 - 2023-05-03 06:03:52,650 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_06-03-52-832.650158405304.yaml
+dep1 - 2023-05-03 06:03:52,658 
+dep1 - 2023-05-03 06:08:17,476 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-03_08-08-16', 'execution_expe_dir': '/root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17', 'version_concerto_d': 'synchronous', 'reconfiguration_name': 'update', 'nb_concerto_nodes': 5, 'dep_num': 1, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep1 - 2023-05-03 06:08:17,477 Current round: --- FREQ: 38 -----
+[7465, 50][-1, 50]       Server/dep0   0      None
+[7465, 50][7427.5, 50]   Server/dep1   12.5   Left
+[7465, 50][7410, 50]     Server/dep2   0      Left
+[7465, 50][7520, 50]     Server/dep3   0      Right
+[7465, 50][7410, 50]     Server/dep4   0      Left
+-----------------
+dep1 - 2023-05-03 06:08:17,477 Saved timestamp: event_uptime () {} start
+dep1 - 2023-05-03 06:08:17,477 Saved timestamp: event_loading_state () {} start
+dep1 - 2023-05-03 06:08:17,478 [33m --- conf found at /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/reprise_configs/saved_config_dep_assembly_1.json ----[0m
+dep1 - 2023-05-03 06:08:17,478 Retrieving previous conf ...
+dep1 - 2023-05-03 06:08:17,478 done
+dep1 - 2023-05-03 06:08:17,479 Archiving file in /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/archives_reprises/dep_assembly_1/saved_config_2023-05-03_06-08-17.json
+dep1 - 2023-05-03 06:08:17,480 Removing previous conf ...
+dep1 - 2023-05-03 06:08:17,480 done
+dep1 - 2023-05-03 06:08:17,481 [35m[dep1] Changing behavior to 'None'[0m
+dep1 - 2023-05-03 06:08:17,481 Saved timestamp: event_loading_state () {} end
+dep1 - 2023-05-03 06:08:17,481 Loading inventory from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/inventory.yaml
+dep1 - 2023-05-03 06:08:17,486 Loading communication cache from /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache/dep_assembly_1.json
+dep1 - 2023-05-03 06:08:17,487 Cache EXISTS
+dep1 - 2023-05-03 06:08:17,493 Saved timestamp: event_update () {} start
+dep1 - 2023-05-03 06:08:17,504 Saved timestamp: event_update () {} end
+dep1 - 2023-05-03 06:08:17,504 Saved timestamp: event_uptime () {} end
+dep1 - 2023-05-03 06:08:17,510 Saved timestamp: event_uptime_wait_all () {} start
+dep1 - 2023-05-03 06:08:17,510 Saved timestamp: instruction_waitall ('3',) {} start
+dep1 - 2023-05-03 06:08:17,606 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:08:21,890 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:08:26,934 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:08:31,979 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:08:36,985 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:08:42,070 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:08:47,145 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:08:52,204 WAIT ALL False --- Remote assembly {'server_assembly'} not finished, waiting for it
+dep1 - 2023-05-03 06:08:55,158 No assembly to wait, all are inactives
+dep1 - 2023-05-03 06:08:55,158 Saved timestamp: instruction_waitall ('3',) {} end
+dep1 - 2023-05-03 06:08:55,159 Saved timestamp: event_uptime_wait_all () {} end
+dep1 - 2023-05-03 06:08:55,159 ---------------------- END OF RECONFIGURATION GG -----------------------
+dep1 - 2023-05-03 06:08:55,159 Saved timestamp: event_saving_state () {} start
+dep1 - 2023-05-03 06:08:55,160 Saving current conf ...
+dep1 - 2023-05-03 06:08:55,171 Saved timestamp: event_saving_state () {} end
+dep1 - 2023-05-03 06:08:55,172 Saving communication cache here /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/communication_cache
+dep1 - 2023-05-03 06:08:55,173 DUMPING FILE: /root/concerto-d-projects/results_synchronous-mascots_synchronous_raspberry_T1_waiting_rate-1-2023-05-03_06-04-17/dep1_2023-05-03_06-08-55-135.1736626625061.yaml
+dep1 - 2023-05-03 06:08:55,181 
