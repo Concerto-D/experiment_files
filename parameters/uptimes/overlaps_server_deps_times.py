@@ -1,3 +1,4 @@
+import copy
 import json
 import sys
 
@@ -89,7 +90,7 @@ if __name__ == "__main__":
     # default_file_name = "uptimes-60-50-12-0_02-0_02-generated"
     # default_file_name = "uptimes-30-50-12-0_02-0_02-generated-best"
     # default_file_name = "uptimes-36-50-12-0_02-0_02-generated"
-    default_file_name = "mascots_uptimes-60-50-5-ud0_od0_7_25_perc"
+    default_file_name = "mascots_uptimes-60-50-5-ud2_od0_15_25_perc"
     # default_file_name = "uptimes-36-50-12-0_25-0_25-generated-again"
     # default_file_name = "uptimes-36-50-12-0_25-0_25"
     # default_file_name = "uptimes-36-50-12-0_5-0_5-generated-again"
@@ -106,10 +107,12 @@ if __name__ == "__main__":
     combo_up = []
     count_combo_up = []
     for round_num in range(len(output[0])):
+        old_combo = copy.deepcopy(combo)
         r, nb_appearances, combo, combo_up = compute_overlap_for_round(round_num, output, nb_appearances, combo, combo_up)
         result += r
         if len(combo) == 5:
-            combo = []
+            last_added = set(combo) - set(old_combo)
+            combo = [*last_added]
             count_combo += [round_num]
             print(f"COMBO{count_combo}: round_num {round_num}", file=file_output)
         if len(combo_up) == 5:

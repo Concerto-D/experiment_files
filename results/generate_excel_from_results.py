@@ -200,11 +200,11 @@ def generate_sheet_expe_2(wb, expe_name, data_path):
 
 
 wb = Workbook()
-expe_name = "raspberry-5_deps-50-duration"
+expe_name = "mascots"
 
 # Generate sheets
 generate_sheet_expe_1(wb, expe_name, "/home/aomond/experiments_results/concerto-d/prod")
-generate_sheet_expe_2(wb, expe_name, "/home/aomond/experiments_results/concerto-d/prod")
+# generate_sheet_expe_2(wb, expe_name, "/home/aomond/experiments_results/concerto-d/prod")
 
 # Save the file
 wb.save(f"{expe_name}-prod-new-uptimes-2-2.xlsx")

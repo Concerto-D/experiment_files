@@ -146,5 +146,5 @@ def compute_mean_std(results_dir, output):
 
 
 if __name__ == "__main__":
-    for n in ["asynchronous", "synchronous", "mjuz"]:
-        main(f"/home/aomond/experiments_results/concerto-d/prod/raspberry-5_deps-50-duration/{n}")
+    for n in ["asynchronous", "synchronous"]:
+        main(f"/home/aomond/experiments_results/concerto-d/prod/mascots/{n}")
