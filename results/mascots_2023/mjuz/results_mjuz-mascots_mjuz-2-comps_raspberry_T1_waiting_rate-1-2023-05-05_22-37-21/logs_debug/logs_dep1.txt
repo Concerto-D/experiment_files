@@ -1,0 +1,1068 @@
+[2023-05-05 20:37:32.162 +0000] INFO (1669825): ---------------------------------- Waking up hello everyone ----------------------------------------------------
+[2023-05-05 20:37:32.212 +0000] INFO (1669825): script parameters:
+[2023-05-05 20:37:32.213 +0000] INFO (1669825): /home/anomond/concerto-d-projects/experiment_files/parameters/transitions_times/transitions_times-1-30-deps12-1.json
+[2023-05-05 20:37:32.213 +0000] INFO (1669825): 2023-05-05_22-37-28
+[2023-05-05 20:37:32.214 +0000] INFO (1669825): /home/anomond/concerto-d-projects/results_mjuz-mascots_mjuz-2-comps_raspberry_T1_waiting_rate-1-2023-05-05_22-37-21
+[2023-05-05 20:37:32.214 +0000] INFO (1669825): deploy
+[2023-05-05 20:37:32.214 +0000] INFO (1669825): 5
+[2023-05-05 20:37:32.215 +0000] INFO (1669825): 1
+[2023-05-05 20:37:32.215 +0000] INFO (1669825): ------------
+[2023-05-05 20:37:32.248 +0000] INFO (1669825): running deployment
+[2023-05-05 20:37:32.662 +0000] INFO (1669825): resources service binding port 19955
+[2023-05-05 20:37:32.663 +0000] INFO (1669825): resources service started on port 19955
+[2023-05-05 20:37:32.665 +0000] INFO (1669825): deployment service binding port 19956
+[2023-05-05 20:37:32.666 +0000] INFO (1669825): deployment service started on port 19956
+[2023-05-05 20:37:32.684 +0000] INFO (1669825): Initializing
+[2023-05-05 20:37:32.687 +0000] DEBUG (1669825): Getting stack dep12Comps
+[2023-05-05 20:37:37.354 +0000] DEBUG (1669825): Completed getting stack dep12Comps
+[2023-05-05 20:37:37.355 +0000] INFO (1669825): Completed initializing
+[2023-05-05 20:37:37.362 +0000] INFO (1669825): Starting deploy
+[2023-05-05 20:37:37.365 +0000] DEBUG (1669825): Deploying stack
+[2023-05-05 20:37:41.637 +0000] TRACE (1669825): Updating (dep12Comps):
+[2023-05-05 20:37:41.685 +0000] TRACE (1669825):
+[2023-05-05 20:37:41.849 +0000] TRACE (1669825):  +  pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps creating 
+[2023-05-05 20:37:41.963 +0000] INFO (1669825): dep1 installTime: 1.25
+[2023-05-05 20:37:42.031 +0000] INFO (1669825): dep1 deployTime: 1.52
+[2023-05-05 20:37:45.872 +0000] TRACE (1669825):  +  pulumi-nodejs:dynamic:Resource remote-connection$dep1 creating 
+[2023-05-05 20:37:46.034 +0000] TRACE (1669825):  +  pulumi-nodejs:dynamic:Resource dep1Install creating 
+[2023-05-05 20:37:46.075 +0000] INFO (1669825): Remote 'dep1' created
+[2023-05-05 20:37:46.116 +0000] TRACE (1669825):  +  pulumi-nodejs:dynamic:Resource remote-connection$dep1 created 
+[2023-05-05 20:37:47.312 +0000] TRACE (1669825):  +  pulumi-nodejs:dynamic:Resource dep1Install created 
+[2023-05-05 20:37:47.403 +0000] TRACE (1669825):  +  pulumi-nodejs:dynamic:Resource dep1Runningdeploy creating 
+[2023-05-05 20:37:47.419 +0000] TRACE (1669825):  +  pulumi-nodejs:dynamic:Resource offer$dep1:dep1install creating 
+[2023-05-05 20:37:47.455 +0000] INFO (1669825): Offer 'dep1install' to remote 'dep1' updated
+[2023-05-05 20:37:47.499 +0000] TRACE (1669825):  +  pulumi-nodejs:dynamic:Resource offer$dep1:dep1install created 
+[2023-05-05 20:37:47.515 +0000] DEBUG (1669825): Directly forwarding offer failed
+    Error: 14 UNAVAILABLE: No connection established
+        at Object.callErrorFromStatus (/home/anomond/concerto-d-projects/mjuz-concerto-d/node_modules/@grpc/grpc-js/src/call.ts:81:24)
+        at Object.onReceiveStatus (/home/anomond/concerto-d-projects/mjuz-concerto-d/node_modules/@grpc/grpc-js/src/client.ts:338:36)
+        at Object.onReceiveStatus (/home/anomond/concerto-d-projects/mjuz-concerto-d/node_modules/@grpc/grpc-js/src/client-interceptors.ts:426:34)
+        at Object.onReceiveStatus (/home/anomond/concerto-d-projects/mjuz-concerto-d/node_modules/@grpc/grpc-js/src/client-interceptors.ts:389:48)
+        at /home/anomond/concerto-d-projects/mjuz-concerto-d/node_modules/@grpc/grpc-js/src/call-stream.ts:276:24
+        at processTicksAndRejections (internal/process/task_queues.js:79:11)
+[2023-05-05 20:37:48.489 +0000] TRACE (1669825): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:37:48.493 +0000] TRACE (1669825): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:37:48.916 +0000] TRACE (1669825):  +  pulumi-nodejs:dynamic:Resource dep1Runningdeploy created 
+[2023-05-05 20:37:49.040 +0000] TRACE (1669825):  +  pulumi-nodejs:dynamic:Resource offer$dep1:dep1deploy creating 
+[2023-05-05 20:37:49.058 +0000] INFO (1669825): Offer 'dep1deploy' to remote 'dep1' updated
+[2023-05-05 20:37:49.070 +0000] DEBUG (1669825): Directly forwarding offer failed
+    Error: 14 UNAVAILABLE: No connection established
+        at Object.callErrorFromStatus (/home/anomond/concerto-d-projects/mjuz-concerto-d/node_modules/@grpc/grpc-js/src/call.ts:81:24)
+        at Object.onReceiveStatus (/home/anomond/concerto-d-projects/mjuz-concerto-d/node_modules/@grpc/grpc-js/src/client.ts:338:36)
+        at Object.onReceiveStatus (/home/anomond/concerto-d-projects/mjuz-concerto-d/node_modules/@grpc/grpc-js/src/client-interceptors.ts:426:34)
+        at Object.onReceiveStatus (/home/anomond/concerto-d-projects/mjuz-concerto-d/node_modules/@grpc/grpc-js/src/client-interceptors.ts:389:48)
+        at /home/anomond/concerto-d-projects/mjuz-concerto-d/node_modules/@grpc/grpc-js/src/call-stream.ts:276:24
+        at processTicksAndRejections (internal/process/task_queues.js:79:11)
+[2023-05-05 20:37:49.074 +0000] TRACE (1669825):  +  pulumi-nodejs:dynamic:Resource offer$dep1:dep1deploy created 
+[2023-05-05 20:37:49.125 +0000] TRACE (1669825):  +  pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps created 
+[2023-05-05 20:37:49.126 +0000] TRACE (1669825): Outputs:
+    depInstallId         : "install"
+    depRunningRessourceId: "deploy"
+
+Resources:
+    + 6 created
+
+Duration: 8s
+[2023-05-05 20:37:53.490 +0000] TRACE (1669825): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:37:53.497 +0000] TRACE (1669825): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:37:58.491 +0000] TRACE (1669825): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:37:58.498 +0000] TRACE (1669825): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:38:01.870 +0000] DEBUG (1669825): Completed deploying stack
+[2023-05-05 20:38:01.872 +0000] INFO (1669825): Completed deploy
+[2023-05-05 20:38:01.873 +0000] INFO (1669825): Waiting for next action
+[2023-05-05 20:38:03.492 +0000] TRACE (1669825): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:38:03.501 +0000] TRACE (1669825): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:38:08.496 +0000] TRACE (1669825): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:38:08.506 +0000] TRACE (1669825): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:38:13.496 +0000] TRACE (1669825): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:38:13.558 +0000] TRACE (1669825): 💚 Heartbeat successful for remote(s): dep1
+[2023-05-05 20:38:13.560 +0000] DEBUG (1669825): Remotes connected: dep1
+[2023-05-05 20:38:13.595 +0000] INFO (1669825): FORWARDING OFFER
+[2023-05-05 20:38:13.596 +0000] INFO (dep1install/1669825): dep1
+[2023-05-05 20:38:13.599 +0000] INFO (1669825): FORWARDING OFFER
+[2023-05-05 20:38:13.600 +0000] INFO (dep1deploy/1669825): dep1
+[2023-05-05 20:38:18.501 +0000] TRACE (1669825): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:38:18.513 +0000] TRACE (1669825): 💚 Heartbeat successful for remote(s): dep1
+[2023-05-05 20:38:22.217 +0000] INFO (1669825): Starting terminate
+[2023-05-05 20:38:22.219 +0000] INFO (1669825): Completed terminate
+[2023-05-05 20:38:22.220 +0000] INFO (1669825): wait everything
+[2023-05-05 20:38:22.222 +0000] INFO (1669825): Shutting down resources
+[2023-05-05 20:38:22.224 +0000] INFO (1669825): Shutting down deployment
+[2023-05-05 20:38:22.227 +0000] INFO (1669825): end of run deployment
+[2023-05-05 20:38:22.228 +0000] INFO (1669825): Registing end times
+[2023-05-05 20:38:22.229 +0000] INFO (1669825): Register end time for: event_uptime
+[2023-05-05 20:38:22.230 +0000] INFO (1669825): Done
+[2023-05-05 20:38:22.231 +0000] INFO (1669825): Writing file here: 2023-05-05_22-37-28
+[2023-05-05 20:38:22.270 +0000] INFO (1669825): Done writing file
+[2023-05-05 20:38:22.271 +0000] INFO (1669825): ---------------------- Going to sleep --------------------------------
+
+[2023-05-05 20:40:47.230 +0000] INFO (1669928): ---------------------------------- Waking up hello everyone ----------------------------------------------------
+[2023-05-05 20:40:47.279 +0000] INFO (1669928): script parameters:
+[2023-05-05 20:40:47.280 +0000] INFO (1669928): /home/anomond/concerto-d-projects/experiment_files/parameters/transitions_times/transitions_times-1-30-deps12-1.json
+[2023-05-05 20:40:47.281 +0000] INFO (1669928): 2023-05-05_22-40-44
+[2023-05-05 20:40:47.281 +0000] INFO (1669928): /home/anomond/concerto-d-projects/results_mjuz-mascots_mjuz-2-comps_raspberry_T1_waiting_rate-1-2023-05-05_22-37-21
+[2023-05-05 20:40:47.282 +0000] INFO (1669928): deploy
+[2023-05-05 20:40:47.282 +0000] INFO (1669928): 5
+[2023-05-05 20:40:47.282 +0000] INFO (1669928): 1
+[2023-05-05 20:40:47.282 +0000] INFO (1669928): ------------
+[2023-05-05 20:40:47.315 +0000] INFO (1669928): running deployment
+[2023-05-05 20:40:47.730 +0000] INFO (1669928): resources service binding port 19955
+[2023-05-05 20:40:47.732 +0000] INFO (1669928): resources service started on port 19955
+[2023-05-05 20:40:47.733 +0000] INFO (1669928): deployment service binding port 19956
+[2023-05-05 20:40:47.734 +0000] INFO (1669928): deployment service started on port 19956
+[2023-05-05 20:40:47.753 +0000] INFO (1669928): Initializing
+[2023-05-05 20:40:47.755 +0000] DEBUG (1669928): Getting stack dep12Comps
+[2023-05-05 20:40:56.582 +0000] DEBUG (1669928): Completed getting stack dep12Comps
+[2023-05-05 20:40:56.584 +0000] INFO (1669928): Completed initializing
+[2023-05-05 20:40:56.592 +0000] INFO (1669928): Starting deploy
+[2023-05-05 20:40:56.595 +0000] DEBUG (1669928): Deploying stack
+[2023-05-05 20:41:00.867 +0000] TRACE (1669928): Updating (dep12Comps):
+[2023-05-05 20:41:03.102 +0000] TRACE (1669928):
+[2023-05-05 20:41:03.322 +0000] TRACE (1669928):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps running 
+[2023-05-05 20:41:03.375 +0000] INFO (1669928): dep1 installTime: 1.25
+[2023-05-05 20:41:03.442 +0000] INFO (1669928): dep1 deployTime: 1.52
+[2023-05-05 20:41:07.332 +0000] TRACE (1669928):     pulumi-nodejs:dynamic:Resource dep1Install  [diff: ~reconfChanged]
+[2023-05-05 20:41:07.546 +0000] INFO (1669928): Remote 'dep1' refreshed
+[2023-05-05 20:41:07.674 +0000] TRACE (1669928):     pulumi-nodejs:dynamic:Resource remote-connection$dep1  
+    pulumi-nodejs:dynamic:Resource dep1Runningdeploy  [diff: ~reconfChanged]
+[2023-05-05 20:41:07.742 +0000] INFO (1669928): Offer 'dep1deploy' to remote 'dep1' refreshed
+[2023-05-05 20:41:07.749 +0000] TRACE (1669928): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:41:07.795 +0000] TRACE (1669928):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1deploy  
+[2023-05-05 20:41:07.801 +0000] TRACE (1669928): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:41:07.805 +0000] INFO (1669928): Offer 'dep1install' to remote 'dep1' refreshed
+[2023-05-05 20:41:07.837 +0000] TRACE (1669928):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1install  
+[2023-05-05 20:41:07.873 +0000] TRACE (1669928):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps  
+[2023-05-05 20:41:07.874 +0000] TRACE (1669928): Outputs:
+    depInstallId         : "install"
+    depRunningRessourceId: "deploy"
+
+Resources:
+    6 unchanged
+
+Duration: 5s
+[2023-05-05 20:41:12.749 +0000] TRACE (1669928): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:41:12.757 +0000] TRACE (1669928): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:41:17.751 +0000] TRACE (1669928): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:41:17.757 +0000] TRACE (1669928): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:41:20.692 +0000] DEBUG (1669928): Completed deploying stack
+[2023-05-05 20:41:20.694 +0000] INFO (1669928): Completed deploy
+[2023-05-05 20:41:20.695 +0000] INFO (1669928): Waiting for next action
+[2023-05-05 20:41:22.752 +0000] TRACE (1669928): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:41:22.763 +0000] TRACE (1669928): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:41:27.758 +0000] TRACE (1669928): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:41:27.761 +0000] TRACE (1669928): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:41:32.763 +0000] TRACE (1669928): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:41:32.799 +0000] TRACE (1669928): 💚 Heartbeat successful for remote(s): dep1
+[2023-05-05 20:41:32.801 +0000] DEBUG (1669928): Remotes connected: dep1
+[2023-05-05 20:41:32.826 +0000] INFO (1669928): FORWARDING OFFER
+[2023-05-05 20:41:32.827 +0000] INFO (dep1deploy/1669928): dep1
+[2023-05-05 20:41:32.830 +0000] INFO (1669928): FORWARDING OFFER
+[2023-05-05 20:41:32.830 +0000] INFO (dep1install/1669928): dep1
+[2023-05-05 20:41:37.289 +0000] INFO (1669928): Starting terminate
+[2023-05-05 20:41:37.291 +0000] INFO (1669928): Completed terminate
+[2023-05-05 20:41:37.292 +0000] INFO (1669928): wait everything
+[2023-05-05 20:41:37.294 +0000] INFO (1669928): Shutting down resources
+[2023-05-05 20:41:37.296 +0000] INFO (1669928): Shutting down deployment
+[2023-05-05 20:41:37.298 +0000] INFO (1669928): end of run deployment
+[2023-05-05 20:41:37.300 +0000] INFO (1669928): Registing end times
+[2023-05-05 20:41:37.301 +0000] INFO (1669928): Register end time for: event_uptime
+[2023-05-05 20:41:37.308 +0000] INFO (1669928): Done
+[2023-05-05 20:41:37.309 +0000] INFO (1669928): Writing file here: 2023-05-05_22-40-44
+[2023-05-05 20:41:37.343 +0000] INFO (1669928): Done writing file
+[2023-05-05 20:41:37.344 +0000] INFO (1669928): ---------------------- Going to sleep --------------------------------
+
+[2023-05-05 20:47:17.256 +0000] INFO (1670055): ---------------------------------- Waking up hello everyone ----------------------------------------------------
+[2023-05-05 20:47:17.305 +0000] INFO (1670055): script parameters:
+[2023-05-05 20:47:17.306 +0000] INFO (1670055): /home/anomond/concerto-d-projects/experiment_files/parameters/transitions_times/transitions_times-1-30-deps12-1.json
+[2023-05-05 20:47:17.306 +0000] INFO (1670055): 2023-05-05_22-47-14
+[2023-05-05 20:47:17.307 +0000] INFO (1670055): /home/anomond/concerto-d-projects/results_mjuz-mascots_mjuz-2-comps_raspberry_T1_waiting_rate-1-2023-05-05_22-37-21
+[2023-05-05 20:47:17.307 +0000] INFO (1670055): deploy
+[2023-05-05 20:47:17.307 +0000] INFO (1670055): 5
+[2023-05-05 20:47:17.307 +0000] INFO (1670055): 1
+[2023-05-05 20:47:17.308 +0000] INFO (1670055): ------------
+[2023-05-05 20:47:17.341 +0000] INFO (1670055): running deployment
+[2023-05-05 20:47:17.769 +0000] INFO (1670055): resources service binding port 19955
+[2023-05-05 20:47:17.770 +0000] INFO (1670055): resources service started on port 19955
+[2023-05-05 20:47:17.773 +0000] INFO (1670055): deployment service binding port 19956
+[2023-05-05 20:47:17.774 +0000] INFO (1670055): deployment service started on port 19956
+[2023-05-05 20:47:17.816 +0000] INFO (1670055): Initializing
+[2023-05-05 20:47:17.818 +0000] DEBUG (1670055): Getting stack dep12Comps
+[2023-05-05 20:47:26.629 +0000] DEBUG (1670055): Completed getting stack dep12Comps
+[2023-05-05 20:47:26.631 +0000] INFO (1670055): Completed initializing
+[2023-05-05 20:47:26.640 +0000] INFO (1670055): Starting deploy
+[2023-05-05 20:47:26.643 +0000] DEBUG (1670055): Deploying stack
+[2023-05-05 20:47:30.920 +0000] TRACE (1670055): Updating (dep12Comps):
+[2023-05-05 20:47:33.155 +0000] TRACE (1670055):
+[2023-05-05 20:47:33.399 +0000] TRACE (1670055):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps running 
+[2023-05-05 20:47:33.458 +0000] INFO (1670055): dep1 installTime: 1.25
+[2023-05-05 20:47:33.530 +0000] INFO (1670055): dep1 deployTime: 1.52
+[2023-05-05 20:47:37.359 +0000] TRACE (1670055):     pulumi-nodejs:dynamic:Resource dep1Install  
+[2023-05-05 20:47:37.516 +0000] INFO (1670055): Remote 'dep1' refreshed
+[2023-05-05 20:47:37.636 +0000] TRACE (1670055):     pulumi-nodejs:dynamic:Resource remote-connection$dep1  
+    pulumi-nodejs:dynamic:Resource dep1Runningdeploy  
+[2023-05-05 20:47:37.699 +0000] INFO (1670055): Offer 'dep1install' to remote 'dep1' refreshed
+[2023-05-05 20:47:37.735 +0000] TRACE (1670055):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1install  
+[2023-05-05 20:47:37.740 +0000] INFO (1670055): Offer 'dep1deploy' to remote 'dep1' refreshed
+[2023-05-05 20:47:37.765 +0000] TRACE (1670055):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1deploy  
+[2023-05-05 20:47:37.790 +0000] TRACE (1670055): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:47:37.812 +0000] TRACE (1670055):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps  
+ 
+Outputs:
+    depInstallId         : "install"
+    depRunningRessourceId: "deploy"
+
+Resources:
+    6 unchanged
+
+Duration: 5s
+[2023-05-05 20:47:37.836 +0000] TRACE (1670055): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:47:42.791 +0000] TRACE (1670055): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:47:42.799 +0000] TRACE (1670055): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:47:47.792 +0000] TRACE (1670055): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:47:47.799 +0000] TRACE (1670055): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:47:50.615 +0000] DEBUG (1670055): Completed deploying stack
+[2023-05-05 20:47:50.617 +0000] INFO (1670055): Completed deploy
+[2023-05-05 20:47:50.618 +0000] INFO (1670055): Waiting for next action
+[2023-05-05 20:47:52.795 +0000] TRACE (1670055): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:47:52.805 +0000] TRACE (1670055): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:47:57.796 +0000] TRACE (1670055): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:47:57.854 +0000] TRACE (1670055): 💚 Heartbeat successful for remote(s): dep1
+[2023-05-05 20:47:57.856 +0000] DEBUG (1670055): Remotes connected: dep1
+[2023-05-05 20:47:57.895 +0000] INFO (1670055): FORWARDING OFFER
+[2023-05-05 20:47:57.896 +0000] INFO (dep1install/1670055): dep1
+[2023-05-05 20:47:57.899 +0000] INFO (1670055): FORWARDING OFFER
+[2023-05-05 20:47:57.900 +0000] INFO (dep1deploy/1670055): dep1
+[2023-05-05 20:48:02.802 +0000] TRACE (1670055): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:48:02.813 +0000] TRACE (1670055): 💚 Heartbeat successful for remote(s): dep1
+[2023-05-05 20:48:07.314 +0000] INFO (1670055): Starting terminate
+[2023-05-05 20:48:07.316 +0000] INFO (1670055): Completed terminate
+[2023-05-05 20:48:07.317 +0000] INFO (1670055): wait everything
+[2023-05-05 20:48:07.319 +0000] INFO (1670055): Shutting down resources
+[2023-05-05 20:48:07.321 +0000] INFO (1670055): Shutting down deployment
+[2023-05-05 20:48:07.324 +0000] INFO (1670055): end of run deployment
+[2023-05-05 20:48:07.326 +0000] INFO (1670055): Registing end times
+[2023-05-05 20:48:07.326 +0000] INFO (1670055): Register end time for: event_uptime
+[2023-05-05 20:48:07.327 +0000] INFO (1670055): Done
+[2023-05-05 20:48:07.328 +0000] INFO (1670055): Writing file here: 2023-05-05_22-47-14
+[2023-05-05 20:48:07.371 +0000] INFO (1670055): Done writing file
+[2023-05-05 20:48:07.372 +0000] INFO (1670055): ---------------------- Going to sleep --------------------------------
+
+[2023-05-05 20:52:04.765 +0000] INFO (1670180): ---------------------------------- Waking up hello everyone ----------------------------------------------------
+[2023-05-05 20:52:04.815 +0000] INFO (1670180): script parameters:
+[2023-05-05 20:52:04.815 +0000] INFO (1670180): /home/anomond/concerto-d-projects/experiment_files/parameters/transitions_times/transitions_times-1-30-deps12-1.json
+[2023-05-05 20:52:04.816 +0000] INFO (1670180): 2023-05-05_22-52-01
+[2023-05-05 20:52:04.816 +0000] INFO (1670180): /home/anomond/concerto-d-projects/results_mjuz-mascots_mjuz-2-comps_raspberry_T1_waiting_rate-1-2023-05-05_22-37-21
+[2023-05-05 20:52:04.817 +0000] INFO (1670180): deploy
+[2023-05-05 20:52:04.817 +0000] INFO (1670180): 5
+[2023-05-05 20:52:04.817 +0000] INFO (1670180): 1
+[2023-05-05 20:52:04.818 +0000] INFO (1670180): ------------
+[2023-05-05 20:52:04.851 +0000] INFO (1670180): running deployment
+[2023-05-05 20:52:05.274 +0000] INFO (1670180): resources service binding port 19955
+[2023-05-05 20:52:05.275 +0000] INFO (1670180): resources service started on port 19955
+[2023-05-05 20:52:05.277 +0000] INFO (1670180): deployment service binding port 19956
+[2023-05-05 20:52:05.278 +0000] INFO (1670180): deployment service started on port 19956
+[2023-05-05 20:52:05.297 +0000] INFO (1670180): Initializing
+[2023-05-05 20:52:05.300 +0000] DEBUG (1670180): Getting stack dep12Comps
+[2023-05-05 20:52:14.061 +0000] DEBUG (1670180): Completed getting stack dep12Comps
+[2023-05-05 20:52:14.062 +0000] INFO (1670180): Completed initializing
+[2023-05-05 20:52:14.070 +0000] INFO (1670180): Starting deploy
+[2023-05-05 20:52:14.073 +0000] DEBUG (1670180): Deploying stack
+[2023-05-05 20:52:18.336 +0000] TRACE (1670180): Updating (dep12Comps):
+[2023-05-05 20:52:20.584 +0000] TRACE (1670180):
+[2023-05-05 20:52:20.804 +0000] TRACE (1670180):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps running 
+[2023-05-05 20:52:20.857 +0000] INFO (1670180): dep1 installTime: 1.25
+[2023-05-05 20:52:20.925 +0000] INFO (1670180): dep1 deployTime: 1.52
+[2023-05-05 20:52:25.016 +0000] INFO (1670180): Remote 'dep1' refreshed
+[2023-05-05 20:52:25.107 +0000] TRACE (1670180):     pulumi-nodejs:dynamic:Resource remote-connection$dep1  
+    pulumi-nodejs:dynamic:Resource dep1Install  
+[2023-05-05 20:52:25.206 +0000] TRACE (1670180):     pulumi-nodejs:dynamic:Resource dep1Runningdeploy  
+[2023-05-05 20:52:25.247 +0000] INFO (1670180): Offer 'dep1install' to remote 'dep1' refreshed
+[2023-05-05 20:52:25.283 +0000] TRACE (1670180):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1install  
+[2023-05-05 20:52:25.289 +0000] INFO (1670180): Offer 'dep1deploy' to remote 'dep1' refreshed
+[2023-05-05 20:52:25.292 +0000] TRACE (1670180): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:52:25.347 +0000] TRACE (1670180):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1deploy  
+[2023-05-05 20:52:25.354 +0000] TRACE (1670180): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:52:25.388 +0000] TRACE (1670180):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps  
+[2023-05-05 20:52:25.390 +0000] TRACE (1670180): Outputs:
+    depInstallId         : "install"
+    depRunningRessourceId: "deploy"
+
+Resources:
+    6 unchanged
+
+Duration: 5s
+[2023-05-05 20:52:30.292 +0000] TRACE (1670180): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:52:30.300 +0000] TRACE (1670180): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:52:35.294 +0000] TRACE (1670180): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:52:35.301 +0000] TRACE (1670180): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:52:38.177 +0000] DEBUG (1670180): Completed deploying stack
+[2023-05-05 20:52:38.178 +0000] INFO (1670180): Completed deploy
+[2023-05-05 20:52:38.179 +0000] INFO (1670180): Waiting for next action
+[2023-05-05 20:52:40.297 +0000] TRACE (1670180): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:52:40.307 +0000] TRACE (1670180): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:52:45.298 +0000] TRACE (1670180): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:52:45.306 +0000] TRACE (1670180): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:52:50.302 +0000] TRACE (1670180): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:52:50.306 +0000] TRACE (1670180): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:52:54.824 +0000] INFO (1670180): Starting terminate
+[2023-05-05 20:52:54.826 +0000] INFO (1670180): Completed terminate
+[2023-05-05 20:52:54.827 +0000] INFO (1670180): wait everything
+[2023-05-05 20:52:54.829 +0000] INFO (1670180): Shutting down resources
+[2023-05-05 20:52:54.831 +0000] INFO (1670180): Shutting down deployment
+[2023-05-05 20:52:54.834 +0000] INFO (1670180): end of run deployment
+[2023-05-05 20:52:54.835 +0000] INFO (1670180): Registing end times
+[2023-05-05 20:52:54.836 +0000] INFO (1670180): Register end time for: event_uptime
+[2023-05-05 20:52:54.837 +0000] INFO (1670180): Done
+[2023-05-05 20:52:54.838 +0000] INFO (1670180): Writing file here: 2023-05-05_22-52-01
+[2023-05-05 20:52:54.876 +0000] INFO (1670180): Done writing file
+[2023-05-05 20:52:54.877 +0000] INFO (1670180): ---------------------- Going to sleep --------------------------------
+
+[2023-05-05 20:57:02.216 +0000] INFO (1670308): ---------------------------------- Waking up hello everyone ----------------------------------------------------
+[2023-05-05 20:57:02.265 +0000] INFO (1670308): script parameters:
+[2023-05-05 20:57:02.266 +0000] INFO (1670308): /home/anomond/concerto-d-projects/experiment_files/parameters/transitions_times/transitions_times-1-30-deps12-1.json
+[2023-05-05 20:57:02.266 +0000] INFO (1670308): 2023-05-05_22-56-59
+[2023-05-05 20:57:02.267 +0000] INFO (1670308): /home/anomond/concerto-d-projects/results_mjuz-mascots_mjuz-2-comps_raspberry_T1_waiting_rate-1-2023-05-05_22-37-21
+[2023-05-05 20:57:02.267 +0000] INFO (1670308): deploy
+[2023-05-05 20:57:02.268 +0000] INFO (1670308): 5
+[2023-05-05 20:57:02.268 +0000] INFO (1670308): 1
+[2023-05-05 20:57:02.268 +0000] INFO (1670308): ------------
+[2023-05-05 20:57:02.301 +0000] INFO (1670308): running deployment
+[2023-05-05 20:57:02.717 +0000] INFO (1670308): resources service binding port 19955
+[2023-05-05 20:57:02.718 +0000] INFO (1670308): resources service started on port 19955
+[2023-05-05 20:57:02.720 +0000] INFO (1670308): deployment service binding port 19956
+[2023-05-05 20:57:02.721 +0000] INFO (1670308): deployment service started on port 19956
+[2023-05-05 20:57:02.739 +0000] INFO (1670308): Initializing
+[2023-05-05 20:57:02.742 +0000] DEBUG (1670308): Getting stack dep12Comps
+[2023-05-05 20:57:11.549 +0000] DEBUG (1670308): Completed getting stack dep12Comps
+[2023-05-05 20:57:11.551 +0000] INFO (1670308): Completed initializing
+[2023-05-05 20:57:11.559 +0000] INFO (1670308): Starting deploy
+[2023-05-05 20:57:11.562 +0000] DEBUG (1670308): Deploying stack
+[2023-05-05 20:57:15.826 +0000] TRACE (1670308): Updating (dep12Comps):
+[2023-05-05 20:57:18.072 +0000] TRACE (1670308):
+[2023-05-05 20:57:18.289 +0000] TRACE (1670308):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps running 
+[2023-05-05 20:57:18.348 +0000] INFO (1670308): dep1 installTime: 1.25
+[2023-05-05 20:57:18.415 +0000] INFO (1670308): dep1 deployTime: 1.52
+[2023-05-05 20:57:22.468 +0000] INFO (1670308): Remote 'dep1' refreshed
+[2023-05-05 20:57:22.576 +0000] TRACE (1670308):     pulumi-nodejs:dynamic:Resource remote-connection$dep1  
+    pulumi-nodejs:dynamic:Resource dep1Install  
+[2023-05-05 20:57:22.651 +0000] TRACE (1670308):     pulumi-nodejs:dynamic:Resource dep1Runningdeploy  
+[2023-05-05 20:57:22.690 +0000] INFO (1670308): Offer 'dep1install' to remote 'dep1' refreshed
+[2023-05-05 20:57:22.729 +0000] TRACE (1670308):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1install  
+[2023-05-05 20:57:22.734 +0000] INFO (1670308): Offer 'dep1deploy' to remote 'dep1' refreshed
+[2023-05-05 20:57:22.737 +0000] TRACE (1670308): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:57:22.778 +0000] TRACE (1670308):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1deploy  
+[2023-05-05 20:57:22.784 +0000] TRACE (1670308): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:57:22.818 +0000] TRACE (1670308):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps  
+[2023-05-05 20:57:22.820 +0000] TRACE (1670308): Outputs:
+    depInstallId         : "install"
+    depRunningRessourceId: "deploy"
+
+Resources:
+    6 unchanged
+
+Duration: 5s
+[2023-05-05 20:57:27.738 +0000] TRACE (1670308): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:57:27.746 +0000] TRACE (1670308): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:57:32.739 +0000] TRACE (1670308): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:57:32.745 +0000] TRACE (1670308): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:57:35.576 +0000] DEBUG (1670308): Completed deploying stack
+[2023-05-05 20:57:35.577 +0000] INFO (1670308): Completed deploy
+[2023-05-05 20:57:35.578 +0000] INFO (1670308): Waiting for next action
+[2023-05-05 20:57:37.740 +0000] TRACE (1670308): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:57:37.750 +0000] TRACE (1670308): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:57:42.745 +0000] TRACE (1670308): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:57:42.748 +0000] TRACE (1670308): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 20:57:47.749 +0000] TRACE (1670308): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 20:57:47.806 +0000] TRACE (1670308): 💚 Heartbeat successful for remote(s): dep1
+[2023-05-05 20:57:47.808 +0000] DEBUG (1670308): Remotes connected: dep1
+[2023-05-05 20:57:47.842 +0000] INFO (1670308): FORWARDING OFFER
+[2023-05-05 20:57:47.843 +0000] INFO (dep1install/1670308): dep1
+[2023-05-05 20:57:47.846 +0000] INFO (1670308): FORWARDING OFFER
+[2023-05-05 20:57:47.847 +0000] INFO (dep1deploy/1670308): dep1
+[2023-05-05 20:57:52.274 +0000] INFO (1670308): Starting terminate
+[2023-05-05 20:57:52.276 +0000] INFO (1670308): Completed terminate
+[2023-05-05 20:57:52.277 +0000] INFO (1670308): wait everything
+[2023-05-05 20:57:52.279 +0000] INFO (1670308): Shutting down resources
+[2023-05-05 20:57:52.281 +0000] INFO (1670308): Shutting down deployment
+[2023-05-05 20:57:52.283 +0000] INFO (1670308): end of run deployment
+[2023-05-05 20:57:52.285 +0000] INFO (1670308): Registing end times
+[2023-05-05 20:57:52.286 +0000] INFO (1670308): Register end time for: event_uptime
+[2023-05-05 20:57:52.286 +0000] INFO (1670308): Done
+[2023-05-05 20:57:52.287 +0000] INFO (1670308): Writing file here: 2023-05-05_22-56-59
+[2023-05-05 20:57:52.326 +0000] INFO (1670308): Done writing file
+[2023-05-05 20:57:52.327 +0000] INFO (1670308): ---------------------- Going to sleep --------------------------------
+
+[2023-05-05 21:03:32.134 +0000] INFO (1670435): ---------------------------------- Waking up hello everyone ----------------------------------------------------
+[2023-05-05 21:03:32.182 +0000] INFO (1670435): script parameters:
+[2023-05-05 21:03:32.183 +0000] INFO (1670435): /home/anomond/concerto-d-projects/experiment_files/parameters/transitions_times/transitions_times-1-30-deps12-1.json
+[2023-05-05 21:03:32.184 +0000] INFO (1670435): 2023-05-05_23-03-28
+[2023-05-05 21:03:32.184 +0000] INFO (1670435): /home/anomond/concerto-d-projects/results_mjuz-mascots_mjuz-2-comps_raspberry_T1_waiting_rate-1-2023-05-05_22-37-21
+[2023-05-05 21:03:32.185 +0000] INFO (1670435): deploy
+[2023-05-05 21:03:32.185 +0000] INFO (1670435): 5
+[2023-05-05 21:03:32.185 +0000] INFO (1670435): 1
+[2023-05-05 21:03:32.185 +0000] INFO (1670435): ------------
+[2023-05-05 21:03:32.218 +0000] INFO (1670435): running deployment
+[2023-05-05 21:03:32.647 +0000] INFO (1670435): resources service binding port 19955
+[2023-05-05 21:03:32.648 +0000] INFO (1670435): resources service started on port 19955
+[2023-05-05 21:03:32.650 +0000] INFO (1670435): deployment service binding port 19956
+[2023-05-05 21:03:32.651 +0000] INFO (1670435): deployment service started on port 19956
+[2023-05-05 21:03:32.669 +0000] INFO (1670435): Initializing
+[2023-05-05 21:03:32.672 +0000] DEBUG (1670435): Getting stack dep12Comps
+[2023-05-05 21:03:41.485 +0000] DEBUG (1670435): Completed getting stack dep12Comps
+[2023-05-05 21:03:41.487 +0000] INFO (1670435): Completed initializing
+[2023-05-05 21:03:41.495 +0000] INFO (1670435): Starting deploy
+[2023-05-05 21:03:41.499 +0000] DEBUG (1670435): Deploying stack
+[2023-05-05 21:03:45.776 +0000] TRACE (1670435): Updating (dep12Comps):
+[2023-05-05 21:03:48.018 +0000] TRACE (1670435):
+[2023-05-05 21:03:48.243 +0000] TRACE (1670435):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps running 
+[2023-05-05 21:03:48.295 +0000] INFO (1670435): dep1 installTime: 1.25
+[2023-05-05 21:03:48.363 +0000] INFO (1670435): dep1 deployTime: 1.52
+[2023-05-05 21:03:52.238 +0000] TRACE (1670435):     pulumi-nodejs:dynamic:Resource dep1Install  
+[2023-05-05 21:03:52.402 +0000] INFO (1670435): Remote 'dep1' refreshed
+[2023-05-05 21:03:52.515 +0000] TRACE (1670435):     pulumi-nodejs:dynamic:Resource remote-connection$dep1  
+    pulumi-nodejs:dynamic:Resource dep1Runningdeploy  
+[2023-05-05 21:03:52.576 +0000] INFO (1670435): Offer 'dep1install' to remote 'dep1' refreshed
+[2023-05-05 21:03:52.612 +0000] TRACE (1670435):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1install  
+[2023-05-05 21:03:52.617 +0000] INFO (1670435): Offer 'dep1deploy' to remote 'dep1' refreshed
+[2023-05-05 21:03:52.641 +0000] TRACE (1670435):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1deploy  
+[2023-05-05 21:03:52.666 +0000] TRACE (1670435): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:03:52.688 +0000] TRACE (1670435):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps  
+ 
+Outputs:
+    depInstallId         : "install"
+    depRunningRessourceId: "deploy"
+
+Resources:
+    6 unchanged
+
+Duration: 5s
+[2023-05-05 21:03:52.713 +0000] TRACE (1670435): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:03:57.667 +0000] TRACE (1670435): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:03:57.674 +0000] TRACE (1670435): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:04:02.668 +0000] TRACE (1670435): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:04:02.675 +0000] TRACE (1670435): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:04:05.430 +0000] DEBUG (1670435): Completed deploying stack
+[2023-05-05 21:04:05.431 +0000] INFO (1670435): Completed deploy
+[2023-05-05 21:04:05.432 +0000] INFO (1670435): Waiting for next action
+[2023-05-05 21:04:07.670 +0000] TRACE (1670435): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:04:07.681 +0000] TRACE (1670435): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:04:12.672 +0000] TRACE (1670435): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:04:12.730 +0000] TRACE (1670435): 💚 Heartbeat successful for remote(s): dep1
+[2023-05-05 21:04:12.731 +0000] DEBUG (1670435): Remotes connected: dep1
+[2023-05-05 21:04:12.773 +0000] INFO (1670435): FORWARDING OFFER
+[2023-05-05 21:04:12.774 +0000] INFO (dep1install/1670435): dep1
+[2023-05-05 21:04:12.777 +0000] INFO (1670435): FORWARDING OFFER
+[2023-05-05 21:04:12.778 +0000] INFO (dep1deploy/1670435): dep1
+[2023-05-05 21:04:17.675 +0000] TRACE (1670435): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:04:17.687 +0000] TRACE (1670435): 💚 Heartbeat successful for remote(s): dep1
+[2023-05-05 21:04:22.192 +0000] INFO (1670435): Starting terminate
+[2023-05-05 21:04:22.193 +0000] INFO (1670435): Completed terminate
+[2023-05-05 21:04:22.195 +0000] INFO (1670435): wait everything
+[2023-05-05 21:04:22.197 +0000] INFO (1670435): Shutting down resources
+[2023-05-05 21:04:22.199 +0000] INFO (1670435): Shutting down deployment
+[2023-05-05 21:04:22.201 +0000] INFO (1670435): end of run deployment
+[2023-05-05 21:04:22.203 +0000] INFO (1670435): Registing end times
+[2023-05-05 21:04:22.204 +0000] INFO (1670435): Register end time for: event_uptime
+[2023-05-05 21:04:22.204 +0000] INFO (1670435): Done
+[2023-05-05 21:04:22.205 +0000] INFO (1670435): Writing file here: 2023-05-05_23-03-28
+[2023-05-05 21:04:22.243 +0000] INFO (1670435): Done writing file
+[2023-05-05 21:04:22.244 +0000] INFO (1670435): ---------------------- Going to sleep --------------------------------
+
+[2023-05-05 21:08:02.253 +0000] INFO (1670562): ---------------------------------- Waking up hello everyone ----------------------------------------------------
+[2023-05-05 21:08:02.302 +0000] INFO (1670562): script parameters:
+[2023-05-05 21:08:02.303 +0000] INFO (1670562): /home/anomond/concerto-d-projects/experiment_files/parameters/transitions_times/transitions_times-1-30-deps12-1.json
+[2023-05-05 21:08:02.304 +0000] INFO (1670562): 2023-05-05_23-07-59
+[2023-05-05 21:08:02.304 +0000] INFO (1670562): /home/anomond/concerto-d-projects/results_mjuz-mascots_mjuz-2-comps_raspberry_T1_waiting_rate-1-2023-05-05_22-37-21
+[2023-05-05 21:08:02.304 +0000] INFO (1670562): deploy
+[2023-05-05 21:08:02.305 +0000] INFO (1670562): 5
+[2023-05-05 21:08:02.305 +0000] INFO (1670562): 1
+[2023-05-05 21:08:02.305 +0000] INFO (1670562): ------------
+[2023-05-05 21:08:02.339 +0000] INFO (1670562): running deployment
+[2023-05-05 21:08:02.753 +0000] INFO (1670562): resources service binding port 19955
+[2023-05-05 21:08:02.754 +0000] INFO (1670562): resources service started on port 19955
+[2023-05-05 21:08:02.756 +0000] INFO (1670562): deployment service binding port 19956
+[2023-05-05 21:08:02.757 +0000] INFO (1670562): deployment service started on port 19956
+[2023-05-05 21:08:02.776 +0000] INFO (1670562): Initializing
+[2023-05-05 21:08:02.779 +0000] DEBUG (1670562): Getting stack dep12Comps
+[2023-05-05 21:08:11.540 +0000] DEBUG (1670562): Completed getting stack dep12Comps
+[2023-05-05 21:08:11.542 +0000] INFO (1670562): Completed initializing
+[2023-05-05 21:08:11.550 +0000] INFO (1670562): Starting deploy
+[2023-05-05 21:08:11.553 +0000] DEBUG (1670562): Deploying stack
+[2023-05-05 21:08:15.826 +0000] TRACE (1670562): Updating (dep12Comps):
+[2023-05-05 21:08:18.039 +0000] TRACE (1670562):
+[2023-05-05 21:08:18.259 +0000] TRACE (1670562):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps running 
+[2023-05-05 21:08:18.311 +0000] INFO (1670562): dep1 installTime: 1.25
+[2023-05-05 21:08:18.378 +0000] INFO (1670562): dep1 deployTime: 1.52
+[2023-05-05 21:08:22.240 +0000] TRACE (1670562):     pulumi-nodejs:dynamic:Resource dep1Install  
+[2023-05-05 21:08:22.398 +0000] INFO (1670562): Remote 'dep1' refreshed
+[2023-05-05 21:08:22.508 +0000] TRACE (1670562):     pulumi-nodejs:dynamic:Resource remote-connection$dep1  
+    pulumi-nodejs:dynamic:Resource dep1Runningdeploy  
+[2023-05-05 21:08:22.563 +0000] INFO (1670562): Offer 'dep1install' to remote 'dep1' refreshed
+[2023-05-05 21:08:22.599 +0000] TRACE (1670562):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1install  
+[2023-05-05 21:08:22.604 +0000] INFO (1670562): Offer 'dep1deploy' to remote 'dep1' refreshed
+[2023-05-05 21:08:22.637 +0000] TRACE (1670562):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1deploy  
+[2023-05-05 21:08:22.671 +0000] TRACE (1670562):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps  
+[2023-05-05 21:08:22.673 +0000] TRACE (1670562): Outputs:
+    depInstallId         : "install"
+    depRunningRessourceId: "deploy"
+
+Resources:
+    6 unchanged
+
+Duration: 5s
+[2023-05-05 21:08:22.771 +0000] TRACE (1670562): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:08:22.826 +0000] TRACE (1670562): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:08:27.772 +0000] TRACE (1670562): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:08:27.779 +0000] TRACE (1670562): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:08:32.772 +0000] TRACE (1670562): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:08:32.779 +0000] TRACE (1670562): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:08:35.447 +0000] DEBUG (1670562): Completed deploying stack
+[2023-05-05 21:08:35.448 +0000] INFO (1670562): Completed deploy
+[2023-05-05 21:08:35.449 +0000] INFO (1670562): Waiting for next action
+[2023-05-05 21:08:37.775 +0000] TRACE (1670562): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:08:37.785 +0000] TRACE (1670562): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:08:42.776 +0000] TRACE (1670562): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:08:42.785 +0000] TRACE (1670562): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:08:47.780 +0000] TRACE (1670562): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:08:47.783 +0000] TRACE (1670562): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:08:52.307 +0000] INFO (1670562): Starting terminate
+[2023-05-05 21:08:52.309 +0000] INFO (1670562): Completed terminate
+[2023-05-05 21:08:52.310 +0000] INFO (1670562): wait everything
+[2023-05-05 21:08:52.312 +0000] INFO (1670562): Shutting down resources
+[2023-05-05 21:08:52.314 +0000] INFO (1670562): Shutting down deployment
+[2023-05-05 21:08:52.317 +0000] INFO (1670562): end of run deployment
+[2023-05-05 21:08:52.318 +0000] INFO (1670562): Registing end times
+[2023-05-05 21:08:52.319 +0000] INFO (1670562): Register end time for: event_uptime
+[2023-05-05 21:08:52.320 +0000] INFO (1670562): Done
+[2023-05-05 21:08:52.321 +0000] INFO (1670562): Writing file here: 2023-05-05_23-07-59
+[2023-05-05 21:08:52.360 +0000] INFO (1670562): Done writing file
+[2023-05-05 21:08:52.361 +0000] INFO (1670562): ---------------------- Going to sleep --------------------------------
+
+[2023-05-05 21:10:02.212 +0000] INFO (1670686): ---------------------------------- Waking up hello everyone ----------------------------------------------------
+[2023-05-05 21:10:02.261 +0000] INFO (1670686): script parameters:
+[2023-05-05 21:10:02.262 +0000] INFO (1670686): /home/anomond/concerto-d-projects/experiment_files/parameters/transitions_times/transitions_times-1-30-deps12-1.json
+[2023-05-05 21:10:02.262 +0000] INFO (1670686): 2023-05-05_23-09-59
+[2023-05-05 21:10:02.263 +0000] INFO (1670686): /home/anomond/concerto-d-projects/results_mjuz-mascots_mjuz-2-comps_raspberry_T1_waiting_rate-1-2023-05-05_22-37-21
+[2023-05-05 21:10:02.263 +0000] INFO (1670686): deploy
+[2023-05-05 21:10:02.263 +0000] INFO (1670686): 5
+[2023-05-05 21:10:02.264 +0000] INFO (1670686): 1
+[2023-05-05 21:10:02.264 +0000] INFO (1670686): ------------
+[2023-05-05 21:10:02.297 +0000] INFO (1670686): running deployment
+[2023-05-05 21:10:02.712 +0000] INFO (1670686): resources service binding port 19955
+[2023-05-05 21:10:02.713 +0000] INFO (1670686): resources service started on port 19955
+[2023-05-05 21:10:02.715 +0000] INFO (1670686): deployment service binding port 19956
+[2023-05-05 21:10:02.716 +0000] INFO (1670686): deployment service started on port 19956
+[2023-05-05 21:10:02.734 +0000] INFO (1670686): Initializing
+[2023-05-05 21:10:02.737 +0000] DEBUG (1670686): Getting stack dep12Comps
+[2023-05-05 21:10:11.638 +0000] DEBUG (1670686): Completed getting stack dep12Comps
+[2023-05-05 21:10:11.640 +0000] INFO (1670686): Completed initializing
+[2023-05-05 21:10:11.648 +0000] INFO (1670686): Starting deploy
+[2023-05-05 21:10:11.651 +0000] DEBUG (1670686): Deploying stack
+[2023-05-05 21:10:15.937 +0000] TRACE (1670686): Updating (dep12Comps):
+[2023-05-05 21:10:18.181 +0000] TRACE (1670686):
+[2023-05-05 21:10:18.411 +0000] TRACE (1670686):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps running 
+[2023-05-05 21:10:18.464 +0000] INFO (1670686): dep1 installTime: 1.25
+[2023-05-05 21:10:18.533 +0000] INFO (1670686): dep1 deployTime: 1.52
+[2023-05-05 21:10:22.511 +0000] INFO (1670686): Remote 'dep1' refreshed
+[2023-05-05 21:10:22.617 +0000] TRACE (1670686):     pulumi-nodejs:dynamic:Resource remote-connection$dep1  
+    pulumi-nodejs:dynamic:Resource dep1Install  
+[2023-05-05 21:10:22.692 +0000] TRACE (1670686):     pulumi-nodejs:dynamic:Resource dep1Runningdeploy  
+[2023-05-05 21:10:22.729 +0000] INFO (1670686): Offer 'dep1install' to remote 'dep1' refreshed
+[2023-05-05 21:10:22.732 +0000] TRACE (1670686): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:10:22.775 +0000] TRACE (1670686): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:10:22.793 +0000] TRACE (1670686):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1install  
+[2023-05-05 21:10:22.801 +0000] INFO (1670686): Offer 'dep1deploy' to remote 'dep1' refreshed
+[2023-05-05 21:10:22.825 +0000] TRACE (1670686):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1deploy  
+[2023-05-05 21:10:22.858 +0000] TRACE (1670686):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps  
+[2023-05-05 21:10:22.859 +0000] TRACE (1670686): Outputs:
+    depInstallId         : "install"
+    depRunningRessourceId: "deploy"
+
+Resources:
+    6 unchanged
+
+Duration: 5s
+[2023-05-05 21:10:27.733 +0000] TRACE (1670686): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:10:27.740 +0000] TRACE (1670686): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:10:32.734 +0000] TRACE (1670686): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:10:32.741 +0000] TRACE (1670686): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:10:35.634 +0000] DEBUG (1670686): Completed deploying stack
+[2023-05-05 21:10:35.636 +0000] INFO (1670686): Completed deploy
+[2023-05-05 21:10:35.637 +0000] INFO (1670686): Waiting for next action
+[2023-05-05 21:10:37.737 +0000] TRACE (1670686): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:10:37.747 +0000] TRACE (1670686): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:10:42.738 +0000] TRACE (1670686): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:10:42.797 +0000] TRACE (1670686): 💚 Heartbeat successful for remote(s): dep1
+[2023-05-05 21:10:42.799 +0000] DEBUG (1670686): Remotes connected: dep1
+[2023-05-05 21:10:42.834 +0000] INFO (1670686): FORWARDING OFFER
+[2023-05-05 21:10:42.835 +0000] INFO (dep1install/1670686): dep1
+[2023-05-05 21:10:42.838 +0000] INFO (1670686): FORWARDING OFFER
+[2023-05-05 21:10:42.839 +0000] INFO (dep1deploy/1670686): dep1
+[2023-05-05 21:10:47.741 +0000] TRACE (1670686): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:10:47.753 +0000] TRACE (1670686): 💚 Heartbeat successful for remote(s): dep1
+[2023-05-05 21:10:52.270 +0000] INFO (1670686): Starting terminate
+[2023-05-05 21:10:52.272 +0000] INFO (1670686): Completed terminate
+[2023-05-05 21:10:52.273 +0000] INFO (1670686): wait everything
+[2023-05-05 21:10:52.275 +0000] INFO (1670686): Shutting down resources
+[2023-05-05 21:10:52.277 +0000] INFO (1670686): Shutting down deployment
+[2023-05-05 21:10:52.280 +0000] INFO (1670686): end of run deployment
+[2023-05-05 21:10:52.282 +0000] INFO (1670686): Registing end times
+[2023-05-05 21:10:52.282 +0000] INFO (1670686): Register end time for: event_uptime
+[2023-05-05 21:10:52.283 +0000] INFO (1670686): Done
+[2023-05-05 21:10:52.284 +0000] INFO (1670686): Writing file here: 2023-05-05_23-09-59
+[2023-05-05 21:10:52.323 +0000] INFO (1670686): Done writing file
+[2023-05-05 21:10:52.324 +0000] INFO (1670686): ---------------------- Going to sleep --------------------------------
+
+[2023-05-05 21:16:32.309 +0000] INFO (1670814): ---------------------------------- Waking up hello everyone ----------------------------------------------------
+[2023-05-05 21:16:32.359 +0000] INFO (1670814): script parameters:
+[2023-05-05 21:16:32.360 +0000] INFO (1670814): /home/anomond/concerto-d-projects/experiment_files/parameters/transitions_times/transitions_times-1-30-deps12-1.json
+[2023-05-05 21:16:32.361 +0000] INFO (1670814): 2023-05-05_23-16-29
+[2023-05-05 21:16:32.361 +0000] INFO (1670814): /home/anomond/concerto-d-projects/results_mjuz-mascots_mjuz-2-comps_raspberry_T1_waiting_rate-1-2023-05-05_22-37-21
+[2023-05-05 21:16:32.361 +0000] INFO (1670814): deploy
+[2023-05-05 21:16:32.362 +0000] INFO (1670814): 5
+[2023-05-05 21:16:32.362 +0000] INFO (1670814): 1
+[2023-05-05 21:16:32.362 +0000] INFO (1670814): ------------
+[2023-05-05 21:16:32.396 +0000] INFO (1670814): running deployment
+[2023-05-05 21:16:32.816 +0000] INFO (1670814): resources service binding port 19955
+[2023-05-05 21:16:32.817 +0000] INFO (1670814): resources service started on port 19955
+[2023-05-05 21:16:32.819 +0000] INFO (1670814): deployment service binding port 19956
+[2023-05-05 21:16:32.820 +0000] INFO (1670814): deployment service started on port 19956
+[2023-05-05 21:16:32.839 +0000] INFO (1670814): Initializing
+[2023-05-05 21:16:32.842 +0000] DEBUG (1670814): Getting stack dep12Comps
+[2023-05-05 21:16:41.749 +0000] DEBUG (1670814): Completed getting stack dep12Comps
+[2023-05-05 21:16:41.751 +0000] INFO (1670814): Completed initializing
+[2023-05-05 21:16:41.759 +0000] INFO (1670814): Starting deploy
+[2023-05-05 21:16:41.763 +0000] DEBUG (1670814): Deploying stack
+[2023-05-05 21:16:46.027 +0000] TRACE (1670814): Updating (dep12Comps):
+[2023-05-05 21:16:48.277 +0000] TRACE (1670814):
+[2023-05-05 21:16:48.504 +0000] TRACE (1670814):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps running 
+[2023-05-05 21:16:48.556 +0000] INFO (1670814): dep1 installTime: 1.25
+[2023-05-05 21:16:48.626 +0000] INFO (1670814): dep1 deployTime: 1.52
+[2023-05-05 21:16:52.531 +0000] TRACE (1670814):     pulumi-nodejs:dynamic:Resource dep1Install  
+[2023-05-05 21:16:52.692 +0000] INFO (1670814): Remote 'dep1' refreshed
+[2023-05-05 21:16:52.805 +0000] TRACE (1670814):     pulumi-nodejs:dynamic:Resource remote-connection$dep1  
+    pulumi-nodejs:dynamic:Resource dep1Runningdeploy  
+[2023-05-05 21:16:52.854 +0000] TRACE (1670814): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:16:52.894 +0000] INFO (1670814): Offer 'dep1install' to remote 'dep1' refreshed
+[2023-05-05 21:16:52.902 +0000] TRACE (1670814): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:16:52.936 +0000] TRACE (1670814):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1install  
+[2023-05-05 21:16:52.941 +0000] INFO (1670814): Offer 'dep1deploy' to remote 'dep1' refreshed
+[2023-05-05 21:16:52.965 +0000] TRACE (1670814):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1deploy  
+[2023-05-05 21:16:52.999 +0000] TRACE (1670814):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps  
+[2023-05-05 21:16:53.000 +0000] TRACE (1670814): Outputs:
+    depInstallId         : "install"
+    depRunningRessourceId: "deploy"
+
+Resources:
+    6 unchanged
+
+Duration: 5s
+[2023-05-05 21:16:57.855 +0000] TRACE (1670814): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:16:57.863 +0000] TRACE (1670814): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:17:02.858 +0000] TRACE (1670814): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:17:02.864 +0000] TRACE (1670814): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:17:05.772 +0000] DEBUG (1670814): Completed deploying stack
+[2023-05-05 21:17:05.774 +0000] INFO (1670814): Completed deploy
+[2023-05-05 21:17:05.775 +0000] INFO (1670814): Waiting for next action
+[2023-05-05 21:17:07.860 +0000] TRACE (1670814): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:17:07.870 +0000] TRACE (1670814): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:17:12.860 +0000] TRACE (1670814): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:17:12.919 +0000] TRACE (1670814): 💚 Heartbeat successful for remote(s): dep1
+[2023-05-05 21:17:12.920 +0000] DEBUG (1670814): Remotes connected: dep1
+[2023-05-05 21:17:12.955 +0000] INFO (1670814): FORWARDING OFFER
+[2023-05-05 21:17:12.956 +0000] INFO (dep1install/1670814): dep1
+[2023-05-05 21:17:12.960 +0000] INFO (1670814): FORWARDING OFFER
+[2023-05-05 21:17:12.960 +0000] INFO (dep1deploy/1670814): dep1
+[2023-05-05 21:17:17.864 +0000] TRACE (1670814): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:17:17.894 +0000] TRACE (1670814): 💚 Heartbeat successful for remote(s): dep1
+[2023-05-05 21:17:22.368 +0000] INFO (1670814): Starting terminate
+[2023-05-05 21:17:22.370 +0000] INFO (1670814): Completed terminate
+[2023-05-05 21:17:22.372 +0000] INFO (1670814): wait everything
+[2023-05-05 21:17:22.374 +0000] INFO (1670814): Shutting down resources
+[2023-05-05 21:17:22.376 +0000] INFO (1670814): Shutting down deployment
+[2023-05-05 21:17:22.378 +0000] INFO (1670814): end of run deployment
+[2023-05-05 21:17:22.380 +0000] INFO (1670814): Registing end times
+[2023-05-05 21:17:22.380 +0000] INFO (1670814): Register end time for: event_uptime
+[2023-05-05 21:17:22.381 +0000] INFO (1670814): Done
+[2023-05-05 21:17:22.382 +0000] INFO (1670814): Writing file here: 2023-05-05_23-16-29
+[2023-05-05 21:17:22.422 +0000] INFO (1670814): Done writing file
+[2023-05-05 21:17:22.423 +0000] INFO (1670814): ---------------------- Going to sleep --------------------------------
+
+[2023-05-05 21:22:44.790 +0000] INFO (1670950): ---------------------------------- Waking up hello everyone ----------------------------------------------------
+[2023-05-05 21:22:44.844 +0000] INFO (1670950): script parameters:
+[2023-05-05 21:22:44.845 +0000] INFO (1670950): /home/anomond/concerto-d-projects/experiment_files/parameters/transitions_times/transitions_times-1-30-deps12-1.json
+[2023-05-05 21:22:44.845 +0000] INFO (1670950): 2023-05-05_23-22-41
+[2023-05-05 21:22:44.846 +0000] INFO (1670950): /home/anomond/concerto-d-projects/results_mjuz-mascots_mjuz-2-comps_raspberry_T1_waiting_rate-1-2023-05-05_22-37-21
+[2023-05-05 21:22:44.846 +0000] INFO (1670950): deploy
+[2023-05-05 21:22:44.846 +0000] INFO (1670950): 5
+[2023-05-05 21:22:44.847 +0000] INFO (1670950): 1
+[2023-05-05 21:22:44.847 +0000] INFO (1670950): ------------
+[2023-05-05 21:22:44.882 +0000] INFO (1670950): running deployment
+[2023-05-05 21:22:45.317 +0000] INFO (1670950): resources service binding port 19955
+[2023-05-05 21:22:45.318 +0000] INFO (1670950): resources service started on port 19955
+[2023-05-05 21:22:45.320 +0000] INFO (1670950): deployment service binding port 19956
+[2023-05-05 21:22:45.320 +0000] INFO (1670950): deployment service started on port 19956
+[2023-05-05 21:22:45.341 +0000] INFO (1670950): Initializing
+[2023-05-05 21:22:45.344 +0000] DEBUG (1670950): Getting stack dep12Comps
+[2023-05-05 21:22:54.113 +0000] DEBUG (1670950): Completed getting stack dep12Comps
+[2023-05-05 21:22:54.115 +0000] INFO (1670950): Completed initializing
+[2023-05-05 21:22:54.124 +0000] INFO (1670950): Starting deploy
+[2023-05-05 21:22:54.127 +0000] DEBUG (1670950): Deploying stack
+[2023-05-05 21:22:58.403 +0000] TRACE (1670950): Updating (dep12Comps):
+[2023-05-05 21:23:00.665 +0000] TRACE (1670950):
+[2023-05-05 21:23:00.897 +0000] TRACE (1670950):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps running 
+[2023-05-05 21:23:00.951 +0000] INFO (1670950): dep1 installTime: 1.25
+[2023-05-05 21:23:01.021 +0000] INFO (1670950): dep1 deployTime: 1.52
+[2023-05-05 21:23:05.030 +0000] TRACE (1670950):     pulumi-nodejs:dynamic:Resource dep1Install  
+[2023-05-05 21:23:05.178 +0000] INFO (1670950): Remote 'dep1' refreshed
+[2023-05-05 21:23:05.296 +0000] TRACE (1670950):     pulumi-nodejs:dynamic:Resource remote-connection$dep1  
+    pulumi-nodejs:dynamic:Resource dep1Runningdeploy  
+[2023-05-05 21:23:05.347 +0000] TRACE (1670950): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:23:05.390 +0000] INFO (1670950): Offer 'dep1install' to remote 'dep1' refreshed
+[2023-05-05 21:23:05.399 +0000] TRACE (1670950): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:23:05.433 +0000] TRACE (1670950):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1install  
+[2023-05-05 21:23:05.438 +0000] INFO (1670950): Offer 'dep1deploy' to remote 'dep1' refreshed
+[2023-05-05 21:23:05.463 +0000] TRACE (1670950):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1deploy  
+[2023-05-05 21:23:05.497 +0000] TRACE (1670950):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps  
+[2023-05-05 21:23:05.499 +0000] TRACE (1670950): Outputs:
+    depInstallId         : "install"
+    depRunningRessourceId: "deploy"
+
+Resources:
+    6 unchanged
+
+Duration: 5s
+[2023-05-05 21:23:10.347 +0000] TRACE (1670950): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:23:10.355 +0000] TRACE (1670950): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:23:15.348 +0000] TRACE (1670950): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:23:15.355 +0000] TRACE (1670950): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:23:18.338 +0000] DEBUG (1670950): Completed deploying stack
+[2023-05-05 21:23:18.339 +0000] INFO (1670950): Completed deploy
+[2023-05-05 21:23:18.341 +0000] INFO (1670950): Waiting for next action
+[2023-05-05 21:23:20.349 +0000] TRACE (1670950): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:23:20.359 +0000] TRACE (1670950): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:23:25.354 +0000] TRACE (1670950): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:23:25.357 +0000] TRACE (1670950): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:23:30.358 +0000] TRACE (1670950): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:23:30.367 +0000] TRACE (1670950): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:23:34.854 +0000] INFO (1670950): Starting terminate
+[2023-05-05 21:23:34.856 +0000] INFO (1670950): Completed terminate
+[2023-05-05 21:23:34.857 +0000] INFO (1670950): wait everything
+[2023-05-05 21:23:34.859 +0000] INFO (1670950): Shutting down resources
+[2023-05-05 21:23:34.861 +0000] INFO (1670950): Shutting down deployment
+[2023-05-05 21:23:34.864 +0000] INFO (1670950): end of run deployment
+[2023-05-05 21:23:34.865 +0000] INFO (1670950): Registing end times
+[2023-05-05 21:23:34.866 +0000] INFO (1670950): Register end time for: event_uptime
+[2023-05-05 21:23:34.867 +0000] INFO (1670950): Done
+[2023-05-05 21:23:34.868 +0000] INFO (1670950): Writing file here: 2023-05-05_23-22-41
+[2023-05-05 21:23:34.910 +0000] INFO (1670950): Done writing file
+[2023-05-05 21:23:34.910 +0000] INFO (1670950): ---------------------- Going to sleep --------------------------------
+
+[2023-05-05 21:25:46.977 +0000] INFO (1671075): ---------------------------------- Waking up hello everyone ----------------------------------------------------
+[2023-05-05 21:25:47.027 +0000] INFO (1671075): script parameters:
+[2023-05-05 21:25:47.027 +0000] INFO (1671075): /home/anomond/concerto-d-projects/experiment_files/parameters/transitions_times/transitions_times-1-30-deps12-1.json
+[2023-05-05 21:25:47.028 +0000] INFO (1671075): 2023-05-05_23-25-43
+[2023-05-05 21:25:47.028 +0000] INFO (1671075): /home/anomond/concerto-d-projects/results_mjuz-mascots_mjuz-2-comps_raspberry_T1_waiting_rate-1-2023-05-05_22-37-21
+[2023-05-05 21:25:47.029 +0000] INFO (1671075): update
+[2023-05-05 21:25:47.029 +0000] INFO (1671075): 5
+[2023-05-05 21:25:47.029 +0000] INFO (1671075): 1
+[2023-05-05 21:25:47.029 +0000] INFO (1671075): ------------
+[2023-05-05 21:25:47.063 +0000] INFO (1671075): running deployment
+[2023-05-05 21:25:47.477 +0000] INFO (1671075): resources service binding port 19955
+[2023-05-05 21:25:47.479 +0000] INFO (1671075): resources service started on port 19955
+[2023-05-05 21:25:47.480 +0000] INFO (1671075): deployment service binding port 19956
+[2023-05-05 21:25:47.481 +0000] INFO (1671075): deployment service started on port 19956
+[2023-05-05 21:25:47.500 +0000] INFO (1671075): Initializing
+[2023-05-05 21:25:47.503 +0000] DEBUG (1671075): Getting stack dep12Comps
+[2023-05-05 21:25:56.261 +0000] DEBUG (1671075): Completed getting stack dep12Comps
+[2023-05-05 21:25:56.263 +0000] INFO (1671075): Completed initializing
+[2023-05-05 21:25:56.270 +0000] INFO (1671075): Starting deploy
+[2023-05-05 21:25:56.273 +0000] DEBUG (1671075): Deploying stack
+[2023-05-05 21:26:00.548 +0000] TRACE (1671075): Updating (dep12Comps):
+[2023-05-05 21:26:02.786 +0000] TRACE (1671075):
+[2023-05-05 21:26:03.008 +0000] TRACE (1671075):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps running 
+[2023-05-05 21:26:03.061 +0000] INFO (1671075): dep1 installTime: 1.25
+[2023-05-05 21:26:03.128 +0000] INFO (1671075): dep1 deployTime: 22.65
+[2023-05-05 21:26:07.292 +0000] TRACE (1671075):     pulumi-nodejs:dynamic:Resource dep1Install  
+[2023-05-05 21:26:07.450 +0000] INFO (1671075): Remote 'dep1' refreshed
+[2023-05-05 21:26:07.494 +0000] TRACE (1671075): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:26:07.533 +0000] TRACE (1671075):     pulumi-nodejs:dynamic:Resource remote-connection$dep1  
+ +  pulumi-nodejs:dynamic:Resource dep1Runningupdate creating 
+[2023-05-05 21:26:07.571 +0000] TRACE (1671075): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:26:07.594 +0000] INFO (1671075): Offer 'dep1install' to remote 'dep1' refreshed
+[2023-05-05 21:26:07.627 +0000] TRACE (1671075):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1install  
+[2023-05-05 21:26:12.497 +0000] TRACE (1671075): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:26:12.508 +0000] TRACE (1671075): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:26:17.502 +0000] TRACE (1671075): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:26:17.511 +0000] TRACE (1671075): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:26:22.503 +0000] TRACE (1671075): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:26:22.513 +0000] TRACE (1671075): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:26:27.506 +0000] TRACE (1671075): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:26:27.562 +0000] TRACE (1671075): 💚 Heartbeat successful for remote(s): dep1
+[2023-05-05 21:26:27.564 +0000] DEBUG (1671075): Remotes connected: dep1
+[2023-05-05 21:26:27.589 +0000] INFO (1671075): FORWARDING OFFER
+[2023-05-05 21:26:27.590 +0000] INFO (dep1install/1671075): dep1
+[2023-05-05 21:26:30.196 +0000] TRACE (1671075):  +  pulumi-nodejs:dynamic:Resource dep1Runningupdate created 
+[2023-05-05 21:26:30.410 +0000] TRACE (1671075):  +  pulumi-nodejs:dynamic:Resource offer$dep1:dep1update creating 
+[2023-05-05 21:26:30.434 +0000] INFO (1671075): Offer 'dep1deploy' to remote 'dep1' refreshed
+[2023-05-05 21:26:30.440 +0000] INFO (1671075): Offer 'dep1update' to remote 'dep1' updated
+[2023-05-05 21:26:30.456 +0000] DEBUG (dep1update/1671075): Directly forwarded offer 'dep1update' to remote 'dep1'
+[2023-05-05 21:26:30.460 +0000] TRACE (1671075):  +  pulumi-nodejs:dynamic:Resource offer$dep1:dep1update created 
+[2023-05-05 21:26:30.471 +0000] TRACE (1671075):  ~  pulumi-nodejs:dynamic:Resource offer$dep1:dep1deploy updating [diff: ~offer]
+[2023-05-05 21:26:30.505 +0000] INFO (1671075): Offer 'dep1deploy' to remote 'dep1' updated
+[2023-05-05 21:26:30.516 +0000] DEBUG (dep1deploy/1671075): Directly forwarded offer 'dep1deploy' to remote 'dep1'
+[2023-05-05 21:26:30.518 +0000] TRACE (1671075):  ~  pulumi-nodejs:dynamic:Resource offer$dep1:dep1deploy updated [diff: ~offer]
+[2023-05-05 21:26:30.555 +0000] TRACE (1671075):  -  pulumi-nodejs:dynamic:Resource dep1Runningdeploy deleting 
+[2023-05-05 21:26:30.575 +0000] TRACE (1671075):  -  pulumi-nodejs:dynamic:Resource dep1Runningdeploy deleted 
+[2023-05-05 21:26:30.622 +0000] TRACE (1671075):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps  
+[2023-05-05 21:26:30.624 +0000] TRACE (1671075): Outputs:
+    depInstallId         : "install"
+  ~ depRunningRessourceId: "deploy" => "update"
+
+Resources:
+    + 2 created
+    ~ 1 updated
+    - 1 deleted
+    4 changes. 4 unchanged
+
+Duration: 28s
+[2023-05-05 21:26:32.507 +0000] TRACE (1671075): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:26:32.515 +0000] TRACE (1671075): 💚 Heartbeat successful for remote(s): dep1
+[2023-05-05 21:26:37.507 +0000] TRACE (1671075): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:26:37.514 +0000] TRACE (1671075): 💚 Heartbeat successful for remote(s): dep1
+[2023-05-05 21:26:42.507 +0000] TRACE (1671075): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:26:43.420 +0000] DEBUG (1671075): Completed deploying stack
+[2023-05-05 21:26:43.422 +0000] INFO (1671075): Completed deploy
+[2023-05-05 21:26:43.423 +0000] INFO (1671075): Waiting for next action
+[2023-05-05 21:26:43.433 +0000] INFO (1671075): Starting terminate
+[2023-05-05 21:26:43.435 +0000] INFO (1671075): Completed terminate
+[2023-05-05 21:26:43.436 +0000] INFO (1671075): wait everything
+[2023-05-05 21:26:43.438 +0000] INFO (1671075): Shutting down resources
+[2023-05-05 21:26:43.440 +0000] INFO (1671075): Shutting down deployment
+[2023-05-05 21:26:43.443 +0000] INFO (1671075): end of run deployment
+[2023-05-05 21:26:43.452 +0000] INFO (1671075): Registing end times
+[2023-05-05 21:26:43.452 +0000] INFO (1671075): Register end time for: event_uptime
+[2023-05-05 21:26:43.453 +0000] INFO (1671075): Done
+[2023-05-05 21:26:43.454 +0000] INFO (1671075): Writing file here: 2023-05-05_23-25-43
+[2023-05-05 21:26:43.493 +0000] INFO (1671075): Done writing file
+[2023-05-05 21:26:43.494 +0000] INFO (1671075): ---------------------- Going to sleep --------------------------------
+
+[2023-05-05 21:30:17.053 +0000] INFO (1671202): ---------------------------------- Waking up hello everyone ----------------------------------------------------
+[2023-05-05 21:30:17.102 +0000] INFO (1671202): script parameters:
+[2023-05-05 21:30:17.103 +0000] INFO (1671202): /home/anomond/concerto-d-projects/experiment_files/parameters/transitions_times/transitions_times-1-30-deps12-1.json
+[2023-05-05 21:30:17.104 +0000] INFO (1671202): 2023-05-05_23-30-13
+[2023-05-05 21:30:17.104 +0000] INFO (1671202): /home/anomond/concerto-d-projects/results_mjuz-mascots_mjuz-2-comps_raspberry_T1_waiting_rate-1-2023-05-05_22-37-21
+[2023-05-05 21:30:17.104 +0000] INFO (1671202): update
+[2023-05-05 21:30:17.105 +0000] INFO (1671202): 5
+[2023-05-05 21:30:17.105 +0000] INFO (1671202): 1
+[2023-05-05 21:30:17.105 +0000] INFO (1671202): ------------
+[2023-05-05 21:30:17.138 +0000] INFO (1671202): running deployment
+[2023-05-05 21:30:17.566 +0000] INFO (1671202): resources service binding port 19955
+[2023-05-05 21:30:17.568 +0000] INFO (1671202): resources service started on port 19955
+[2023-05-05 21:30:17.570 +0000] INFO (1671202): deployment service binding port 19956
+[2023-05-05 21:30:17.570 +0000] INFO (1671202): deployment service started on port 19956
+[2023-05-05 21:30:17.589 +0000] INFO (1671202): Initializing
+[2023-05-05 21:30:17.592 +0000] DEBUG (1671202): Getting stack dep12Comps
+[2023-05-05 21:30:26.382 +0000] DEBUG (1671202): Completed getting stack dep12Comps
+[2023-05-05 21:30:26.383 +0000] INFO (1671202): Completed initializing
+[2023-05-05 21:30:26.391 +0000] INFO (1671202): Starting deploy
+[2023-05-05 21:30:26.394 +0000] DEBUG (1671202): Deploying stack
+[2023-05-05 21:30:30.679 +0000] TRACE (1671202): Updating (dep12Comps):
+[2023-05-05 21:30:32.914 +0000] TRACE (1671202):
+[2023-05-05 21:30:33.077 +0000] TRACE (1671202):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps running 
+[2023-05-05 21:30:33.190 +0000] INFO (1671202): dep1 installTime: 1.25
+[2023-05-05 21:30:33.258 +0000] INFO (1671202): dep1 deployTime: 22.65
+[2023-05-05 21:30:37.458 +0000] TRACE (1671202):     pulumi-nodejs:dynamic:Resource dep1Install  
+[2023-05-05 21:30:37.613 +0000] INFO (1671202): Remote 'dep1' refreshed
+[2023-05-05 21:30:37.684 +0000] TRACE (1671202):     pulumi-nodejs:dynamic:Resource remote-connection$dep1  
+    pulumi-nodejs:dynamic:Resource dep1Runningupdate  [diff: ~reconfChanged]
+[2023-05-05 21:30:37.797 +0000] INFO (1671202): Offer 'dep1install' to remote 'dep1' refreshed
+[2023-05-05 21:30:37.826 +0000] TRACE (1671202):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1install  
+[2023-05-05 21:30:37.860 +0000] INFO (1671202): Offer 'dep1update' to remote 'dep1' refreshed
+[2023-05-05 21:30:37.893 +0000] TRACE (1671202):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1update  
+[2023-05-05 21:30:37.900 +0000] INFO (1671202): Offer 'dep1deploy' to remote 'dep1' refreshed
+[2023-05-05 21:30:37.923 +0000] TRACE (1671202):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1deploy  
+[2023-05-05 21:30:37.959 +0000] TRACE (1671202):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps  
+[2023-05-05 21:30:37.960 +0000] TRACE (1671202): Outputs:
+    depInstallId         : "install"
+    depRunningRessourceId: "update"
+
+Resources:
+    7 unchanged
+
+Duration: 6s
+[2023-05-05 21:30:42.585 +0000] TRACE (1671202): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:30:42.619 +0000] TRACE (1671202): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:30:47.587 +0000] TRACE (1671202): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:30:47.594 +0000] TRACE (1671202): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:30:50.734 +0000] DEBUG (1671202): Completed deploying stack
+[2023-05-05 21:30:50.736 +0000] INFO (1671202): Completed deploy
+[2023-05-05 21:30:50.737 +0000] INFO (1671202): Waiting for next action
+[2023-05-05 21:30:52.588 +0000] TRACE (1671202): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:30:52.616 +0000] TRACE (1671202): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:30:57.591 +0000] TRACE (1671202): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:30:57.601 +0000] TRACE (1671202): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:31:02.595 +0000] TRACE (1671202): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:31:02.604 +0000] TRACE (1671202): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:31:07.110 +0000] INFO (1671202): Starting terminate
+[2023-05-05 21:31:07.112 +0000] INFO (1671202): Completed terminate
+[2023-05-05 21:31:07.113 +0000] INFO (1671202): wait everything
+[2023-05-05 21:31:07.115 +0000] INFO (1671202): Shutting down resources
+[2023-05-05 21:31:07.117 +0000] INFO (1671202): Shutting down deployment
+[2023-05-05 21:31:07.119 +0000] INFO (1671202): end of run deployment
+[2023-05-05 21:31:07.121 +0000] INFO (1671202): Registing end times
+[2023-05-05 21:31:07.122 +0000] INFO (1671202): Register end time for: event_uptime
+[2023-05-05 21:31:07.123 +0000] INFO (1671202): Done
+[2023-05-05 21:31:07.124 +0000] INFO (1671202): Writing file here: 2023-05-05_23-30-13
+[2023-05-05 21:31:07.163 +0000] INFO (1671202): Done writing file
+[2023-05-05 21:31:07.164 +0000] INFO (1671202): ---------------------- Going to sleep --------------------------------
+
+[2023-05-05 21:33:49.603 +0000] INFO (1671330): ---------------------------------- Waking up hello everyone ----------------------------------------------------
+[2023-05-05 21:33:49.654 +0000] INFO (1671330): script parameters:
+[2023-05-05 21:33:49.655 +0000] INFO (1671330): /home/anomond/concerto-d-projects/experiment_files/parameters/transitions_times/transitions_times-1-30-deps12-1.json
+[2023-05-05 21:33:49.656 +0000] INFO (1671330): 2023-05-05_23-33-46
+[2023-05-05 21:33:49.656 +0000] INFO (1671330): /home/anomond/concerto-d-projects/results_mjuz-mascots_mjuz-2-comps_raspberry_T1_waiting_rate-1-2023-05-05_22-37-21
+[2023-05-05 21:33:49.657 +0000] INFO (1671330): update
+[2023-05-05 21:33:49.657 +0000] INFO (1671330): 5
+[2023-05-05 21:33:49.657 +0000] INFO (1671330): 1
+[2023-05-05 21:33:49.657 +0000] INFO (1671330): ------------
+[2023-05-05 21:33:49.692 +0000] INFO (1671330): running deployment
+[2023-05-05 21:33:50.115 +0000] INFO (1671330): resources service binding port 19955
+[2023-05-05 21:33:50.116 +0000] INFO (1671330): resources service started on port 19955
+[2023-05-05 21:33:50.118 +0000] INFO (1671330): deployment service binding port 19956
+[2023-05-05 21:33:50.119 +0000] INFO (1671330): deployment service started on port 19956
+[2023-05-05 21:33:50.139 +0000] INFO (1671330): Initializing
+[2023-05-05 21:33:50.142 +0000] DEBUG (1671330): Getting stack dep12Comps
+[2023-05-05 21:33:58.941 +0000] DEBUG (1671330): Completed getting stack dep12Comps
+[2023-05-05 21:33:58.943 +0000] INFO (1671330): Completed initializing
+[2023-05-05 21:33:58.952 +0000] INFO (1671330): Starting deploy
+[2023-05-05 21:33:58.955 +0000] DEBUG (1671330): Deploying stack
+[2023-05-05 21:34:03.223 +0000] TRACE (1671330): Updating (dep12Comps):
+[2023-05-05 21:34:05.449 +0000] TRACE (1671330):
+[2023-05-05 21:34:05.689 +0000] TRACE (1671330):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps running 
+[2023-05-05 21:34:05.762 +0000] INFO (1671330): dep1 installTime: 1.25
+[2023-05-05 21:34:05.828 +0000] INFO (1671330): dep1 deployTime: 22.65
+[2023-05-05 21:34:10.130 +0000] INFO (1671330): Remote 'dep1' refreshed
+[2023-05-05 21:34:10.148 +0000] TRACE (1671330): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:34:10.198 +0000] TRACE (1671330): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:34:10.257 +0000] TRACE (1671330):     pulumi-nodejs:dynamic:Resource remote-connection$dep1  
+    pulumi-nodejs:dynamic:Resource dep1Install  
+[2023-05-05 21:34:10.339 +0000] TRACE (1671330):     pulumi-nodejs:dynamic:Resource dep1Runningupdate  
+[2023-05-05 21:34:10.391 +0000] INFO (1671330): Offer 'dep1install' to remote 'dep1' refreshed
+[2023-05-05 21:34:10.428 +0000] TRACE (1671330):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1install  
+[2023-05-05 21:34:10.433 +0000] INFO (1671330): Offer 'dep1update' to remote 'dep1' refreshed
+[2023-05-05 21:34:10.466 +0000] TRACE (1671330):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1update  
+[2023-05-05 21:34:10.471 +0000] INFO (1671330): Offer 'dep1deploy' to remote 'dep1' refreshed
+[2023-05-05 21:34:10.537 +0000] TRACE (1671330):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1deploy  
+[2023-05-05 21:34:10.584 +0000] TRACE (1671330):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps  
+[2023-05-05 21:34:10.587 +0000] TRACE (1671330): Outputs:
+    depInstallId         : "install"
+    depRunningRessourceId: "update"
+
+Resources:
+    7 unchanged
+
+Duration: 6s
+[2023-05-05 21:34:15.148 +0000] TRACE (1671330): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:34:15.158 +0000] TRACE (1671330): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:34:20.150 +0000] TRACE (1671330): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:34:20.156 +0000] TRACE (1671330): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:34:23.445 +0000] DEBUG (1671330): Completed deploying stack
+[2023-05-05 21:34:23.447 +0000] INFO (1671330): Completed deploy
+[2023-05-05 21:34:23.448 +0000] INFO (1671330): Waiting for next action
+[2023-05-05 21:34:25.151 +0000] TRACE (1671330): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:34:25.161 +0000] TRACE (1671330): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:34:30.151 +0000] TRACE (1671330): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:34:30.159 +0000] TRACE (1671330): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:34:35.154 +0000] TRACE (1671330): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:34:35.171 +0000] TRACE (1671330): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:34:39.660 +0000] INFO (1671330): Starting terminate
+[2023-05-05 21:34:39.662 +0000] INFO (1671330): Completed terminate
+[2023-05-05 21:34:39.663 +0000] INFO (1671330): wait everything
+[2023-05-05 21:34:39.666 +0000] INFO (1671330): Shutting down resources
+[2023-05-05 21:34:39.667 +0000] INFO (1671330): Shutting down deployment
+[2023-05-05 21:34:39.670 +0000] INFO (1671330): end of run deployment
+[2023-05-05 21:34:39.672 +0000] INFO (1671330): Registing end times
+[2023-05-05 21:34:39.672 +0000] INFO (1671330): Register end time for: event_uptime
+[2023-05-05 21:34:39.673 +0000] INFO (1671330): Done
+[2023-05-05 21:34:39.674 +0000] INFO (1671330): Writing file here: 2023-05-05_23-33-46
+[2023-05-05 21:34:39.713 +0000] INFO (1671330): Done writing file
+[2023-05-05 21:34:39.714 +0000] INFO (1671330): ---------------------- Going to sleep --------------------------------
+
+[2023-05-05 21:37:04.576 +0000] INFO (1671453): ---------------------------------- Waking up hello everyone ----------------------------------------------------
+[2023-05-05 21:37:04.626 +0000] INFO (1671453): script parameters:
+[2023-05-05 21:37:04.626 +0000] INFO (1671453): /home/anomond/concerto-d-projects/experiment_files/parameters/transitions_times/transitions_times-1-30-deps12-1.json
+[2023-05-05 21:37:04.627 +0000] INFO (1671453): 2023-05-05_23-37-01
+[2023-05-05 21:37:04.627 +0000] INFO (1671453): /home/anomond/concerto-d-projects/results_mjuz-mascots_mjuz-2-comps_raspberry_T1_waiting_rate-1-2023-05-05_22-37-21
+[2023-05-05 21:37:04.628 +0000] INFO (1671453): update
+[2023-05-05 21:37:04.628 +0000] INFO (1671453): 5
+[2023-05-05 21:37:04.628 +0000] INFO (1671453): 1
+[2023-05-05 21:37:04.628 +0000] INFO (1671453): ------------
+[2023-05-05 21:37:04.662 +0000] INFO (1671453): running deployment
+[2023-05-05 21:37:05.077 +0000] INFO (1671453): resources service binding port 19955
+[2023-05-05 21:37:05.078 +0000] INFO (1671453): resources service started on port 19955
+[2023-05-05 21:37:05.080 +0000] INFO (1671453): deployment service binding port 19956
+[2023-05-05 21:37:05.081 +0000] INFO (1671453): deployment service started on port 19956
+[2023-05-05 21:37:05.100 +0000] INFO (1671453): Initializing
+[2023-05-05 21:37:05.102 +0000] DEBUG (1671453): Getting stack dep12Comps
+[2023-05-05 21:37:13.865 +0000] DEBUG (1671453): Completed getting stack dep12Comps
+[2023-05-05 21:37:13.866 +0000] INFO (1671453): Completed initializing
+[2023-05-05 21:37:13.875 +0000] INFO (1671453): Starting deploy
+[2023-05-05 21:37:13.878 +0000] DEBUG (1671453): Deploying stack
+[2023-05-05 21:37:18.162 +0000] TRACE (1671453): Updating (dep12Comps):
+[2023-05-05 21:37:20.490 +0000] TRACE (1671453):
+[2023-05-05 21:37:20.718 +0000] TRACE (1671453):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps running 
+[2023-05-05 21:37:20.771 +0000] INFO (1671453): dep1 installTime: 1.25
+[2023-05-05 21:37:20.839 +0000] INFO (1671453): dep1 deployTime: 22.65
+[2023-05-05 21:37:25.121 +0000] INFO (1671453): Remote 'dep1' refreshed
+[2023-05-05 21:37:25.239 +0000] TRACE (1671453):     pulumi-nodejs:dynamic:Resource remote-connection$dep1  
+    pulumi-nodejs:dynamic:Resource dep1Install  
+[2023-05-05 21:37:25.322 +0000] TRACE (1671453):     pulumi-nodejs:dynamic:Resource dep1Runningupdate  
+[2023-05-05 21:37:25.373 +0000] INFO (1671453): Offer 'dep1install' to remote 'dep1' refreshed
+[2023-05-05 21:37:25.412 +0000] TRACE (1671453):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1install  
+[2023-05-05 21:37:25.417 +0000] INFO (1671453): Offer 'dep1update' to remote 'dep1' refreshed
+[2023-05-05 21:37:25.450 +0000] TRACE (1671453):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1update  
+[2023-05-05 21:37:25.456 +0000] INFO (1671453): Offer 'dep1deploy' to remote 'dep1' refreshed
+[2023-05-05 21:37:25.480 +0000] TRACE (1671453):     pulumi-nodejs:dynamic:Resource offer$dep1:dep1deploy  
+[2023-05-05 21:37:25.514 +0000] TRACE (1671453):     pulumi:pulumi:Stack Dep1DeployAndUpdate2Comps-dep12Comps  
+[2023-05-05 21:37:25.516 +0000] TRACE (1671453): Outputs:
+    depInstallId         : "install"
+    depRunningRessourceId: "update"
+
+Resources:
+    7 unchanged
+
+Duration: 6s
+[2023-05-05 21:37:30.097 +0000] TRACE (1671453): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:37:30.159 +0000] TRACE (1671453): 💚 Heartbeat successful for remote(s): dep1
+[2023-05-05 21:37:30.160 +0000] DEBUG (1671453): Remotes connected: dep1
+[2023-05-05 21:37:30.188 +0000] INFO (1671453): FORWARDING OFFER
+[2023-05-05 21:37:30.189 +0000] INFO (dep1install/1671453): dep1
+[2023-05-05 21:37:30.190 +0000] INFO (1671453): FORWARDING OFFER
+[2023-05-05 21:37:30.191 +0000] INFO (dep1update/1671453): dep1
+[2023-05-05 21:37:30.192 +0000] INFO (1671453): FORWARDING OFFER
+[2023-05-05 21:37:30.192 +0000] INFO (dep1deploy/1671453): dep1
+[2023-05-05 21:37:35.098 +0000] TRACE (1671453): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:37:35.108 +0000] TRACE (1671453): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:37:38.347 +0000] DEBUG (1671453): Completed deploying stack
+[2023-05-05 21:37:38.349 +0000] INFO (1671453): Completed deploy
+[2023-05-05 21:37:38.350 +0000] INFO (1671453): Waiting for next action
+[2023-05-05 21:37:40.099 +0000] TRACE (1671453): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:37:40.110 +0000] TRACE (1671453): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:37:45.102 +0000] TRACE (1671453): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:37:45.112 +0000] TRACE (1671453): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:37:50.104 +0000] TRACE (1671453): 💌 Sending heartbeat to remote(s): dep1
+[2023-05-05 21:37:50.112 +0000] TRACE (1671453): 💔 Heartbeat failed for remote(s): dep1
+[2023-05-05 21:37:54.632 +0000] INFO (1671453): Starting terminate
+[2023-05-05 21:37:54.634 +0000] INFO (1671453): Completed terminate
+[2023-05-05 21:37:54.635 +0000] INFO (1671453): wait everything
+[2023-05-05 21:37:54.638 +0000] INFO (1671453): Shutting down resources
+[2023-05-05 21:37:54.639 +0000] INFO (1671453): Shutting down deployment
+[2023-05-05 21:37:54.642 +0000] INFO (1671453): end of run deployment
+[2023-05-05 21:37:54.644 +0000] INFO (1671453): Registing end times
+[2023-05-05 21:37:54.645 +0000] INFO (1671453): Register end time for: event_uptime
+[2023-05-05 21:37:54.645 +0000] INFO (1671453): Done
+[2023-05-05 21:37:54.646 +0000] INFO (1671453): Writing file here: 2023-05-05_23-37-01
+[2023-05-05 21:37:54.685 +0000] INFO (1671453): Done writing file
+[2023-05-05 21:37:54.686 +0000] INFO (1671453): ---------------------- Going to sleep --------------------------------
+
