@@ -9,7 +9,7 @@ def compute_max_exec_duration(details_assemblies_results, reconf_name):
 
 for version in ["asynchronous", "synchronous", "mjuz"]:
     global_results_means = {}
-    
+
     # Creation du dict avec les résultats pour le max exec
     # async_results_dir = f"/home/aomond/experiments_results/concerto-d/prod/mascots/{version}"
     async_results_dir = f"mascots_2023/{version}"
