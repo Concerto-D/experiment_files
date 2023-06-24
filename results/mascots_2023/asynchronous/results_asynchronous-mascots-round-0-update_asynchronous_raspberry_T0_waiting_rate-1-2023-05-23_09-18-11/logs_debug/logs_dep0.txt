@@ -1,0 +1,144 @@
+dep0 - 2023-05-23 07:21:47,370 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-23_09-21-46', 'execution_expe_dir': '/home/anomond/concerto-d-projects/results_asynchronous-mascots-round-0-update_asynchronous_raspberry_T0_waiting_rate-1-2023-05-23_09-18-11', 'version_concerto_d': 'asynchronous', 'reconfiguration_name': 'deploy', 'nb_concerto_nodes': 5, 'dep_num': 0, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep0 - 2023-05-23 07:21:47,370 Current round: --- FREQ: 1 -----
+[250, 50][212.5, 50]   Server/dep0   12.5   Left
+[250, 50][212.5, 50]   Server/dep1   12.5   Left
+[250, 50][287.5, 50]   Server/dep2   12.5   Right
+[250, 50][305, 50]     Server/dep3   0      Right
+[250, 50][212.5, 50]   Server/dep4   12.5   Left
+-----------------
+dep0 - 2023-05-23 07:21:47,371 Saved timestamp: event_uptime () {} start
+dep0 - 2023-05-23 07:21:47,371 Saved timestamp: event_loading_state () {} start
+dep0 - 2023-05-23 07:21:47,371 '[33m'----- Previous config doesn't NOT exists, starting from zero ----'[0m'
+dep0 - 2023-05-23 07:21:47,371 '[33m'----- Searched in /home/anomond/concerto-d-projects/results_asynchronous-mascots-round-0-update_asynchronous_raspberry_T0_waiting_rate-1-2023-05-23_09-18-11/reprise_configs/saved_config_dep_assembly_0.json -----'[0m'
+dep0 - 2023-05-23 07:21:47,372 Saved timestamp: event_loading_state () {} end
+dep0 - 2023-05-23 07:21:47,372 Saved timestamp: event_deploy () {} start
+dep0 - 2023-05-23 07:21:47,372 Saved timestamp: instruction_add ('0', 'dep0', 'Dep') {} start
+dep0 - 2023-05-23 07:21:47,373 Saved timestamp: instruction_add ('0', 'dep0', 'Dep') {} end
+dep0 - 2023-05-23 07:21:47,373 Saved timestamp: instruction_conn ('1', 'dep0', 'ip', 'server', 'serviceu_ip0') {} start
+dep0 - 2023-05-23 07:21:47,373 Creating connection: dep0 ip server serviceu_ip0
+dep0 - 2023-05-23 07:21:47,373 Saved timestamp: instruction_conn ('1', 'dep0', 'ip', 'server', 'serviceu_ip0') {} end
+dep0 - 2023-05-23 07:21:47,374 Saved timestamp: instruction_conn ('2', 'dep0', 'service', 'server', 'serviceu0') {} start
+dep0 - 2023-05-23 07:21:47,374 Creating connection: dep0 service server serviceu0
+dep0 - 2023-05-23 07:21:47,374 Saved timestamp: instruction_conn ('2', 'dep0', 'service', 'server', 'serviceu0') {} end
+dep0 - 2023-05-23 07:21:47,374 Saved timestamp: instruction_push_b ('3', 'dep0', 'deploy') {} start
+dep0 - 2023-05-23 07:21:47,375 [35m[dep0] Queing behavior 'deploy'[0m
+dep0 - 2023-05-23 07:21:47,375 Saved timestamp: instruction_push_b ('3', 'dep0', 'deploy') {} end
+dep0 - 2023-05-23 07:21:47,375 Saved timestamp: instruction_wait ('4', 'dep0') {} start
+dep0 - 2023-05-23 07:21:47,375 Waiting for component dep0 to finish its behaviors execution
+dep0 - 2023-05-23 07:21:47,375 [35m[dep0] Ending transition '_init'[0m
+dep0 - 2023-05-23 07:21:47,426 Move from idocks to place (undeployed)
+dep0 - 2023-05-23 07:21:47,426 [35m[dep0] Entering place 'undeployed'[0m
+dep0 - 2023-05-23 07:21:47,426 Move from place to odocks (undeployed)
+dep0 - 2023-05-23 07:21:48,148 Put component state ACTIVE on wait/deploy/dep0
+dep0 - 2023-05-23 07:21:48,149 Saved timestamp: behavior ('deploy', 'dep0') {} start
+dep0 - 2023-05-23 07:21:48,150 [35m[dep0] Changing behavior to 'deploy'[0m
+dep0 - 2023-05-23 07:21:48,200 [35m[dep0] Leaving place 'undeployed'[0m
+dep0 - 2023-05-23 07:21:48,201 [35m[dep0] Starting transition 'install'[0m
+dep0 - 2023-05-23 07:21:48,204 [35m[dep0] allocating resources[0m
+dep0 - 2023-05-23 07:21:49,466 [35m[dep0] got IP 123.124.1.0[0m
+dep0 - 2023-05-23 07:21:49,467 [35m[dep0] finished allocation[0m
+dep0 - 2023-05-23 07:21:49,512 [35m[dep0] Ending transition 'install'[0m
+dep0 - 2023-05-23 07:21:49,563 Move from idocks to place (installed)
+dep0 - 2023-05-23 07:21:49,563 [35m[dep0] Entering place 'installed'[0m
+dep0 - 2023-05-23 07:21:49,564 Put nb dependency users 1 on nb_users/dep0/ip
+dep0 - 2023-05-23 07:21:49,565 [35m[dep0] Starting to use place dependency 'ip'[0m
+dep0 - 2023-05-23 07:21:49,565 Move from place to odocks (installed)
+dep0 - 2023-05-23 07:21:49,566 [35m[dep0] Leaving place 'installed'[0m
+dep0 - 2023-05-23 07:21:49,566 [35m[dep0] Starting transition 'run'[0m
+dep0 - 2023-05-23 07:21:49,567 [35m[dep0] preparing to run[0m
+dep0 - 2023-05-23 07:21:51,779 Waiting for component dep0 to finish its behaviors execution
+dep0 - 2023-05-23 07:21:52,221 [35m[dep0] running[0m
+dep0 - 2023-05-23 07:21:52,232 [35m[dep0] Ending transition 'run'[0m
+dep0 - 2023-05-23 07:21:52,283 Move from idocks to place (running)
+dep0 - 2023-05-23 07:21:52,283 [35m[dep0] Entering place 'running'[0m
+dep0 - 2023-05-23 07:21:52,284 Put nb dependency users 1 on nb_users/dep0/service
+dep0 - 2023-05-23 07:21:52,285 [35m[dep0] Starting to use place dependency 'service'[0m
+dep0 - 2023-05-23 07:21:52,285 Move from place to odocks (running)
+dep0 - 2023-05-23 07:21:52,286 Saved timestamp: behavior ('deploy', 'dep0') {} end
+dep0 - 2023-05-23 07:21:52,287 Put component state INACTIVE on wait/deploy/dep0
+dep0 - 2023-05-23 07:21:52,288 [35m[dep0] Changing behavior to 'None'[0m
+dep0 - 2023-05-23 07:21:52,288 [35m[dep0] Going IDLE[0m
+dep0 - 2023-05-23 07:21:52,289 Put component state INACTIVE on wait/deploy/dep_assembly_0
+dep0 - 2023-05-23 07:21:52,340 Saved timestamp: instruction_wait ('4', 'dep0') {} end
+dep0 - 2023-05-23 07:21:52,340 Saved timestamp: event_deploy () {} end
+dep0 - 2023-05-23 07:21:52,341 Saved timestamp: event_uptime () {} end
+dep0 - 2023-05-23 07:21:52,341 ---------------------- END OF RECONFIGURATION GG -----------------------
+dep0 - 2023-05-23 07:21:52,342 Saved timestamp: event_saving_state () {} start
+dep0 - 2023-05-23 07:21:52,342 Saving current conf ...
+dep0 - 2023-05-23 07:21:52,351 Saved timestamp: event_saving_state () {} end
+dep0 - 2023-05-23 07:21:52,352 DUMPING FILE: /home/anomond/concerto-d-projects/results_asynchronous-mascots-round-0-update_asynchronous_raspberry_T0_waiting_rate-1-2023-05-23_09-18-11/dep0_2023-05-23_07-21-52-512.3518440723419.yaml
+dep0 - 2023-05-23 07:21:52,370 
+dep0 - 2023-05-23 07:26:09,693 Initialization complete, script parameters: {'duration': 50.0, 'waiting_rate': '1', 'timestamp_log_dir': '2023-05-23_09-26-08', 'execution_expe_dir': '/home/anomond/concerto-d-projects/results_asynchronous-mascots-round-0-update_asynchronous_raspberry_T0_waiting_rate-1-2023-05-23_09-18-11', 'version_concerto_d': 'asynchronous', 'reconfiguration_name': 'update', 'nb_concerto_nodes': 5, 'dep_num': 0, 'uptimes_nodes_file_path': None, 'execution_start_time': None}
+dep0 - 2023-05-23 07:26:09,693 Current round: --- FREQ: 1 -----
+[250, 50][212.5, 50]   Server/dep0   12.5   Left
+[250, 50][212.5, 50]   Server/dep1   12.5   Left
+[250, 50][287.5, 50]   Server/dep2   12.5   Right
+[250, 50][305, 50]     Server/dep3   0      Right
+[250, 50][212.5, 50]   Server/dep4   12.5   Left
+-----------------
+dep0 - 2023-05-23 07:26:09,694 Saved timestamp: event_uptime () {} start
+dep0 - 2023-05-23 07:26:09,694 Saved timestamp: event_loading_state () {} start
+dep0 - 2023-05-23 07:26:09,694 [33m --- conf found at /home/anomond/concerto-d-projects/results_asynchronous-mascots-round-0-update_asynchronous_raspberry_T0_waiting_rate-1-2023-05-23_09-18-11/reprise_configs/saved_config_dep_assembly_0.json ----[0m
+dep0 - 2023-05-23 07:26:09,694 Retrieving previous conf ...
+dep0 - 2023-05-23 07:26:09,695 done
+dep0 - 2023-05-23 07:26:09,696 Archiving file in /home/anomond/concerto-d-projects/results_asynchronous-mascots-round-0-update_asynchronous_raspberry_T0_waiting_rate-1-2023-05-23_09-18-11/archives_reprises/dep_assembly_0/saved_config_2023-05-23_07-26-09.json
+dep0 - 2023-05-23 07:26:09,696 Removing previous conf ...
+dep0 - 2023-05-23 07:26:09,697 done
+dep0 - 2023-05-23 07:26:09,698 [35m[dep0] Changing behavior to 'None'[0m
+dep0 - 2023-05-23 07:26:09,698 Saved timestamp: event_loading_state () {} end
+dep0 - 2023-05-23 07:26:09,698 Saved timestamp: event_update () {} start
+dep0 - 2023-05-23 07:26:09,698 Saved timestamp: instruction_push_b ('0', 'dep0', 'update') {} start
+dep0 - 2023-05-23 07:26:10,413 Put component state ACTIVE on wait/update/dep0
+dep0 - 2023-05-23 07:26:10,414 Saved timestamp: behavior ('update', 'dep0') {} start
+dep0 - 2023-05-23 07:26:10,415 [35m[dep0] Changing behavior to 'update'[0m
+dep0 - 2023-05-23 07:26:10,415 Saved timestamp: instruction_push_b ('0', 'dep0', 'update') {} end
+dep0 - 2023-05-23 07:26:10,416 Saved timestamp: instruction_push_b ('1', 'dep0', 'deploy') {} start
+dep0 - 2023-05-23 07:26:10,416 [35m[dep0] Queing behavior 'deploy'[0m
+dep0 - 2023-05-23 07:26:10,417 Saved timestamp: instruction_push_b ('1', 'dep0', 'deploy') {} end
+dep0 - 2023-05-23 07:26:10,417 Saved timestamp: instruction_wait ('2', 'dep0') {} start
+dep0 - 2023-05-23 07:26:10,417 Waiting for component dep0 to finish its behaviors execution
+dep0 - 2023-05-23 07:26:10,417 Move from place to odocks (running)
+dep0 - 2023-05-23 07:26:10,417 Provide dep service is now refusing
+dep0 - 2023-05-23 07:26:10,418 Send refusing state 1 on refusing/dep0/service
+dep0 - 2023-05-23 07:26:10,419 Get nb dependency users on nb_users/server/serviceu0, result: 0
+dep0 - 2023-05-23 07:26:10,420 [35m[dep0] Leaving place 'running'[0m
+dep0 - 2023-05-23 07:26:10,420 Put nb dependency users 0 on nb_users/dep0/service
+dep0 - 2023-05-23 07:26:10,420 [35m[dep0] Stopping to use place dependency 'service'[0m
+dep0 - 2023-05-23 07:26:10,421 [35m[dep0] Starting transition 'update'[0m
+dep0 - 2023-05-23 07:26:10,421 [35m[dep0] updating[0m
+dep0 - 2023-05-23 07:26:12,774 [35m[dep0] updated[0m
+dep0 - 2023-05-23 07:26:12,784 [35m[dep0] Ending transition 'update'[0m
+dep0 - 2023-05-23 07:26:12,834 Move from idocks to place (installed)
+dep0 - 2023-05-23 07:26:12,835 [35m[dep0] Entering place 'installed'[0m
+dep0 - 2023-05-23 07:26:12,835 Put nb dependency users 2 on nb_users/dep0/ip
+dep0 - 2023-05-23 07:26:12,836 [35m[dep0] Starting to use place dependency 'ip'[0m
+dep0 - 2023-05-23 07:26:12,837 Move from place to odocks (installed)
+dep0 - 2023-05-23 07:26:12,837 Saved timestamp: behavior ('update', 'dep0') {} end
+dep0 - 2023-05-23 07:26:12,838 Saved timestamp: behavior ('deploy', 'dep0') {} start
+dep0 - 2023-05-23 07:26:12,838 [35m[dep0] Changing behavior to 'deploy'[0m
+dep0 - 2023-05-23 07:26:12,889 [35m[dep0] Leaving place 'installed'[0m
+dep0 - 2023-05-23 07:26:12,890 [35m[dep0] Starting transition 'run'[0m
+dep0 - 2023-05-23 07:26:12,891 [35m[dep0] preparing to run[0m
+dep0 - 2023-05-23 07:26:14,097 Waiting for component dep0 to finish its behaviors execution
+dep0 - 2023-05-23 07:26:15,544 [35m[dep0] running[0m
+dep0 - 2023-05-23 07:26:15,556 [35m[dep0] Ending transition 'run'[0m
+dep0 - 2023-05-23 07:26:15,606 Move from idocks to place (running)
+dep0 - 2023-05-23 07:26:15,607 [35m[dep0] Entering place 'running'[0m
+dep0 - 2023-05-23 07:26:15,607 Put nb dependency users 1 on nb_users/dep0/service
+dep0 - 2023-05-23 07:26:15,608 Send refusing state 0 on refusing/dep0/service
+dep0 - 2023-05-23 07:26:15,609 [35m[dep0] Starting to use place dependency 'service'[0m
+dep0 - 2023-05-23 07:26:15,610 Move from place to odocks (running)
+dep0 - 2023-05-23 07:26:15,610 Saved timestamp: behavior ('deploy', 'dep0') {} end
+dep0 - 2023-05-23 07:26:15,611 Put component state INACTIVE on wait/update/dep0
+dep0 - 2023-05-23 07:26:15,611 [35m[dep0] Changing behavior to 'None'[0m
+dep0 - 2023-05-23 07:26:15,612 [35m[dep0] Going IDLE[0m
+dep0 - 2023-05-23 07:26:15,612 Put component state INACTIVE on wait/update/dep_assembly_0
+dep0 - 2023-05-23 07:26:15,663 Saved timestamp: instruction_wait ('2', 'dep0') {} end
+dep0 - 2023-05-23 07:26:15,664 Saved timestamp: event_update () {} end
+dep0 - 2023-05-23 07:26:15,664 Saved timestamp: event_uptime () {} end
+dep0 - 2023-05-23 07:26:15,665 ---------------------- END OF RECONFIGURATION GG -----------------------
+dep0 - 2023-05-23 07:26:15,665 Saved timestamp: event_saving_state () {} start
+dep0 - 2023-05-23 07:26:15,666 Saving current conf ...
+dep0 - 2023-05-23 07:26:15,674 Saved timestamp: event_saving_state () {} end
+dep0 - 2023-05-23 07:26:15,674 DUMPING FILE: /home/anomond/concerto-d-projects/results_asynchronous-mascots-round-0-update_asynchronous_raspberry_T0_waiting_rate-1-2023-05-23_09-18-11/dep0_2023-05-23_07-26-15-775.6746625900269.yaml
+dep0 - 2023-05-23 07:26:15,691 
