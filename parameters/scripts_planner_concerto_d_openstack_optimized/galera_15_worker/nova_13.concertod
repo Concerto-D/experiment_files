@@ -1,0 +1,5 @@
+pushB(nova_13, interrupt)
+wait(mariadb_worker_13, interrupt)
+pushB(nova_13, update)
+wait(keystone_13, uninstall)
+pushB(nova_13, deploy)

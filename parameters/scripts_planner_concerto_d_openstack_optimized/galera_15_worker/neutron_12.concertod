@@ -1,0 +1,4 @@
+pushB(neutron_12, uninstall)
+wait(keystone_12, uninstall)
+wait(mariadb_worker_12, interrupt)
+pushB(neutron_12, deploy)

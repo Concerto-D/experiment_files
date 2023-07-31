@@ -90,7 +90,7 @@ if __name__ == "__main__":
     # default_file_name = "uptimes-60-50-12-0_02-0_02-generated"
     # default_file_name = "uptimes-30-50-12-0_02-0_02-generated-best"
     # default_file_name = "uptimes-36-50-12-0_02-0_02-generated"
-    default_file_name = "mascots_uptimes-60-50-5-ud2_od0_15_25_perc"
+    default_file_name = "mascots_uptimes-60-50-5-ud1_od0_15_25_perc"
     # default_file_name = "uptimes-36-50-12-0_25-0_25-generated-again"
     # default_file_name = "uptimes-36-50-12-0_25-0_25"
     # default_file_name = "uptimes-36-50-12-0_5-0_5-generated-again"
@@ -114,11 +114,11 @@ if __name__ == "__main__":
             last_added = set(combo) - set(old_combo)
             combo = [*last_added]
             count_combo += [round_num]
-            print(f"COMBO{count_combo}: round_num {round_num}", file=file_output)
+            # print(f"COMBO{count_combo}: round_num {round_num}", file=file_output)
         if len(combo_up) == 5:
             combo_up = []
             count_combo_up += [round_num]
-            print(f"COMBO_UP{count_combo_up}: round_num {round_num}", file=file_output)
+            # print(f"COMBO_UP{count_combo_up}: round_num {round_num}", file=file_output)
     print(result, file=file_output)
     print("---- COMBO SYNC ----")
     print(count_combo)
